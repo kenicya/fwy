@@ -85,7 +85,7 @@
 .quick_menu #icon_face{display: inline-block;height: 20px;width: 20px;}
 .quick_menu #icon_msg{background: url(../img/icon.png) no-repeat; width: 16px;height: 14px;display: inline-block;}
 #icon_msg.active{background: url(../img/icon.png) no-repeat 0 -16px;}
-.quick_menu_box{background: #626A6F;border-radius: 2px;position: absolute;left: -80px;display: none;top: 34px;}
+.quick_menu_box{background: #626A6F;border-radius: 2px;position: absolute;left: -80px;display: none;top: 34px;z-index: 1000;}
 .quick_menu_con{background: #fff;width: 280px;margin: 0 5px 5px 5px;}
 .quick_menu_box h2{margin: 10px 15px;font-size: 14px;color: #fff;}
 .quick_menu_box .p_info,.quick_menu_box .p_msg{
@@ -135,337 +135,10 @@
     background-position: 0 -74px;margin-top: 2px;
 }
 /*简历*/
-
-.pickpane .c-logo {
-    float: left;
-    margin-left: -40px;
-}
-.pickpane .c-logo img {
-    height: 30px;
-    width: 30px;
-}
-.pickpane ul.menu li.last {
-    background: none repeat scroll 0 0 #F2F2F2;
-    border: medium none;
-    color: #1357A2;
-    padding: 6px 8px;
-    text-align: center;
-}
-.i-v {
-    background: url("/up/company/images/i-v.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    display: inline-block;
-    height: 16px;
-    margin-left: 13px;
-    vertical-align: middle;
-    width: 16px;
-}
-.pickpane ul.menu li.selected {
-    background: none repeat scroll 0 0 #DAEAF2;
-    padding: 5px 8px 6px;
-}
-.pickpane ul.menu li.last.selected {
-    background: none repeat scroll 0 0 #F2F2F2;
-    border: medium none;
-    color: #1357A2;
-    padding: 6px 8px;
-}
-.pickpane {
-    background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    clear: both;
-    margin-top: -1px;
-    position: absolute;
-    width: 160px;
-    z-index: 9990;
-}
-.pickpane ul.menu li {
-    border-bottom: 1px solid #E5E5E5;
-    cursor: pointer;
-    display: block;
-    float: none;
-    padding: 6px 8px;
-    word-wrap: break-word;
-}
-.pickpane ul.menu li.match-list {
-    min-height: 34px;
-    padding-left: 50px;
-}
-.pickpane ul.menu li.match-list em {
-    color: #999999;
-    display: block;
-}
-.pickpane ul.menu li .c-logo {
-    border: 1px solid #E5E5E5;
-    float: left;
-    margin-left: -40px;
-}
-.pickpane ul.menu li .c-logo img {
-    display: block;
-}
-.pickpane ul.menu li.selected {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #DAEAF2;
-    border-color: #DAEAF2;
-    border-image: none;
-    border-style: solid;
-    border-width: 1px 0;
-    color: #333333;
-}
-.pickpane .scrollable {
-    max-height: 200px;
-}
-.pickpane .message {
-    background-color: #FFFFB3;
-    border-top: 1px solid #E6CB45;
-    padding: 8px;
-}
-.pickpane .message p {
-    padding-bottom: 8px;
-}
-.pickpane .message a:link, .pickpane .message a:visited {
-    color: #1470CC;
-    font-size: 13px;
-    font-weight: bold;
-}
-.pickpane li.exceeded {
-    background: none repeat scroll 0 0 #F6F6F6;
-    color: #999999;
-    cursor: default;
-}
-.pickpane a.letgo {
-    margin-top: 0.5em;
-}
-.pickpane .notfound {
-    padding: 4px 8px;
-}
-
-.t-color {
-    color: #7AB1CC;
-}
-.sync {
-    background-image: url("http://8.assets.dajieimg.com/up/new-v2012/images/sync.gif");
-    background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: top;
-    width: 15px;
-}
-.highlight {
-    color: #FF6600;
-}
-.nav-three {
-    height: 22px;
-    margin: 0 0 10px 6px;
-    overflow: hidden;
-}
-.nav-three li {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/bgico.png") no-repeat scroll -398px 0 rgba(0, 0, 0, 0);
-    display: inline;
-    float: left;
-    line-height: 22px;
-    margin: 0 2px 0 -2px;
-    text-align: center;
-    width: 75px;
-}
-.nav-three a {
-    color: #127DB3;
-}
-.nav-three b {
-    color: #333333;
-}
-.shadow-rb2 {
-    box-shadow: 1px 1px 1px rgba(175, 175, 175, 0.35);
-}
-.cl-content {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #D9D9D9;
-}
-.invite-title {
-    background: none repeat scroll 0 0 #ECF5F9;
-    border-bottom: 1px solid #CAD5DA;
-    height: 55px;
-    padding: 10px 0;
-    position: relative;
-}
-#invite-info {
-    float: left;
-    padding-left: 80px;
-    width: 200px;
-}
-.invite-tips {
-    float: left;
-    height: 55px;
-}
-.invite-tips h4 {
-    font: 16px/50px 'Microsoft YaHei','SimHei';
-    height: 55px;
-}
-.invite-title .bt-suc {
-    background: url("http://9.assets.dajieimg.com/up/position-invitation/images/j65.gif") no-repeat scroll left center rgba(0, 0, 0, 0);
-    height: 65px;
-    line-height: 65px;
-    margin-left: 30px;
-    padding-left: 70px;
-    width: 530px;
-}
-.invite-title .fix {
-    padding-left: 7px;
-}
-.invite-title .pl {
-    padding-left: 78px;
-}
-.invite-con {
-    background: url("http://6.assets.dajieimg.com/up/resume/images/invite-bg.png") no-repeat scroll right center rgba(0, 0, 0, 0);
-    height: 48px;
-    overflow: hidden;
-    padding-top: 2px;
-    width: 180px;
-}
-.invite-people-info {
-    float: left;
-    line-height: 24px;
-    padding: 6px 0 0 10px;
-    width: 114px;
-}
-.invite-people-info h3 {
-    color: #666666;
-    font: bold 12px/18px 'SimSun';
-}
-.invite-people-info p {
-    color: #666666;
-    height: 20px;
-    overflow: hidden;
-    width: 100px;
-}
-.basic-icon {
-    background: url("http://9.assets.dajieimg.com/up/resume/images/ico-triangle.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    bottom: -11px;
-    display: block;
-    height: 12px;
-    left: 102px;
-    position: absolute;
-    width: 18px;
-}
-.invite-con .pic {
-    display: inline;
-    float: left;
-    height: 50px;
-    margin-top: 2px;
-    overflow: hidden;
-    width: 50px;
-}
-.ico-candidate {
-    background: url("http://0.assets.dajieimg.com/up/resume/images/ico-candidate.png") no-repeat scroll 0 3px rgba(0, 0, 0, 0);
-    display: inline-block;
-    height: 20px;
-    margin-left: 6px;
-    vertical-align: top;
-    width: 15px;
-}
-.resume-bd {
-    padding-top: 15px;
-}
-.resume-guide {
-    background: url("http://5.assets.dajieimg.com/up/resume/images/resume-guide-tit.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
-    margin: auto;
-    padding-top: 75px;
-    width: 560px;
-}
-.resume-guide h3 {
-    padding-bottom: 5px;
-}
-.frame-box {
-    border: 1px solid #CCCCCC;
-}
-.frame-bd {
-    background: none repeat scroll 0 0 #F9F9F9;
-    height: 200px;
-    overflow-y: auto;
-}
-.frame-ft {
-    border-top: 1px solid #CCCCCC;
-    height: 18px;
-    padding: 5px 16px;
-}
-.frame-ft .checkbox {
-    padding-left: 10px;
-}
-.resume-guide-ft {
-    padding: 20px 0;
-    text-align: center;
-}
-.resume-guide-ft .cancel-text {
-    float: right;
-    margin-top: 5px;
-}
-.frame-bd dl {
-    padding: 0 15px 10px;
-}
-.frame-bd dl dt {
-    font-weight: bold;
-    padding-top: 10px;
-}
-.frame-bd dl dd {
-    border-bottom: 1px solid #D9D9D9;
-    font-weight: bold;
-    padding: 10px 0 10px 25px;
-}
-.frame-bd dl dd p {
-    line-height: 150%;
-    padding-bottom: 5px;
-}
-.frame-bd dl dd em {
-    color: #999999;
-}
-.frame-bd dl dd.last {
-    border: medium none;
-}
-.frame-bd .select-area {
-    float: left;
-    margin-left: -25px;
-}
-.form-info {
-    padding-top: 30px;
-}
-.form-info .text {
-    width: 245px;
-}
-.form-info .matchbox-wrap .matchbox {
-    display: inline-block;
-    vertical-align: middle;
-    width: 255px;
-}
-
 .matchbox-wrap .sync {
     clear: both;
 }
-.sync-tip {
-    background: none repeat scroll 0 0 #FFFCD9;
-    border: 1px solid #F2E085;
-    font-size: 12px;
-    height: 16px;
-    line-height: 16px;
-    padding: 6px;
-    position: relative;
-}
-.sync-tip .arrow {
-    background: url("http://3.assets.dajieimg.com/up/resume/images/sync-tip-arrow.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    display: inline-block;
-    height: 9px;
-    left: -5px;
-    position: absolute;
-    top: 9px;
-    width: 6px;
-}
-.sync-tip .sync-icon {
-    background: url("http://3.assets.dajieimg.com/up/resume/images/sync-tip.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    display: inline-block;
-    height: 15px;
-    vertical-align: middle;
-    width: 15px;
-}
+
 .sidecolumnwrap {
     float: left;
     width: 268px;
@@ -548,14 +221,14 @@
     padding: 0 30px;
 }
 .item-list dd, .disable-list dd {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/item-arrow.gif") no-repeat scroll 0 15px rgba(0, 0, 0, 0);
+    background: url(../img/item-arrow.gif) no-repeat 0 15px;
     border-bottom: 1px solid #E6E6E6;
     height: 15px;
     line-height: 15px;
     padding: 10px 0 10px 13px;
 }
 .item-list .true, .disable-list .true {
-    background: url("http://2.assets.dajieimg.com/images/resume/true.gif") no-repeat scroll left center rgba(0, 0, 0, 0);
+    background: url(../img/icon.png) no-repeat 0 -89px;
     display: inline-block;
     float: right;
     height: 8px;
@@ -571,7 +244,7 @@
     text-align: right;
 }
 .bottom-bar a {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/item-icon.gif") no-repeat scroll 0 3px rgba(0, 0, 0, 0);
+    background: url(../img/icon.png) no-repeat 0 -97px;
     color: #127DB3;
     padding-left: 20px;
 }
@@ -593,7 +266,7 @@
     z-index: 9;
 }
 .edit-btn {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/edit-btn.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url(../img/edit-btn.gif) no-repeat 0 0 ;
     color: #333333;
     float: right;
     height: 26px;
@@ -608,7 +281,7 @@
     text-decoration: none;
 }
 .add-btn {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/edit-btn.gif") no-repeat scroll 0 -26px rgba(0, 0, 0, 0);
+    background: url(../img/edit-btn.gif) no-repeat 0 -26px;
     color: #333333;
     float: right;
     height: 26px;
@@ -675,20 +348,7 @@
     height: 130px;
     width: 130px;
 }
-.u-photo .change-btn {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/photo-edit.gif") no-repeat scroll 30px 8px #FFFFFF;
-    bottom: 0;
-    color: #333333;
-    display: inline-block;
-    height: 28px;
-    left: 0;
-    line-height: 28px;
-    opacity: 0.8;
-    padding-left: 30px;
-    position: absolute;
-    text-align: center;
-    width: 100px;
-}
+
 .photo-mask {
     background: none repeat scroll 0 0 #FFFFFF;
     height: 130px;
@@ -892,13 +552,14 @@ table.f14 td, .f14 {
 .borderNone {
 	border: none;
 }
-
+.b{font-weight: bold;}
 
 .nav2-box {
 	position: relative;
 	width: 960px;
 	border-bottom: 1px solid #aaa;
-	height: 37px;
+	height: 40px;
+	
 }
 .nav2-box .new-job {
 	position: absolute;
@@ -910,7 +571,7 @@ table.f14 td, .f14 {
 	margin-right: 9px;
 }
 .nav2 {
-	height: 38px;
+	height: 40px;
 	padding-left: 0;
 	border: none;
 	margin-bottom: -1px;
@@ -920,17 +581,22 @@ table.f14 td, .f14 {
 	float: left;
 	padding-right: 5px;
 	width: 110px;
+
+}
+.nav2 .active{
+	background: #525D6A;
+	color: #fff;
 }
 .nav2 li a {
 	display: block;
-	height: 38px;
+	height: 40px;
 	padding-left: 4px;
-	background-image: url(/up/new-v2011/i/nav2-tab-nodot.png);
+	background: url(../img/repeat.png) repeat-x;
 	background-position: 0 -62px;
 	color: #333;
 	font-size: 14px;
 	text-align: center;
-	line-height: 42px;
+	line-height: 40px;
 }
 #header, #content {
 	width: 960px;
@@ -946,15 +612,23 @@ table.f14 td, .f14 {
 	visibility: hidden;
 }
 .subsubNav {
-	margin: 0 auto 20px auto;
+	margin: 10px auto;
 	width: 960px;
 	padding-left: 20px;
 }
 .subsubNav a {
 	cursor: pointer;
+	line-height: 35px;
 }
 .subsubNav em {
 	margin: 0 4px 0 8px;
 	display: inline-block;
 	color: #ccc;
+}
+.resume_bg{
+	background: url(../img/user/jianbg.png) repeat-x;
+}
+.resume{
+	background: url(../img/user/jian.jpg) no-repeat center 0;
+	padding-top: 134px;
 }

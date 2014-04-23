@@ -18,6 +18,10 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%
 }
+address, caption, cite, code, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
 dt{font-weight: bold;}
 body, button, input, select, textarea {
 	font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -107,13 +111,13 @@ sup {
 sub {
 	bottom: -0.25em
 }
-ul, ol {
+ul, ol,dl{
 	margin: 0;
 	padding: 0;
 	list-style: none
 }
 dd {
-	margin: 0 0 0 40px
+	margin: 0;
 }
 
 input, button {
@@ -886,5 +890,5 @@ p#back-to-top a span{
 
 .text-info:hover {
   color: #245269;
-  
+
 }
