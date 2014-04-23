@@ -28,7 +28,6 @@ $('.quick_menu li').mousemove(function(){
 
 </head>
 <body>
-	<div id="fullbg"></div>
 	<div class="wrap">
 		<!-- 头部start -->
 		<div class="header-w">
@@ -45,52 +44,74 @@ $('.quick_menu li').mousemove(function(){
 							<div class="quick_menu_box">
 								<h2>账户设置</h2>
 								<div class="quick_menu_con">
-								<table class="p_info">
-							      <tbody>
-							        <tr>
-							          <td class="data-icon"><img class="p_face" src="http://gm0.lietou-static.com/user/photo/minix/default_c_1.gif?0.6037496654935514"></td>
-							          <td>龙华</td>
-							          <td class="data-menu"><a href="http://www.liepin.com/user/logout/">退出</a></td>
-							        </tr>
-							        <tr>
-							          <td class="data-icon"><i class="icon icon-settings-profile"></i></td>
-							          <td>账号信息</td>
-							          <td class="data-menu"><a href="http://c.liepin.com/profile/basic/">修改</a></td>
-							        </tr>
-							        <tr>
-							          <td class="data-icon"><i class="icon icon-settings-password"></i></td>
-							          <td>密码修改</td>
-							          <td class="data-menu"><a href="http://c.liepin.com/profile/modifypwd/">修改</a></td>
-							        </tr>
-							        <tr>
-							          <td class="data-icon"><i class="icon icon-settings-privacy"></i></td>
-							          <td>隐私设置</td>
-							          <td class="data-menu"><a href="http://c.liepin.com/profile/getsecret/">修改</a></td>
-							        </tr>
-							        <tr>
-							          <td class="data-icon"><i class="icon icon-settings-help"></i></td>
-							          <td>帮助中心</td>
-							          <td class="data-menu"><a href="http://www.liepin.com/help/">获得帮助</a></td>
-							        </tr>
-							      </tbody>
-							    </table>
-							    </div>
+									<table class="p_info">
+										<tbody>
+											<tr>
+												<td class="data-icon">
+													<img class="p_face" src="http://gm0.lietou-static.com/user/photo/minix/default_c_1.gif?0.6037496654935514"></td>
+												<td>龙华</td>
+												<td class="data-menu">
+													<a href="http://www.liepin.com/user/logout/">退出</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="data-icon"> <i class="icon icon-settings-profile"></i>
+												</td>
+												<td>账号信息</td>
+												<td class="data-menu">
+													<a href="http://c.liepin.com/profile/basic/">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="data-icon"> <i class="icon icon-settings-password"></i>
+												</td>
+												<td>密码修改</td>
+												<td class="data-menu">
+													<a href="http://c.liepin.com/profile/modifypwd/">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="data-icon">
+													<i class="icon icon-settings-privacy"></i>
+												</td>
+												<td>隐私设置</td>
+												<td class="data-menu">
+													<a href="http://c.liepin.com/profile/getsecret/">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="data-icon">
+													<i class="icon icon-settings-help"></i>
+												</td>
+												<td>帮助中心</td>
+												<td class="data-menu">
+													<a href="http://www.liepin.com/help/">获得帮助</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</li>
 						<li >
-							<a href="#" title="消息" id="link_msg"> <i id="icon_msg"></i>
+							<a href="#" title="消息" id="link_msg">
+								<i id="icon_msg"></i>
 							</a>
 							<div class="quick_menu_box">
 								<h2>消息</h2>
 								<div class="quick_menu_con">
-								<table class="p_msg">
-							      <tbody>							        
-							        <tr>							          
-							          <td><strong class="text-warning mrl5">3</strong>条系统消息</td>
-							          <td class="data-menu"><a href="http://www.liepin.com/help/">获得帮助</a></td>
-							        </tr>
-							      </tbody>
-							    </table>
+									<table class="p_msg">
+										<tbody>
+											<tr>
+												<td> <strong class="text-warning mrl5">3</strong>
+													条系统消息
+												</td>
+												<td class="data-menu">
+													<a href="http://www.liepin.com/help/">获得帮助</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</li>
@@ -108,47 +129,877 @@ $('.quick_menu li').mousemove(function(){
 					<li>
 						<a href="">找职位</a>
 					</li>
-					<li>
-						<a href="">找人才</a>
-					</li>
+
 					<li>
 						<a href="">找企业</a>
 					</li>
 					<li>
-						<a href="">同道问答</a>
+						<a href="">简历管理</a>
 					</li>
 					<li class="b-r">
-						<a href="">企业服务</a>
+						<a href="">个人中心</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<!-- 头部end -->
+		<div id="content">
+			<div class="nav2-box">
+				<ul class="nav2">
+					<li style="width: 100px;display: none" id="id-nav-campus">
+						<a href="http://campus.dajie.com/campusIndex">
+							<span>应届生项目</span>
+						</a>
+					</li>
+					<li style="width: 70px">
+						<a rel="nofollow" href="/">
+							<span id="id-nav-jobindex">找工作</span>
+						</a>
+					</li>
+					<li style="width: 70px;display: none" id="id-nav-intern">
+						<a rel="nofollow" href="/job/intern">
+							<span>找实习</span>
+						</a>
+					</li>
+					<li style="width: 70px;display: none" id="id-nav-campustalk">
+						<a rel="nofollow" href="http://campus.dajie.com/talk/index">
+							<span>宣讲会</span>
+						</a>
+					</li>
+					<li style="width: 100px;" id="id-nav-talent-campus">
+						<a rel="nofollow" href="/talent/user/index">
+							<span>名企人才库</span>
+						</a>
+					</li>
+					<li style="width: 100px">
+						<a rel="nofollow" href="/favorite/index">
+							<span>我的收藏</span>
+						</a>
+					</li>
+					<li style="width: 100px">
+						<a rel="nofollow" href="/jobapply/feedback">
+							<span>我的投递反馈</span>
+						</a>
+					</li>
+					<li class="selected" style="width: 100px">
+						<a rel="nofollow" href="/resume/index">
+							<span>我的简历</span>
+						</a>
+					</li>
+					<li style="width: 100px">
+						<a rel="nofollow" href="/intention/index">
+							<span>我的求职意愿</span>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+			
+			<div class="subsubNav">
+				<span class="b">编辑简历</span> <em>|</em>
+				<span>
+					<a target="_blank" href="/resume/preview">预览简历</a>
+				</span> <em>|</em>
+				<span>
+					<a href="/resume/letter/index">求职信</a>
+				</span>
+				<em>|</em>
+				<span>
+					<a href="/buddy/buddycomment/index">评价管理</a>
+				</span>
+			</div>
+			<div class="resume-main clear">
+				<div class="sidecolumnwrap">
+					<div class="sidecolumn">
+						<div class="mask-area">
+							<div class="dashboard">
+								<div num="9" class="inner i-9">90%</div>
+							</div>
+							<div class="resume-item-box">
+								<div class="tips-normal drag-tips">
+									<span class="highlight">拖动模块试试看！</span>
+									调整模块顺序或者隐藏不想显示在简历中的模块。
+									<p class="alignright">
+										<a class="t-color" href="#">我知道了</a>
+									</p>
+								</div>
+
+								<dl class="disable-list">
+									<dt class="drag-model-tit">显示的模块：</dt>
+									<dd id="base">
+										<span class="true"></span>
+										基本信息
+									</dd>
+									<dd id="contact">
+										<span class="true"></span>
+										联系方式
+									</dd>
+									<dd id="edu">
+										<span class="true"></span>
+										教育经历
+									</dd>
+								</dl>
+								<dl class="item-list">
+									<dd id="lang">
+										<span class="true"></span>
+										语言能力
+									</dd>
+									<dd id="cert">
+										<span class="true"></span>
+										证书
+									</dd>
+									<dd id="itskill">
+										<span class="true"></span>
+										IT技能
+									</dd>
+									<dd id="position">
+										<span class="true"></span>
+										校内职务
+									</dd>
+									<dd id="scholarship">
+										<span class="true"></span>
+										校内奖励
+									</dd>
+									<dd id="intern">
+										<span class="true"></span>
+										实习经历
+									</dd>
+									<dd id="practice">
+										<span class="true"></span>
+										工作经历
+									</dd>
+									<dd id="project">
+										<span class="true"></span>
+										项目经验
+									</dd>
+									<dd id="training">
+										<span class="false">未添加</span>
+										培训经历
+									</dd>
+									<dd id="offer">
+										<span class="false">未添加</span>
+										求职经历
+									</dd>
+									<dd id="other">
+										<span class="true"></span>
+										其他信息
+									</dd>
+									<dd id="affix">
+										<span class="false">未添加</span>
+										附件/作品
+									</dd>
+									<dt id="hidden" class="drag-model-tit hidden-list">隐藏的模块：</dt>
+								</dl>
+								<div class="bottom-bar">
+									<a class="J_editModel" href="#">模块编辑</a>
+								</div>
+								<!-- <div class="button-bar">
+									<a href="javascript:void(0);" class="big-fresh margin J_saveDrag">
+										<span>保存</span>
+									</a>
+									<a href="javascript:void(0);" class="big-normal J_cancelDrag">
+										<span>取消</span>
+									</a>
+								</div> -->
+							</div>
+						</div>
+
+					</div>
+					<div class="p-for-edu-ad">
+						<a href="http://edu.dajie.com/source/zt/jz.html" target="_blank">
+							<img src="http://assets.dajieimg.com/up/resume/images/edu-ad.jpg"></a>
+					</div>
+				</div>
+				<div class="maincolumn border-bottom">
+					<div class="item-section">
+						<div class="mask-area">
+							<h3>
+								<a itemid="11392599" itemtype="base" rel="base" class="edit-btn J_editBase" href="#" style="display: block;">编辑</a>
+								<span class="b f14">基本信息</span>
+							</h3>
+							<div class="item-bd">
+
+								<div id="base-info" class="info-area clear" style="display: block;">
+									<div class="u-photo">
+										<div class="photo-area">
+											<a href="http://www.dajie.com/settings/avatar?redir=http://job.dajie.com/resume/index">
+												<img src=""></a>
+											<a style="display:none;" class="change-btn" href="http://www.dajie.com/settings/avatar?redir=http://job.dajie.com/resume/index">更换头像</a>
+
+											<div style="display: none" id="photo-mask" class="photo-mask"></div>
+										</div>
+										<div class="showphoto">
+											<input type="checkbox" checked="checked" id="photo_checkbox">
+											<label class="checkbox" for="photo_checkbox">在简历中显示</label>
+										</div>
+									</div>
+
+									<script type="text/javascript">
+    var has_photo = 1;
+    $('#photo_checkbox').click(function () {
+        $.ajax({
+            url:'/resume/visibility',
+            type:'post',
+            success:function (r) {
+                if (r == 0) {
+                    var o = document.getElementById("photo-mask").style.display;
+                    if (o == 'none') {
+                        $('#photo-mask').show();
+                    } else {
+                        $('#photo-mask').hide();
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+									<table>
+										<colgroup>
+										<col width="99">
+										<col width="*"></colgroup>
+									<tbody>
+										<tr>
+											<th>姓名:</th>
+											<td>冯惠雅(女)</td>
+										</tr>
+
+										<tr>
+											<th>现居地:</th>
+											<td>
+												广东
+                    梅州
+											</td>
+										</tr>
+										<tr>
+											<th>户口地:</th>
+											<td>
+												广东
+                梅州
+											</td>
+										</tr>
+										<tr>
+											<th>出生日期:</th>
+											<td>1991-03-09</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item-section">
+					<div class="mask-area">
+						<h3>
+							<a itemtype="contact" rel="contact" class="edit-btn J_editBase" href="#" style="display: block;">编辑</a>
+							<span class="b f14">联系方式</span>
+						</h3>
+						<div class="item-bd">
+							<div id="contact-info" class="info-area" style="display: block;">
+								<table>
+									<colgroup>
+									<col width="99">
+									<col width="*"></colgroup>
+								<tbody>
+									<tr>
+										<th>手机:</th>
+										<td>13824573452</td>
+									</tr>
+									<tr>
+										<th>邮箱:</th>
+										<td>572751316@qq.com</td>
+									</tr>
+									<tr>
+										<th>QQ:</th>
+										<td>572751316</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item-section">
+				<div class="mask-area">
+					<h3>
+						<a maxnum="10" rel="add" itemtype="edu" class="add-btn J_event" href="#">添加</a>
+						<span class="b f14">教育经历</span>
+					</h3>
+					<div class="item-bd">
+
+						<div class="info-area" id="edu-info">
+							<table width="100%">
+								<colgroup>
+								<col width="160">
+								<col width="155">
+								<col width="80">
+								<col width="*">
+								<col width="65"></colgroup>
+							<thead>
+								<tr class="g9">
+									<td>毕业院校</td>
+									<td>就读时间</td>
+									<td>学历</td>
+									<td>专业</td>
+									<td></td>
+								</tr>
+							</thead>
+							<tbody class="table-list">
+								<tr>
+									<td>
+										<div style="width:120px" class="g6 break break">嘉应学院</div>
+									</td>
+									<td>2010-9 至 2014-7</td>
+									<td>本科</td>
+									<td>
+										<div class="g6 break">计算机科学与技术</div>
+									</td>
+									<td class="padding">
+										<a rel="edit" class="edit t-color J_event" itemid="3350782" itemtype="edu" href="#">编辑</a>
+										<a class="del t-color J_event" itemid="3350782" rel="del" itemtype="edu" href="#">删除</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item-section">
+			<div class="mask-area">
+				<h3>
+					<a maxnum="10" rel="add" itemtype="lang" class="add-btn J_event" href="#">添加</a>
+					<span class="b f14">语言能力</span>
+				</h3>
+				<div class="item-bd">
+					<div class="info-area" id="lang-info">
+						<table width="100%">
+							<colgroup>
+							<col width="70">
+							<col width="80">
+							<col width="60">
+							<col width="*">
+							<col width="65"></colgroup>
+						<thead>
+							<tr class="g9">
+								<td>语言</td>
+								<td>听说</td>
+								<td>读写</td>
+								<td>等级考试</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody class="table-list">
+							<tr class="">
+								<td>英语</td>
+								<td>良好</td>
+								<td>良好</td>
+								<td>
+									<div style="width:285px" class="break">
+										大学英语考试四级
+                            (455分)
+									</div>
+								</td>
+								<td>
+									<a itemtype="lang" rel="edit" itemid="2765331" title="修改语言能力" class="edit t-color J_event" href="#">编辑</a>
+									<a itemtype="lang" itemid="2765331" rel="del" class="del t-color J_event" href="#">删除</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<!-- 尾部开始 -->
-	<div class="footer">
-
-		<p>
-
-			<a rel="nofollow" href="/support/about.html">关于本站</a>
-			<span>|</span>
-			<a rel="nofollow" href="/support/help.html">网站帮助</a>
-			<span>|</span>
-
-			<a rel="nofollow" href="/support/advertise.html">广告合作</a>
-			<span>|</span>
-			<a class="cur" href="/link/">友情链接</a>
-			<span>|</span>
-			<a href="/soft/">网站地图</a>
-			<span>|</span>
-			<a href="/sitemaps.xml">网站RSS</a>
-		</p>
-		<p>
-			Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
-		</p>
+	<div class="item-section">
+		<div class="mask-area">
+			<h3>
+				<a maxnum="10" rel="edit" itemtype="cert" class="edit-btn J_event" href="#">编辑</a>
+				<span class="b f14">证书</span>
+			</h3>
+			<div class="item-bd">
+				<div class="info-area" id="cert-info">
+					<table width="100%">
+						<tbody class="table-list">
+							<tr>
+								<td>
+									<div class="break" style="width: 510px">
+										普通话等级证书，
+                    大学英语四级
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- 尾部结束 -->
+	<div class="item-section">
+		<div class="mask-area">
+			<h3>
+				<a maxnum="10" rel="edit" itemtype="itskill" class="edit-btn J_event" href="#" style="display: block;">编辑</a>
+				<span class="b f14">IT技能</span>
+			</h3>
+			<div class="item-bd">
+				<div class="info-area" id="itskill-info" style="display: block;">
+
+					<table width="100%">
+						<colgroup>
+						<col width="90">
+						<col width="*"></colgroup>
+					<tbody class="table-list">
+						<input type="hidden" name="here">
+						<tr>
+							<th>精通的技能：</th>
+							<td>
+								<div class="break" style="width: 420px">
+									HTML，
+                Dreamweaver
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>熟悉的技能：</th>
+							<td>
+								<div class="break" style="width: 420px">
+									Word，
+                Excel，
+                PowerPoint，
+                PHP，
+                MySQL，
+                HTML，
+                CSS，
+                Dreamweaver，
+                JavaScript，
+                Photoshop
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="item-section">
+	<div class="mask-area">
+		<h3>
+			<a maxnum="10" rel="add" itemtype="position" class="add-btn J_event" href="#">添加</a>
+			<span class="b f14">校内职务</span>
+		</h3>
+		<div class="item-bd">
+			<div class="info-area" id="position-info">
+				<table width="100%">
+					<colgroup>
+					<col width="160">
+					<col width="155">
+					<col width="*">
+					<col width="65"></colgroup>
+				<thead>
+					<tr class="g9">
+						<td>职务名称</td>
+						<td>任职时间</td>
+						<td>学校</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody class="table-list">
+					<tr>
+						<td>
+							<div style="width:102px" class="break">副班长</div>
+						</td>
+						<td>
+							2012-09
+							<span>至</span>
+							今
+						</td>
+						<td>
+							<div style="width:172px" class="break">嘉应学院</div>
+						</td>
+						<td class="padding">
+							<a class="edit t-color J_event" title="修改校内职务" itemid="2338551" itemtype="position" rel="edit" href="#">编辑</a>
+							<a class="del t-color J_event" itemid="2338551" itemtype="position" rel="del" href="#">删除</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+	<h3>
+		<a maxnum="15" rel="add" itemtype="scholarship" class="add-btn J_event" href="#">添加</a>
+		<span class="b f14">校内奖励</span>
+	</h3>
+	<div class="item-bd">
+		<div class="info-area" id="scholarship-info">
+			<table width="100%">
+				<colgroup>
+				<col width="160">
+				<col width="155">
+				<col width="*">
+				<col width="65"></colgroup>
+			<thead>
+				<tr class="g9">
+					<td>奖项名称</td>
+					<td>获得时间</td>
+					<td>学校</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody class="table-list">
+				<tr>
+					<td>
+						<div style="width:130px" class="break">计算机学院优秀学生干部</div>
+					</td>
+					<td>2013-10</td>
+					<td>嘉应学院</td>
+					<td class="padding">
+						<a class="edit t-color J_event" title="修改校内奖励" rel="edit" itemid="6094983" itemtype="scholarship" href="#">编辑</a>
+						<a class="del t-color J_event" rel="del" itemid="6094983" itemtype="scholarship" href="#">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="width:130px" class="break">计算机学院优秀学生三等奖学金</div>
+					</td>
+					<td>2013-10</td>
+					<td>嘉应学院</td>
+					<td class="padding">
+						<a class="edit t-color J_event" title="修改校内奖励" rel="edit" itemid="6094982" itemtype="scholarship" href="#">编辑</a>
+						<a class="del t-color J_event" rel="del" itemid="6094982" itemtype="scholarship" href="#">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="width:130px" class="break">计算机学院优秀学生三等奖学金</div>
+					</td>
+					<td>2012-10</td>
+					<td>嘉应学院</td>
+					<td class="padding">
+						<a class="edit t-color J_event" title="修改校内奖励" rel="edit" itemid="6094981" itemtype="scholarship" href="#">编辑</a>
+						<a class="del t-color J_event" rel="del" itemid="6094981" itemtype="scholarship" href="#">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="width:130px" class="break">计算机学院优秀学生三等奖学金</div>
+					</td>
+					<td>2011-12</td>
+					<td>嘉应学院</td>
+					<td class="padding">
+						<a class="edit t-color J_event" title="修改校内奖励" rel="edit" itemid="5023985" itemtype="scholarship" href="#">编辑</a>
+						<a class="del t-color J_event" rel="del" itemid="5023985" itemtype="scholarship" href="#">删除</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+<h3>
+	<a maxnum="10" rel="add" itemtype="intern" class="add-btn J_event" href="#">添加</a>
+	<span class="b f14">实习经历</span>
+</h3>
+<div class="item-bd">
+
+	<div class="info-area" id="intern-info">
+		<table width="100%">
+			<colgroup>
+			<col width="160">
+			<col width="155">
+			<col width="*">
+			<col width="65"></colgroup>
+		<thead>
+			<tr>
+				<td>工作公司</td>
+				<td>在职时间</td>
+				<td>职位名称</td>
+				<td>&nbsp;</td>
+			</tr>
+		</thead>
+		<tbody class="table-list">
+			<tr>
+				<td>
+					<div style="width:132px" class="break">追风有限公司</div>
+				</td>
+				<td>2013-3 至 2013-9</td>
+				<td>
+					<div style="width:102px" class="break">web前端开发程序员</div>
+				</td>
+				<td>
+					<a itemtype="intern" rel="edit" itemid="4336220" class="edit t-color J_event" href="#">编辑</a>
+					<a itemtype="intern" itemid="4336220" rel="del" class="del t-color J_event" href="#">删除</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+<h3>
+<a maxnum="10" rel="add" itemtype="practice" class="add-btn J_event" href="#">添加</a>
+<span class="b f14">工作经历</span>
+</h3>
+<div class="item-bd">
+
+<div class="info-area" id="practice-info">
+	<table width="100%">
+		<colgroup>
+		<col width="160">
+		<col width="155">
+		<col width="*">
+		<col width="65"></colgroup>
+	<thead>
+		<tr>
+			<td>工作公司</td>
+			<td>在职时间</td>
+			<td>职位名称</td>
+			<td>&nbsp;</td>
+		</tr>
+	</thead>
+	<tbody class="table-list">
+		<tr>
+			<td>
+				<div style="width:132px" class="break">梅州星空网络有限公司</div>
+			</td>
+			<td>2013-12 至 今</td>
+			<td>
+				<div style="width:102px" class="break">前端程序员</div>
+			</td>
+			<td class="padding">
+				<a itemtype="practice" rel="edit" itemid="5361587" class="edit t-color J_event" href="#">编辑</a>
+				<a itemtype="practice" itemid="5361587" rel="del" class="del t-color J_event" href="#">删除</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div style="width:132px" class="break">追风有限公司</div>
+			</td>
+			<td>2013-3 至 今</td>
+			<td>
+				<div style="width:102px" class="break">web前端程序员</div>
+			</td>
+			<td class="padding">
+				<a itemtype="practice" rel="edit" itemid="5361575" class="edit t-color J_event" href="#">编辑</a>
+				<a itemtype="practice" itemid="5361575" rel="del" class="del t-color J_event" href="#">删除</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+<h3>
+<a maxnum="10" rel="add" itemtype="project" class="add-btn J_event" href="#">添加</a>
+<span class="b f14">项目经验</span>
+</h3>
+<div class="item-bd">
+<div class="info-area" id="project-info">
+<table width="100%">
+	<colgroup>
+	<col width="160">
+	<col width="155">
+	<col width="*">
+	<col width="65"></colgroup>
+<thead>
+	<tr class="g9">
+		<td>项目名称</td>
+		<td>参与时间</td>
+		<td>担任职务</td>
+		<td></td>
+	</tr>
+</thead>
+<tbody class="table-list">
+	<tr>
+		<td>
+			<div style="width:132px" class="break ">web开发</div>
+		</td>
+		<td>2013-6 至 2013-9</td>
+		<td>
+			<div style="width:166px" class="break">网站前端程序员</div>
+		</td>
+		<td class="padding">
+			<a class="edit t-color J_event" title="修改项目经验" itemid="1031925" itemtype="project" rel="edit" href="#">编辑</a>
+			<a itemid="1031925" itemtype="project" rel="del" class="del t-color J_event" href="#">删除</a>
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+<h3>
+<a maxnum="10" rel="add" itemtype="training" class="add-btn J_event" href="#">添加</a>
+<span class="b f14">培训经历</span>
+</h3>
+<div class="item-bd">
+<div class="info-area" id="training-info">
+<div class="blank-area">
+<p class="g9">相关的培训经历可以提高你的职场竞争力。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+<h3>
+<a maxnum="20" rel="add" itemtype="offer" class="add-btn J_event" href="#">添加</a>
+<span class="b f14">求职经历</span>
+</h3>
+<div class="item-bd">
+<div class="info-area" id="offer-info">
+<div class="blank-area">
+<p class="g9">晒出你的名企笔/面试经历和offer可以迅速吸引HR的关注。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+<h3>
+<a maxnum="8" rel="add" itemtype="other" class="add-btn J_event" href="#">添加</a>
+<span class="b f14">其他信息</span>
+</h3>
+<div class="item-bd">
+<div class="info-area" id="other-info">
+<table width="100%">
+<colgroup>
+<col width="160">
+<col width="*">
+<col width="65"></colgroup>
+<thead>
+<tr class="g9">
+	<td>标题</td>
+	<td>描述</td>
+	<td></td>
+</tr>
+</thead>
+<tbody class="table-list">
+<tr>
+	<td>兴趣爱好</td>
+	<td>
+		<div class="break " style="width: 330px;">我性格开朗，平时喜欢打球、唱歌...</div>
+	</td>
+	<td class="padding">
+		<a class="edit t-color J_event" itemid="1762630" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+		<a class="del t-color J_event" rel="del" itemid="1762630" itemtype="other" href="#">删除</a>
+	</td>
+</tr>
+
+<tr>
+	<td>自我评价</td>
+	<td>
+		<div class="break " style="width: 330px;">我个性开朗，做事认真负责，与人...</div>
+	</td>
+	<td class="padding">
+		<a class="edit t-color J_event" itemid="1762628" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+		<a class="del t-color J_event" rel="del" itemid="1762628" itemtype="other" href="#">删除</a>
+	</td>
+</tr>
+
+<tr>
+	<td>特长</td>
+	<td>
+		<div class="break " style="width: 330px;">专业特长是web前端开发，同时...</div>
+	</td>
+	<td class="padding">
+		<a class="edit t-color J_event" itemid="1762675" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+		<a class="del t-color J_event" rel="del" itemid="1762675" itemtype="other" href="#">删除</a>
+	</td>
+</tr>
+
+<tr>
+	<td>职业目标</td>
+	<td>
+		<div class="break " style="width: 330px;">我的职业目标就是想当一名优秀的...</div>
+	</td>
+	<td class="padding">
+		<a class="edit t-color J_event" itemid="1762654" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+		<a class="del t-color J_event" rel="del" itemid="1762654" itemtype="other" href="#">删除</a>
+	</td>
+</tr>
+
+<tr>
+	<td>职业技能</td>
+	<td>
+		<div class="break " style="width: 330px;">在校期间，我系统的学习了计算机...</div>
+	</td>
+	<td class="padding">
+		<a class="edit t-color J_event" itemid="1762669" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+		<a class="del t-color J_event" rel="del" itemid="1762669" itemtype="other" href="#">删除</a>
+	</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="item-section">
+<div class="mask-area">
+<h3>
+<a maxnum="5" rel="add" itemtype="affix" class="add-btn J_event" href="#">添加</a>
+<span class="b f14">附件/作品</span>
+</h3>
+<div class="item-bd">
+<div class="info-area" id="affix-info">
+<div class="blank-area">
+<p class="g9">你可以上传英文简历、设计的作品等。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- 尾部开始 -->
+<div class="footer">
+
+<p>
+
+<a rel="nofollow" href="/support/about.html">关于本站</a>
+<span>|</span>
+<a rel="nofollow" href="/support/help.html">网站帮助</a>
+<span>|</span>
+
+<a rel="nofollow" href="/support/advertise.html">广告合作</a>
+<span>|</span>
+<a class="cur" href="/link/">友情链接</a>
+<span>|</span>
+<a href="/soft/">网站地图</a>
+<span>|</span>
+<a href="/sitemaps.xml">网站RSS</a>
+</p>
+<p>
+Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+</p>
+</div>
+<!-- 尾部结束 -->
 
 </body>
 </html>

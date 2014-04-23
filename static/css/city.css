@@ -156,22 +156,22 @@ h1, h2, h3, h4, h5, h6 {
 	color: #333;
 }
 h1 {
-	font-size: 20px
+	font-size: 28px
 }
 h2 {
-	font-size: 18px
+	font-size: 25px
 }
 h3 {
-	font-size: 16px
+	font-size: 20px
 }
 h4 {
-	font-size: 15px
+	font-size: 18px
 }
 h5 {
-	font-size: 14px
+	font-size: 15px
 }
 h6 {
-	font-size: 12px
+	font-size: 13px
 }
 ul {
 	list-style: none;
@@ -190,16 +190,11 @@ ul li {
 .w620{width: 620px;overflow: hidden;position: relative;}
 .w480{width: 480px;overflow: hidden;position: relative;}
 .w500{width: 500px;overflow: hidden;}
-.w700{width: 700px;}
-.w270{width: 270px;}
 .mt10{margin-top: 10px;}
 .mt20{margin-top: 20px;}
 .p10{padding: 10px;}
 .tc{text-align: center;}
 .mt55{margin-top: 55px;}
-.ml20{margin-left: 20px;}
-.ml10{margin-left: 10px;}
-.mrl5{margin-right: 5px;margin-left: 5px;}
 .pos-m{position: absolute;top: 50%;left: 50%;}
 /*warp*/
 .warp{width: 100%;}
@@ -415,7 +410,7 @@ width:100%;
 overflow:hidden;
 margin-bottom: 0px;
 font-family: "Microsoft Yahei";
-background: url(../img/repeat.png) repeat-x;
+background: url(../img/repeat.jpg) repeat-x;
 height: 30px;
 border-bottom: 2px solid #00CCFF;
 }
@@ -455,53 +450,6 @@ text-align:justify;
 .l-content a:hover{
 	color: #FF6600;
 }
-
-/*tab*/
-
-ul.u_r {
-width:600px;
-overflow:hidden;
-margin-bottom: 0px;
-background: url(../img/repeat.png);
-height: 38px;
-border-bottom: 2px solid #ffcc33;
-}
-
-ul.u_r li {
-color: #333;
-cursor: pointer;
-display: block;
-float: left;
-font-size: 16px;
-height: 38px;
-line-height: 38px;
-list-style-type: none;
-text-align: center;
-width: 125px;
-background: none;
-}
-ul.u_r .current{
-background: #ffcc33;
-color: #fff;
-}
-
-.reg-w{
-	line-height: 30px;
-}
-a.reg-b{
-	display: inline-block;
-	height: 30px;
-	width: 100px;
-	background:#CC9933;
-	line-height: 30px;
-	color: #fff;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	*vertical-align: middle;
-}
-a.reg-b:hover{
-	background: #F2B94D;
-}
 /*silder*/
 .flexslider { position: relative; height: 450px; overflow: hidden; background: url(../img/loading.gif) 50% no-repeat; width: 620px;margin-top: 45px;}
 .slides { position: relative; z-index: 1;}
@@ -513,7 +461,7 @@ a.reg-b:hover{
 
 /*area*/
 .area-w{
-	 background: url(../img/repeat.png) repeat-x 0 -45px;
+	 background: url(../img/repeat.jpg) repeat-x 0 -45px;
     z-index: 10;
     height: 180px;
     border-bottom: 1px solid #eee;
@@ -842,49 +790,3 @@ p#back-to-top a span{
       background:#fe8605 url(../img/top.png) no-repeat center center;
 }
 
-/**/
-
-.text-muted {
-  color: #999999;
-}
-
-.text-primary {
-  color: #428bca;
-}
-
-.text-primary:hover {
-  color: #3071a9;
-}
-
-.text-warning {
-  color: #8a6d3b;
-}
-
-.text-warning:hover {
-  color: #66512c;
-}
-
-.text-danger {
-  color: #a94442;
-}
-
-.text-danger:hover {
-  color: #843534;
-}
-
-.text-success {
-  color: #3c763d;
-}
-
-.text-success:hover {
-  color: #2b542c;
-}
-
-.text-info {
-  color: #31708f;
-}
-
-.text-info:hover {
-  color: #245269;
-  
-}
