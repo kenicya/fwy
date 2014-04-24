@@ -1,0 +1,199 @@
+<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=gb2312" />
+	<title>服务业人才网</title>
+	<meta name="keywords" content="服务业人才网" />
+	<meta name="description" content="服务业人才网" />
+	<link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../static/css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../static/css/user.css" type="text/css" />
+	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../static/js/tytabs.jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$("#tabsholder").tytabs({
+							prefixtabs:"tab",
+							prefixcontent:"content",
+							 classcontent:"tabscontent",
+							tabinit:"1",
+							fadespeed:"fast"
+							});
+
+});
+</script>
+</head>
+<body class="u_bg">
+	<div class="u_top_w">
+		<div class="u_top">
+			<div class="logo">
+				<a href="#">
+					<img src="../static/img/user/logo.png" alt="服务业人才网"></a>
+			</div>
+			<div class="fl ad">
+				<img src="../static/img/user/ad1.png" alt=""></div>
+		</div>
+	</div>
+	<div class="u_wrap">
+		<div class="row">
+			<div class="u_main clear u_r_bg">
+				<div class="w700 fl">
+					<h1 class="u_tit">用户注册</h1>
+					<div id="tabsholder" class="mt20 ml20">
+						<ul class="tabs u_r">
+							<li id="tab1" class="current">邮箱注册</li>
+							<li id="tab2">手机注册</li>
+
+						</ul>
+						<div class="contents marginbot">
+
+							<div id="content1" class="tabscontent">
+								<form id="register" method="POST" action="">
+									<div class="input_w">
+
+										<input type="text" maxlength="50" placeholder="邮箱地址" class="l_input" name="email" id="J_loginName" autocomplete="off" > <em class="validation_icon"></em>
+										<div class="u_tips"> <i class="u_tips_i"></i> <i class="u_tips_s"></i>
+											请输入您的邮箱地址
+										</div>
+									</div>
+									<div class="input_w">
+
+										<input type="password" placeholder="密码" maxlength="12" class="l_input" name="password"> <em class="validation_icon"></em>
+										<div class="u_tips">
+											<i class="u_tips_i"></i>
+											<i class="u_tips_s"></i>
+											密码长度为6-12个字符
+										</div>
+									</div>
+									<div class="input_w">
+										<input type="password" placeholder="确认密码" maxlength="12" class="l_input" name="password">
+										<em class="validation_icon"></em>
+										<div class="u_wtips">
+											<i class="u_tips_i"></i>
+											<i class="u_tips_s"></i>
+											两次输入的密码不一致
+										</div>
+									</div>
+									<p class="u_accept">
+
+										<input type="checkbox" id="accept" class="vm" value="1" checked="true">
+										<label for="accept" class="vm">
+											我已阅读并同意
+											<a href="">《服务业人才网用户协议》</a>
+										</label>
+
+									</p>
+									<div class="btn_box">
+										<button class="l_submit" type="button">立即注册</button>
+									</div>
+								</form>
+
+							</div>
+							<div id="content2" class="tabscontent">
+								<form id="login" method="POST" action="">
+									<div class="input_w">
+										<input type="text" maxlength="50" placeholder="手机号码" class="l_input" name="email" id="J_loginName" autocomplete="off" >
+										<em class="validation_icon"></em>
+										<div class="u_wtips">
+											<i class="u_tips_i"></i>
+											<i class="u_tips_s"></i>
+											请输入您的邮箱地址
+										</div>
+									</div>
+									<div class="input_w">
+										<a href="#" class="u_getnum">获取手机验证码</a>
+									</div>
+									<div class="input_w">
+										<input type="text" maxlength="50" placeholder="手机验证码" class="l_input" name="email" id="J_loginName" autocomplete="off" >
+										<em class="validation_icon"></em>
+										<div class="u_wtips">
+											<i class="u_tips_i"></i>
+											<i class="u_tips_s"></i>
+											请输入您的手机验证码
+										</div>
+									</div>
+									<div class="input_w">
+
+										<input type="password" placeholder="密码" maxlength="12" class="l_input" name="password">
+										<em class="validation_icon"></em>
+										<div class="u_tips">
+											<i class="u_tips_i"></i>
+											<i class="u_tips_s"></i>
+											密码长度为6-12个字符
+										</div>
+									</div>
+									<div class="input_w">
+										<input type="password" placeholder="确认密码" maxlength="12" class="l_input" name="password">
+										<em class="validation_icon"></em>
+										<div class="u_tips">
+											<i class="u_tips_i"></i>
+											<i class="u_tips_s"></i>
+											两次输入的密码不一致
+										</div>
+									</div>
+									<p class="u_accept">
+
+										<input type="checkbox" id="accept" class="vm" value="1" checked="true">
+										<label for="accept" class="vm">
+											我已阅读并同意
+											<a href="">《服务业人才网用户协议》</a>
+										</label>
+
+									</p>
+									<div class="btn_box">
+										<button class="l_submit" type="button">立即注册</button>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="fr w270">
+					<div class="u_info">
+						<h2 class="tc">
+							您已经是会员，请直接
+							<a href="#" class="ml10">登录</a>
+						</h2>
+						<ul>
+							<li>
+								<i></i>
+								专业的简历模板，让你脱颖而出
+							</li>
+							<li>
+								<i></i>
+								成为服务业人才网用户，让更多大咖企业关注你
+							</li>
+							<li>
+								<i></i>
+								来这里让就业问题不再成为问题
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="u_footer">
+				 <p>
+					<a rel="nofollow" href="/support/about.html">关于本站</a>
+					<span>|</span>
+					<a rel="nofollow" href="/support/help.html">网站帮助</a>
+					<span>|</span>
+
+					<a rel="nofollow" href="/support/advertise.html">广告合作</a>
+					<span>|</span>
+					<a class="cur" href="/link/">友情链接</a>
+					<span>|</span>
+					<a href="/soft/">网站地图</a>
+					<span>|</span>
+					<a href="/sitemaps.xml">网站RSS</a>
+				</p>
+				<p>
+					Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+				</p>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
