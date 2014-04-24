@@ -892,3 +892,6 @@ p#back-to-top a span{
   color: #245269;
 
 }
+.box-sha{
+	box-shadow: 1px 1px 6px 0px #ddd;
+}

@@ -1,0 +1,332 @@
+<!Doctype html>
+<html>
+<head>
+   <meta http-equiv="Content-type" content="text/html; charset=gb2312" />
+   <title>服务业人才网</title>
+   <meta name="keywords" content="服务业人才网" />
+   <meta name="description" content="服务业人才网" />
+   <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
+   <link rel="stylesheet" href="../static/css/common.css" type="text/css" />
+   <link rel="stylesheet" href="../static/css/user.css" type="text/css" />
+   <script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
+   <script type="text/javascript">
+  $(document).ready(function(){
+   $('.quick_menu li').mousemove(function(){
+       $(this).find('.quick_menu_box').slideDown();//可以设置切换时间
+       $(this).find('a').addClass("active");
+       $(this).find('i').addClass("active");
+     });
+     $('.quick_menu li').mouseleave(function(){
+       
+     $(this).find('.quick_menu_box').slideUp("fast");
+     $(this).find('i').removeClass("active");
+     $(this).find('a').removeClass("active");
+     }); 
+
+      //Top
+    <!--[if !IE 6]><!-->
+    $("#back-to-top").hide();  
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>100){
+      $("#back-to-top").fadeIn(600);
+      }
+      else
+      {
+      $("#back-to-top").fadeOut(600);
+      }
+      });
+      //返回顶部
+      $("#back-to-top").click(function(){
+      $('body,html').animate({scrollTop:0},1000);
+      return false;
+      });
+      <!--<![endif]-->
+
+      $('#add-btn').click(function(){
+         $('.btn-wrap').slideUp('fast');
+         $('#letter-form').slideDown('fast');
+      });
+      $('#k_initCancelBtn').click(function(){
+          $('#letter-form').slideUp('fast');
+         $('.btn-wrap').slideDown('fast');
+      });
+});
+  </script>
+</head>
+<body>
+   <div class="wrap">
+      <!-- 头部start -->
+      <div class="header-w">
+         <div class="header">
+            <div class="logo">
+               <a href="#">
+                  <img src="../static/img/logo.png" alt=""></a>
+            </div>
+            <div class="quick_menu">
+               <ul>
+                  <li>
+                     <a href="#" title="账号设置" id="link_setting">
+                        <img id="icon_face"src="../static/img/user/face.gif" alt=""></a>
+                     <div class="quick_menu_box">
+                        <h2>账户设置</h2>
+                        <div class="quick_menu_con">
+                           <table class="p_info">
+                              <tbody>
+                                 <tr>
+                                    <td class="data-icon">
+                                       <img class="p_face" src="http://gm0.lietou-static.com/user/photo/minix/default_c_1.gif?0.6037496654935514"></td>
+                                    <td>龙华</td>
+                                    <td class="data-menu">
+                                       <a href="http://www.liepin.com/user/logout/">退出</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon"> <i class="icon icon-settings-profile"></i>
+                                    </td>
+                                    <td>账号信息</td>
+                                    <td class="data-menu">
+                                       <a href="http://c.liepin.com/profile/basic/">修改</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon"> <i class="icon icon-settings-password"></i>
+                                    </td>
+                                    <td>密码修改</td>
+                                    <td class="data-menu">
+                                       <a href="http://c.liepin.com/profile/modifypwd/">修改</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon">
+                                       <i class="icon icon-settings-privacy"></i>
+                                    </td>
+                                    <td>隐私设置</td>
+                                    <td class="data-menu">
+                                       <a href="http://c.liepin.com/profile/getsecret/">修改</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon">
+                                       <i class="icon icon-settings-help"></i>
+                                    </td>
+                                    <td>帮助中心</td>
+                                    <td class="data-menu">
+                                       <a href="http://www.liepin.com/help/">获得帮助</a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </li>
+                  <li >
+                     <a href="#" title="消息" id="link_msg">
+                        <i id="icon_msg"></i>
+                     </a>
+                     <div class="quick_menu_box">
+                        <h2>消息</h2>
+                        <div class="quick_menu_con">
+                           <table class="p_msg">
+                              <tbody>
+                                 <tr>
+                                    <td> <strong class="text-warning mrl5">3</strong>
+                                       条系统消息
+                                    </td>
+                                    <td class="data-menu">
+                                       <a href="http://www.liepin.com/help/">获得帮助</a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="nav-w">
+         <div class="row">
+            <ul class="nav">
+               <li class="active">
+                  <a href="">首页</a>
+               </li>
+               <li>
+                  <a href="">找职位</a>
+               </li>
+               <li>
+                  <a href="">找企业</a>
+               </li>
+               <li>
+                  <a href="">简历管理</a>
+               </li>
+               <li class="b-r">
+                  <a href="">个人中心</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- 头部end -->
+      <div class="resume_bg">
+         <div class="resume">
+            <div id="content">
+               <div class="nav2-box">
+                  <ul class="nav2">
+                      <li>
+                        <a  class="active" href="/resume/index">
+                           <span>我的简历</span>
+                        </a>
+                     </li>                 
+                     <li>
+                        <a href="/jobapply/feedback">
+                           <span>我的投递反馈</span>
+                        </a>
+                     </li>
+                     
+                     <li>
+                        <a href="/intention/index">
+                           <span>我的求职意愿</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+          
+              <!-- 反馈列表 -->
+              <div style="" id="jobdiv" class="dj-main feedback-main">
+                 <div class="feedback-head clearfix">
+                    <form action="/jobapply/feedback" method="post" id="searchpane-form" name="apply">
+                       <input type="hidden" name="jid" value="">              
+                       <div class="screen-bar">
+                          <input type="text" value="" name="keyWords" class="text J_keyword g9" id="search-text">              
+                          <div class="djBeautySelect select-input" rel="J_email" style="z-index: 10;">
+                             <p class="bs-p-select" classselect="bs-p-select" classover="bs-p-over" title="职位名称" hastitle="true">
+                                <span></span>
+                                职位名称
+                             </p>
+                             <ul style="height: 52px; display: block;">
+                                <li title="企业名称" rel="1" class="" typeclass="" style="">企业名称</li>
+                                <li title="职位名称" rel="0" class="bs-select" typeclass="">职位名称</li>
+                             </ul>
+                          </div>
+                          <select name="scope" class="J_select" id="J_email" style="display: none;">
+                             <option class="" value="1">企业名称</option>
+                             <option selected="selected" value="0">职位名称</option>
+                          </select>
+                          <a class="search-btn" href="#">搜索</a>
+                       </div>
+                       <input type="hidden" name="_CSRFToken" value="ZWkE5-G3qXkiR88NOs5cKCU0o-kYA0epQ0hBn_k*"></form>
+                    <script type="text/javascript">
+                       $(function(){
+                           $('.J_select').beautySelect({'class':'select-input'});
+                           $('.J_keyword').focus(function(){
+                               if($(this).val() == '我要寻找'){
+                                   $(this).removeClass('g9').val('')
+                               }
+                           }).blur(function(){
+                                       if($(this).val() == ''){
+                                           $(this).addClass('g9').val('我要寻找')
+                                       }
+                                   });
+
+                           $('.search-btn').click(function(){
+                               if($('.J_keyword').val() == '我要寻找'){
+                                   $('.J_keyword').val('');
+                               }
+                               $('#searchpane-form').submit();
+                           })
+                           $('.feedback-list tr').live('mouseenter', function(){
+                               $(this).addClass('hover')
+                           }).live('mouseleave', function(){
+                               $(this).removeClass('hover')
+                           })
+                       });
+                       $('#search-text').blurHint('我要寻找');
+                   </script>
+                    <span class="highlight">1</span>
+                    条反馈
+                    <span class="g9">（仅显示90天内的投递反馈）</span>
+                 </div>
+                 <div class="feedback-list">
+                    <input type="hidden" value="/jobapply/feedbackfrag" id="J_feedbackPage">              
+                    <input type="hidden" value="/jobapply/referrallistcheck" id="J_feedbackStatus">              
+                    <table>
+                       <colgroup>              
+                       <col width="230">              
+                       <col width="458">              
+                       <col width="80">              
+                       <col width="80">              
+                       <col width="30"></colgroup>
+                    <thead>
+                       <tr class="">
+                          <td>职位名称</td>
+                          <td>投递反馈</td>
+                          <td>申请者分析</td>
+                          <td>更新时间</td>
+                          <td>&nbsp;</td>
+                       </tr>
+                    </thead>
+                    <tbody id="J_feedbackDom">
+
+                       <tr send="1" resume-apply-id="56122314" applyjid="86d727d7-828b-4656-ae67-d78c6d3f7bf7" applyid="43641826" style="visibility: visible;" class="">
+                          <td class="name-td">
+                             <p class="tit">
+                                <a title="web前端工程师" class="title" id="linkc86d727d7-828b-4656-ae67-d78c6d3f7bf7" target="_blank" href="http://job.dajie.com/86d727d7-828b-4656-ae67-d78c6d3f7bf7.html">web前端工程师</a>
+                             </p>
+                             <p> <em>广州周末网络科技有限公司</em> <em class="g9">|</em>
+                                <em>广州</em>
+                             </p>
+                          </td>
+                          <td>
+                             <ul class="state-tag">
+                                <li class="is_last current">
+                                   <span class="state2">已投递</span>
+                                </li>
+                             </ul>
+                          </td>
+                          <td class="f-invite">
+                             <a title="点击查看申请者分析" target="_blank" href="http://job.dajie.com/86d727d7-828b-4656-ae67-d78c6d3f7bf7.html#analysis" class="f-invite-ass">申请者分析</a>
+                          </td>
+                          <td class="time-td">04-24 17:10</td>
+                          <td>
+                             <a title="删除该条记录" href="#" class="remove">a</a>
+                          </td>
+                       </tr>
+
+                    </tbody>
+                 </table>
+                 <div class="feedback-loading" style="display: none;"></div>
+              </div>
+              <p class="p-for-edu-ad">
+                 <a target="_blank" href="http://edu.dajie.com/source/zt/ws.html">决战网申系列课程助你求职成功</a>
+              </p>
+              </div>
+               <!-- 反馈列表end -->
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- 尾部开始 -->
+   <div class="footer">
+      <p>
+         <a rel="nofollow" href="/support/about.html">关于本站</a>
+         <span>|</span>
+         <a rel="nofollow" href="/support/help.html">网站帮助</a>
+         <span>|</span>
+         <a rel="nofollow" href="/support/advertise.html">广告合作</a>
+         <span>|</span>
+         <a class="cur" href="/link/">友情链接</a>
+         <span>|</span>
+         <a href="/soft/">网站地图</a>
+         <span>|</span>
+         <a href="/sitemaps.xml">网站RSS</a>
+      </p>
+      <p>
+         Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+      </p>
+   </div>
+   <!-- 尾部结束 -->
+<div id="top">
+   <p id="back-to-top" style="display: block;"><a href="#top"><span></span></a></p>
+</div>
+</body>
+</html>
