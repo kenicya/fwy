@@ -192,33 +192,32 @@
                </div>
           
               <!-- 反馈列表 -->
-              <div style="" id="jobdiv" class="dj-main feedback-main">
-                 <div class="feedback-head clearfix">
-                    <form action="/jobapply/feedback" method="post" id="searchpane-form" name="apply">
-                       <input type="hidden" name="jid" value="">              
+              <div id="jobdiv" class="box-sha feedback-main">
+                 <div class="feedback-head clear">
+                    <form action="" method="post" id="searchpane-form" name="apply">                            
                        <div class="screen-bar">
-                          <input type="text" value="" name="keyWords" class="text J_keyword g9" id="search-text">              
-                          <div class="djBeautySelect select-input" rel="J_email" style="z-index: 10;">
+                          <input type="text" value="我要寻找" name="keyWords" class="text k_keyword g9" id="search-text">              
+                          <div class="select-input" rel="k_email" style="z-index: 10;">
                              <p class="bs-p-select" classselect="bs-p-select" classover="bs-p-over" title="职位名称" hastitle="true">
                                 <span></span>
                                 职位名称
                              </p>
-                             <ul style="height: 52px; display: block;">
+                             <ul>
                                 <li title="企业名称" rel="1" class="" typeclass="" style="">企业名称</li>
                                 <li title="职位名称" rel="0" class="bs-select" typeclass="">职位名称</li>
                              </ul>
                           </div>
-                          <select name="scope" class="J_select" id="J_email" style="display: none;">
+                          <select name="scope" class="k_select" id="k_email" style="display: none;">
                              <option class="" value="1">企业名称</option>
                              <option selected="selected" value="0">职位名称</option>
                           </select>
                           <a class="search-btn" href="#">搜索</a>
                        </div>
-                       <input type="hidden" name="_CSRFToken" value="ZWkE5-G3qXkiR88NOs5cKCU0o-kYA0epQ0hBn_k*"></form>
+                       </form>
                     <script type="text/javascript">
                        $(function(){
-                           $('.J_select').beautySelect({'class':'select-input'});
-                           $('.J_keyword').focus(function(){
+                          
+                           $('.k_keyword').focus(function(){
                                if($(this).val() == '我要寻找'){
                                    $(this).removeClass('g9').val('')
                                }
@@ -229,8 +228,8 @@
                                    });
 
                            $('.search-btn').click(function(){
-                               if($('.J_keyword').val() == '我要寻找'){
-                                   $('.J_keyword').val('');
+                               if($('.k_keyword').val() == '我要寻找'){
+                                   $('.k_keyword').val('');
                                }
                                $('#searchpane-form').submit();
                            })
@@ -240,15 +239,15 @@
                                $(this).removeClass('hover')
                            })
                        });
-                       $('#search-text').blurHint('我要寻找');
+                       
                    </script>
                     <span class="highlight">1</span>
                     条反馈
                     <span class="g9">（仅显示90天内的投递反馈）</span>
                  </div>
                  <div class="feedback-list">
-                    <input type="hidden" value="/jobapply/feedbackfrag" id="J_feedbackPage">              
-                    <input type="hidden" value="/jobapply/referrallistcheck" id="J_feedbackStatus">              
+                    <!-- <input type="hidden" value="/jobapply/feedbackfrag" id="k_feedbackPage">              
+                    <input type="hidden" value="/jobapply/referrallistcheck" id="k_feedbackStatus">     -->          
                     <table>
                        <colgroup>              
                        <col width="230">              
@@ -257,23 +256,22 @@
                        <col width="80">              
                        <col width="30"></colgroup>
                     <thead>
-                       <tr class="">
+                       <tr>
                           <td>职位名称</td>
                           <td>投递反馈</td>
-                          <td>申请者分析</td>
                           <td>更新时间</td>
                           <td>&nbsp;</td>
                        </tr>
                     </thead>
-                    <tbody id="J_feedbackDom">
+                    <tbody id="k_feedbackDom">
 
-                       <tr send="1" resume-apply-id="56122314" applyjid="86d727d7-828b-4656-ae67-d78c6d3f7bf7" applyid="43641826" style="visibility: visible;" class="">
+                       <tr>
                           <td class="name-td">
                              <p class="tit">
-                                <a title="web前端工程师" class="title" id="linkc86d727d7-828b-4656-ae67-d78c6d3f7bf7" target="_blank" href="http://job.dajie.com/86d727d7-828b-4656-ae67-d78c6d3f7bf7.html">web前端工程师</a>
+                                <a title="web前端工程师" class="title" target="_blank" href="#">web前端工程师</a>
                              </p>
-                             <p> <em>广州周末网络科技有限公司</em> <em class="g9">|</em>
-                                <em>广州</em>
+                             <p> <span>广州周末网络科技有限公司</span> <span class="g9">|</span>
+                                <span>广州</span>
                              </p>
                           </td>
                           <td>
@@ -283,22 +281,36 @@
                                 </li>
                              </ul>
                           </td>
-                          <td class="f-invite">
-                             <a title="点击查看申请者分析" target="_blank" href="http://job.dajie.com/86d727d7-828b-4656-ae67-d78c6d3f7bf7.html#analysis" class="f-invite-ass">申请者分析</a>
+                          <td class="time-td">04-24 17:10</td>
+                          <td>
+                             <a title="删除该条记录" href="#" class="remove">a</a>
+                          </td>
+                       </tr>
+                         <tr>
+                          <td class="name-td">
+                             <p class="tit">
+                                <a title="web前端工程师" class="title" target="_blank" href="#">web前端工程师</a>
+                             </p>
+                             <p> <span>广州周末网络科技有限公司</span> <span class="g9">|</span>
+                                <span>广州</span>
+                             </p>
+                          </td>
+                          <td>
+                             <ul class="state-tag">
+                                <li class="is_last">
+                                   <span class="state1">已投递</span>
+                                </li>
+                             </ul>
                           </td>
                           <td class="time-td">04-24 17:10</td>
                           <td>
                              <a title="删除该条记录" href="#" class="remove">a</a>
                           </td>
                        </tr>
-
                     </tbody>
                  </table>
                  <div class="feedback-loading" style="display: none;"></div>
               </div>
-              <p class="p-for-edu-ad">
-                 <a target="_blank" href="http://edu.dajie.com/source/zt/ws.html">决战网申系列课程助你求职成功</a>
-              </p>
               </div>
                <!-- 反馈列表end -->
             </div>

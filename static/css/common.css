@@ -893,5 +893,5 @@ p#back-to-top a span{
 
 }
 .box-sha{
-	box-shadow: 1px 1px 6px 0px #ddd;
+	 box-shadow: 0 1px 4px 1px #DDDDDD
 }
