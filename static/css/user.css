@@ -632,7 +632,7 @@ table.f14 td, .f14 {
 }
 
 
-/*preview resume*/
+/*---------------------------preview resume-----------------------------*/
 .g-yahei {
     font-family: "MicroSoft YaHei","SimHei";
 }
@@ -843,7 +843,7 @@ body {
 }
 
 }
-/*求职信*/
+/*-----------------------------------------求职信-------------------------------------------------*/
 
 .add-letter{
 	background: url(../img/user/letter-bg.jpg) no-repeat center 0;
@@ -1113,26 +1113,196 @@ table {
     color: #666666;
     padding: 5px;
 }
-.feedback-blank {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/blank.jpg") no-repeat er 0;
+a.remove {
+    background: url(../img/input.png) no-repeat 0 -34px;
+    display: block;
+    height: 16px;
+    text-indent: -9999em;
+    width: 16px;
+}
+a.remove:hover{
+    background: url(../img/input.png) no-repeat 0 -17px;
+}
+
+/*---------------------------------求职意愿----------------------------------*/
+.intention-main {
+    border: 1px solid #E5E5E5;
+    padding: 20px 0;
+}
+.intention-content {
+    margin: auto;
+    width: 635px;
+}
+.intention-content .tips-normal {
+    background: none repeat scroll 0 0 #FFFCD9;
+    padding: 15px 0 15px 140px;
+}
+.intention-content .tips-normal .inner {
+    background: url("http://9.assets.dajieimg.com/images/icons/alert32.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding-left: 42px;
+}
+.intention-content .tips-normal .inner-border {
+    border-left: 1px solid #E5E5E5;
+    padding-left: 10px;
+}
+.intention-content .tips-normal h1 {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.intention-content .tips-normal p {
+    color: #333333;
+    font-size: 12px;
+    padding-top: 4px;
+}
+.intention-content .text {
+    width: 250px;
+}
+.intention-content select {
+    width: 260px;
+}
+.internship-content {
+    padding-top: 20px;
+}
+.internship-content h3 {
+    padding-bottom: 15px;
+}
+.blank-content {
+    background: url("http://3.assets.dajieimg.com/up/position-invitation/images/blank-bg.jpg") no-repeat scroll 163px 45px rgba(0, 0, 0, 0);
+    height: 170px;
+    padding: 230px 0 0 390px;
+}
+.result-tips {
+    background-color: #F3FFE6;
+    border: 1px solid #9BCD81;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    padding: 4px 10px;
+    vertical-align: middle;
+}
+.result-tips em {
+    height: 14px;
+    line-height: 12px;
+    padding-top: 2px;
+    vertical-align: middle;
+}
+.result-tips em .color {
+    color: #E65C17;
+}
+.th-left th {
+    padding-right: 0;
+}
+.th-left td {
+    padding-left: 10px;
+}
+.intention-hd {
+    height: 66px;
+    text-align: center;
+}
+.intention-hd h1 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.intention-hd p {
+    color: #666666;
+}
+.filter-bar {
+    background: url(../img/user/line2.jpg) no-repeat 0 bottom;
+    height: 21px;
+    position: relative;
+}
+.filter-bar span {
+    background: url("http://8.assets.dajieimg.com/up/recommend/images/arrow-bottom.gif") no-repeat scroll right 7px #FFFFFF;
+    cursor: pointer;
+    padding: 0 25px 0 10px;
+    position: absolute;
+    right: 30px;
+}
+.filter-list {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    position: absolute;
+    width: 130px;
+    z-index: 10;
+}
+.filter-list li {
+    height: 27px;
+    line-height: 27px;
+}
+.filter-list li a {
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    display: block;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 10px;
+}
+.filter-list li a:hover {
+    background: none repeat scroll 0 0 #F1F1F1;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    text-decoration: none;
+}
+.tip-bar {
+    color: #FF6600;
+    padding-left: 120px;
+}
+.item-box {
+    margin-top: 25px;
+}
+.item-box td p input.checkbox {
+    vertical-align: middle;
+}
+.item-box td p label.checkbox {
+    vertical-align: middle;
+}
+
+.internship {
+    background: url("http://2.assets.dajieimg.com/up/recommend/images/sx.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding-top: 30px;
+}
+.dialog-box {
+    height: 218px;
+    position: absolute;
+    width: 469px;
+    z-index: 99991;
+}
+.internship-dialog {
+    background: url("http://2.assets.dajieimg.com/up/recommend/images/dialog-bg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.internship-dialog .tip-text {
+    color: #666666;
+    margin: 90px 0 0 100px;
+}
+.internship-dialog .btn-box {
+    margin: 30px 0 0 100px;
+}
+.fulltime-dialog {
+    background: url("http://2.assets.dajieimg.com/up/recommend/images/dialog-bg.png") no-repeat scroll 0 -218px rgba(0, 0, 0, 0);
+}
+.fulltime-dialog .tip-text {
     color: #666666;
     font-size: 14px;
-    margin: 75px auto 90px;
-    padding-top: 125px;
-    text-align: center;
-    width: 180px;
+    margin: 54px 0 0 100px;
 }
-.feedbackSearch-blank {
-    background: url("http://1.assets.dajieimg.com/up/resume/images/blank2.jpg") no-repeat er 0;
-    color: #666666;
+.fulltime-dialog .btn-box {
+    margin: 68px 0 0 100px;
+}
+.guid-tip {
+    background: url("http://6.assets.dajieimg.com/up/recommend/images/guide-tip.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 60px;
+    padding: 50px 20px 30px;
+    position: absolute;
+    text-align: center;
+    width: 270px;
+    z-index: 99991;
+}
+.guid-tip p {
     font-size: 14px;
-    margin: 75px auto 90px;
-    padding-top: 100px;
-    text-align: center;
-    width: 190px;
-}
-.feedback-loading {
-    background: url("http://0.assets.dajieimg.com/images/chrome/loading_black_24.gif") no-repeat er center;
-    height: 48px;
-    width: 100%;
+    padding-bottom: 20px;
 }

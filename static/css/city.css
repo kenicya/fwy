@@ -654,7 +654,7 @@ text-align:justify;
 .prom_list dd,.prom_list dl{
 	margin: 0;
 }
-/*ÕÚÕÖ²ã*/
+/*脮脷脮脰虏茫*/
 #fullbg{
 background-color: #000;
 display:none;
@@ -756,19 +756,19 @@ border-radius: 4px;
 }
 
 
-/*���ض���*/
+/*返回顶部*/
 p#back-to-top{
       position:fixed;
       bottom:100px;
-      right:80px;
+      right:280px;
 }
 p#back-to-top a{
       text-align:center;
       text-decoration:none;
       color:#d1d1d1;
       display:block;
-      width:63px;
-
+      width:40px;
+	outline: none;
       -moz-transition:color 1s;
       -webkit-transition:color 1s;
       -o-transition:color 1s;
@@ -779,9 +779,10 @@ p#back-to-top a:hover{
 p#back-to-top a span{
       background:#fea405 url(../img/top.png) no-repeat center center;
       display:block;
-      height:63px;
-      width:63px;
+      height:40px;
+      width:40px;
       margin-bottom:5px;
+      border: 1px solid #ddd;
       -moz-transition:background 1s;
       -webkit-transition:background 1s;
       -o-transition:background 1s;
