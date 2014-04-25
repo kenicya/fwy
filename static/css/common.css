@@ -813,41 +813,39 @@ border-radius: 4px;
 
 
 /*返回顶部*/
-p#back-to-top{
-      position:fixed;
-      bottom:100px;
-      right:80px;
+#top{
+  position:fixed;
+  bottom:100px;
+  right:280px;
 }
-p#back-to-top a{
-      text-align:center;
-      text-decoration:none;
-      color:#d1d1d1;
-      display:block;
-      width:63px;
-
-      -moz-transition:color 1s;
-      -webkit-transition:color 1s;
-      -o-transition:color 1s;
+#back-to-top,#feed-back{
+	margin: 0;
 }
-p#back-to-top a:hover{
-      color:#979797;
+#back-to-top a,#feed-back a{
+	text-align:center;
+	text-decoration:none;
+	display:block;
+	width:40px;
+	height: 40px; background:url(../img/feedback.png) no-repeat center center;
+	outline: none;
+	text-indent: -999em;
+	border: 1px solid #ddd;
 }
-p#back-to-top a span{
-      background:#fea405 url(../img/top.png) no-repeat center center;
-      display:block;
-      height:63px;
-      width:63px;
-      margin-bottom:5px;
-      -moz-transition:background 1s;
-      -webkit-transition:background 1s;
-      -o-transition:background 1s;
+#back-to-top a{
+	background: url(../img/top.png) no-repeat center;
+	border-bottom: none;
 }
-#back-to-top a:hover span{
-      background:#fe8605 url(../img/top.png) no-repeat center center;
+#back-to-top a:hover,#feed-back a:hover{
+      background-image: none;
+      background-color: #999;
+      color: #fff;
+      text-indent: 0em;
+      border: 1px solid #777;
+      letter-spacing: 2px;
+      line-height: 20px;
 }
-
-/**/
-
+#back-to-top a:hover{border-bottom: none;}
+/*字体颜色*/
 .text-muted {
   color: #999999;
 }
@@ -893,5 +891,5 @@ p#back-to-top a span{
 
 }
 .box-sha{
-	box-shadow: 1px 1px 6px 0px #ddd;
+	 box-shadow: 0 1px 4px 1px #DDDDDD
 }

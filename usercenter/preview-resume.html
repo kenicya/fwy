@@ -17,11 +17,11 @@
     $("#back-to-top").hide();  
     $(window).scroll(function(){
       if ($(window).scrollTop()>100){
-      $("#back-to-top").fadeIn(600);
+      $("#back-to-top").fadeIn('fast');
       }
       else
       {
-      $("#back-to-top").fadeOut(600);
+      $("#back-to-top").fadeOut('fast');
       }
       });
       //返回顶部
@@ -402,7 +402,7 @@
       </div>
    </div>
    <div style="display:none" id="exportDialog"></div>
-   <div id="interactive-box-exportDialog" class="dialog" style="min-width: 420px; z-index: 99999; left: 621px; top: 327px; display: none;">
+ <!--   <div id="interactive-box-exportDialog" class="dialog" style="min-width: 420px; z-index: 99999; left: 621px; top: 327px; display: none;">
       <iframe id="interactive-iframe" style="height: 246px; left: -7px; opacity: 0; position: absolute; top: -7px; width: 420px; z-index: -1;" src="about:blank"></iframe>
       <div style="position:relative;">
          <div class="body">
@@ -443,11 +443,8 @@
             </div>
          </div>
       </div>
-   </div>
+   </div> -->
 
-   <div id="G-wg-rtlink" class="G-wg-rtlink">
-      <a class="G-wg-gotop" id="J-wg-gotop" href="javascript:void(0);" style="visibility: visible; display: none;">回顶部</a>
-      <a title="意见反馈" class="G-wg-gofaq" id="J-wg-gofaq" href="http://www.dajie.com/account/feedback" target="_blank">意见反馈</a>
    <div id="top">
       <p id="back-to-top" style="display: block;">
          <a href="#top">
