@@ -199,70 +199,70 @@
                        
                      </div>
                      <script type="text/javascript">
-                $(function () {
-                    var $filterList = $('.J_filterList');
-                    $.delay({
-                        speedIn:200,
-                        speedOut:200,
-                        $dom:[$('.J_filterBtn'), $filterList],
-                        enterFun:function () {
-                            var left = $('.J_filterBtn').offset().left + 5,
-                                    top = $('.J_filterBtn').offset().top + 20;
-                            $filterList.css({'left':left + 'px', 'top':top + 'px'}).show();
-                        },
-                        leaveFun:function () {
-                            $filterList.hide()
-                        }
-                    });
+                         $(function () {
+                             var $filterList = $('.J_filterList');
+                             $.delay({
+                                 speedIn:200,
+                                 speedOut:200,
+                                 $dom:[$('.J_filterBtn'), $filterList],
+                                 enterFun:function () {
+                                     var left = $('.J_filterBtn').offset().left + 5,
+                                             top = $('.J_filterBtn').offset().top + 20;
+                                     $filterList.css({'left':left + 'px', 'top':top + 'px'}).show();
+                                 },
+                                 leaveFun:function () {
+                                     $filterList.hide()
+                                 }
+                             });
 
-                    $('.J_filterList a').click(function (e) {
-                        var $item = $(this).attr('rel'),
-                                $curl = $('.J_filterBtn').attr('rel');
-                        if($item == $curl){
-                            $filterList.hide();
-                            e.preventDefault();
-                            return false;
-                        }
-                    })
-                })
-            </script>
+                             $('.J_filterList a').click(function (e) {
+                                 var $item = $(this).attr('rel'),
+                                         $curl = $('.J_filterBtn').attr('rel');
+                                 if($item == $curl){
+                                     $filterList.hide();
+                                     e.preventDefault();
+                                     return false;
+                                 }
+                             })
+                         })
+                     </script>
                      <div class="post-form">
                         <form action="/intention/save" method="POST" name="user-intention-form" id="user-intention-form-id">
                            <script type="text/javascript">
-    function regionsInputChange() {
-        var $span = $('#' + this.id.replace('-input', '-checkbox-span')),
-                $p = $('#' + this.id.replace('-input', '-other-p')),
-                $check = $('#' + this.id.replace('-input', '-other')),
-                $hidden = $('#' + this.id.replace('-input', '-other-hidden')),
-                $record = $('#' + this.id.replace('-input', '-record'));
-        if ($('#' + this.id.replace('-input', '-hidden')).val().length == 0) {
-            $span.hide();
-            $p.hide();
-            $check.attr('checked', false);
-            $hidden.val('1');
-            $record.val('0');
-        } else {
-            $span.show();
-            if ($record.val() == '0') {
-                $check.attr('checked', true);
-                $hidden.val('1');
-                $p.show();
-            }
-            $record.val('1');
-        }
-    }
-    function checkChange($this, $hidden) {
-        if ($($this).attr('checked')) {
-            $hidden.val('1')
-        } else {
-            $hidden.val('0')
-        }
-    }
-</script>
+                               function regionsInputChange() {
+                                   var $span = $('#' + this.id.replace('-input', '-checkbox-span')),
+                                           $p = $('#' + this.id.replace('-input', '-other-p')),
+                                           $check = $('#' + this.id.replace('-input', '-other')),
+                                           $hidden = $('#' + this.id.replace('-input', '-other-hidden')),
+                                           $record = $('#' + this.id.replace('-input', '-record'));
+                                   if ($('#' + this.id.replace('-input', '-hidden')).val().length == 0) {
+                                       $span.hide();
+                                       $p.hide();
+                                       $check.attr('checked', false);
+                                       $hidden.val('1');
+                                       $record.val('0');
+                                   } else {
+                                       $span.show();
+                                       if ($record.val() == '0') {
+                                           $check.attr('checked', true);
+                                           $hidden.val('1');
+                                           $p.show();
+                                       }
+                                       $record.val('1');
+                                   }
+                               }
+                               function checkChange($this, $hidden) {
+                                   if ($($this).attr('checked')) {
+                                       $hidden.val('1')
+                                   } else {
+                                       $hidden.val('0')
+                                   }
+                               }
+                           </script>
                            <div class="item-box full-time">
-                              <table width="100%" class="dj-form-smart th-left">
+                              <table width="100%" class="fwy-form-smart th-left">
                                  <colgroup>
-                                 <col width="113">
+                                 <col width="130">
                                  <col width="*"></colgroup>
                               <tbody>
                                  <tr>
@@ -270,7 +270,7 @@
                                        期望从事职业：
                                     </th>
                                     <td class="input">
-                                       <div id="industry-result" class="selectResult clear dig-selected" style="">
+                                       <div id="industry-result" class="selectResult clear dig-selected">
                                           <a class="ticket" href="javascript:void(0);">
                                              <span class="text">互联网+技术支持</span>
                                              <span class="delete">删除</span>
@@ -279,25 +279,9 @@
                                              <span class="text">IT服务+技术支持</span>
                                              <span class="delete">删除</span>
                                           </a>
-                                       </div>
-                                       <input type="hidden" value="" name="jsonf" id="consider-industry-profession">
-                                       <div class="add-box">
-                                          <input type="text" style="display:none;" id="industry-input" title="IT服务 + 互联网">
-                                          <input type="hidden" value="15,16" name="" reg=".+" class="J_checkInput" id="industry-hidden">
-                                          <a href="javascript:void(0);" id="industry-link" style="display:none;"></a>
-                                          <input type="text" id="profession-input" style="display:none;" title="技术支持">
-                                          <input type="hidden" id="profession-hidden" name="majorIds" value="38">
-                                          <a style="display:none;" id="profession-link" href="javascript:void(0);"></a>
-                                          <div id="industry-button" class="add-button J_addBar add-box-result">
-                                             <span>修改</span>
-                                          </div>
-                                          <p id="profIndJsonOther-p" class="g9">
-                                             <input type="checkbox" checked="checked" id="profIndJsonOther" onclick="checkChange(this,$('#profIndJsonOther-hidden'))" class="checkbox">
-                                             <label for="profIndJsonOther" class="checkbox">也会考虑其他类似职业机会</label>
-                                             <input type="hidden" id="profIndJsonOther-record" value="1">
-                                             <input type="hidden" name="profIndJsonOther" value="1" id="profIndJsonOther-hidden"></p>
-                                       </div>
-                                       <div class="J_Error" style="display:none;">请选择期望从事职业</div>
+                                          <div id="industry-button" class="add-box-result"> 修改</div>  
+                                          
+                                       </div>                                                                              
                                     </td>
                                  </tr>
                                  <tr>
@@ -307,19 +291,14 @@
                                     <td class="input">
                                        <input type="text" value="广州 + 深圳" rel="regions-hidden" blanksubmit="false" id="regions-input" class="select-beauty text g9">
                                        <span id="regions-link" style="display:none">打开</span>
-                                       <input type="hidden" reg="^(\d+\,?){1,5}$" id="regions-hidden" name="city" class="J_checkInput" value="440100,440300">
+                                       <input type="hidden" reg="^(\d+\,?){1,5}$" id="regions-hidden" name="city" class="J_checkInput" value="">
                                        <div class="J_Error" style="display:none;">请选择工作城市，最多5项</div>
-                                       <p id="regions-other-p" class="g9">
-                                          <input type="checkbox" checked="checked" id="regions-other" onclick="checkChange(this,$('#regions-other-hidden'))" class="checkbox">
-                                          <label for="regions-other" class="checkbox">也会考虑去其他城市工作</label>
-                                          <input type="hidden" value="1" id="regions-record">
-                                          <input type="hidden" value="1" name="cityOther" id="regions-other-hidden"></p>
                                     </td>
                                  </tr>
                                  <tr>
                                     <th>
                                        <em>*</em>
-                                       期望全职月薪：
+                                       期望月薪：
                                     </th>
                                     <td class="input">
                                        <select name="salary">
@@ -339,18 +318,10 @@
                                           <option value="137">￥ 50000及以上</option>
                                        </select>
                                        <div class="J_Error" style="display:none;">薪水范围过宽，将会影响职位推广效果。</div>
-                                       <p id="paymentOther-p" class="g9">
+                                       <p id="paymentOther-p" class="g9 m0 f12">
                                           <input type="checkbox" checked="checked" id="paymentOther" onclick="checkChange(this,$('#paymentOther-hidden'))" class="checkbox">
                                           <label for="paymentOther" class="checkbox">显示为面谈</label>
                                           <input type="hidden" name="wageNegotiate" value="1" id="paymentOther-hidden"></p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <th>屏蔽这些职位：</th>
-                                    <td class="input">
-                                       <input type="text" blankvlass="g9" blankvalue="请输入屏蔽关键词" maxlength="50" value="" name="filterKeywords" blanksubmit="true" class="text" reg="^.{0,50}$" id="filter-input">
-                                       <p class="g9">职位名或公司名包含关键词的会被屏蔽，多个关键词用空格分开</p>
-                                       <div class="J_Error" style="display:none;">最多可输入50个字</div>
                                     </td>
                                  </tr>
                               </tbody>
@@ -5011,22 +4982,19 @@
                <input type="hidden" value="3" name="kind">
                <input type="hidden" value="" name="saveIdentity">
                <input type="hidden" name="_CSRFToken" value="ZhhvVXw9I9r33FjiAKjpJaXQWjLP3VLu-WhZcg**"></form>
-            <table width="100%" class="dj-form-smart th-left">
+            <table width="100%" class="fwy-form-smart th-left">
                <colgroup>
                <col width="113">
                <col width="*"></colgroup>
             <tbody>
                <tr>
                   <th></th>
-                  <td class="input" style="padding-top:10px;">
-                     <a stat="9002" id="J_formSubmit" href="##" title="" style="vertical-align:middle;" rel="basic" class="big-fresh formValidateSubmit">
-                        <span>保存</span>
+                  <td class="input">
+                     <a id="k_formSubmit" href="#" title="" class="k-yel-btn">
+                        保存
                      </a>
-                     <span style="display:none;" class="result-tips" name="submit-result-message" id="save">
-                        <em style="display:none;background-position:0 1px;" class="throbber icon">正在保存，请稍候...</em>
-                        <em style="display:none" class="true icon">保存成功！
-                           <a target="_blank" class="vmiddle" href="http://job.dajie.com/index">“你可能感兴趣的职位”</a>
-                           会在60秒内更新</em> 
+                     <span style="" class="result-tips" name="submit-result-message" id="save">
+                        <em style="" class="true">保存成功！会在60秒内更新</em> 
                      </span>
                   </td>
                </tr>

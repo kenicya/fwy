@@ -815,7 +815,7 @@ border-radius: 4px;
 /*·µ»Ø¶¥²¿*/
 #top{
   position:fixed;
-  bottom:100px;
+  bottom:140px;
   right:280px;
 }
 #back-to-top,#feed-back{
@@ -826,13 +826,13 @@ border-radius: 4px;
 	text-decoration:none;
 	display:block;
 	width:40px;
-	height: 40px; background:url(../img/feedback.png) no-repeat center center;
+	height: 40px; background:url(../img/top.png) no-repeat left bottom;
 	outline: none;
 	text-indent: -999em;
 	border: 1px solid #ddd;
 }
 #back-to-top a{
-	background: url(../img/top.png) no-repeat center;
+	background: url(../img/top.png) no-repeat left top;
 	border-bottom: none;
 }
 #back-to-top a:hover,#feed-back a:hover{
@@ -892,4 +892,21 @@ border-radius: 4px;
 }
 .box-sha{
 	 box-shadow: 0 1px 4px 1px #DDDDDD
+}
+.m0{margin-top: 0;margin-bottom: 0;}
+.f12{font-size: 12px;}
+
+/*btn*/
+.k-yel-btn{
+  background: url(../img/repeat.png) repeat-x 0 -278px;
+  border: 1px solid #F09D1F;
+  display: inline-block;
+  padding: 0px 15px;
+  line-height: 30px;
+  height: 30px;
+  color: #333;
+  letter-spacing: 3px;
+}
+.ke-yel-btn:hover{
+	background: url(../img/repeat.png) repeat-x 0 -309px;
 }

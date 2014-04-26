@@ -777,7 +777,7 @@ p#back-to-top a:hover{
       color:#979797;
 }
 p#back-to-top a span{
-      background:#fea405 url(../img/top.png) no-repeat center center;
+      background:#fea405 url(../img/top.png) no-repeat left top;
       display:block;
       height:40px;
       width:40px;

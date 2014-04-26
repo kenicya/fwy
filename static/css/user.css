@@ -927,7 +927,7 @@ body {
 }
 .form-btn .letter-add-btn{
 	background: url(../img/repeat.png) repeat-x 0 -278px;
-	border: 1px solid #F0BC1C;
+	border: 1px solid #F09D1F;
 }
 
 /*投递反馈*/
@@ -1305,4 +1305,185 @@ a.remove:hover{
 .guid-tip p {
     font-size: 14px;
     padding-bottom: 20px;
+}
+/*确定类*/
+.result-tips {
+    background-color: #F3FFE6;
+    border: 1px solid #9BCD81;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    padding: 4px 10px;
+    vertical-align: top;
+}
+.result-tips em {
+    height: 14px;
+    line-height: 8px;
+    padding-top: 2px;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 12px;
+    font-style: normal;
+}
+.result-tips .true{
+    background: url(../img/icon.png) no-repeat 0 -112px;
+    padding-left: 18px;
+
+}
+
+input.select-beauty {
+    background-image: url(../img/select-arrow.gif);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.add-box-result{
+     background: url("../img/edit.png") no-repeat 3px 8px #8EDEFA;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 25px;
+    line-height: 24px;
+    padding: 0 2px 0 16px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 29px;
+}
+.selectResult {
+    border: 1px solid #E5E5E5;
+    padding: 8px;position: relative;
+}
+.dig-selected a {
+    background: url(../img/user/pickpad.gif) no-repeat left top rgba(0, 0, 0, 0);
+    color: #333333;
+    cursor: default;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 4px 2px;
+    padding-left: 8px;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+.dig-selected a:hover .delete{background-position: right bottom;}
+.dig-selected a:hover{
+    background-position: left bottom;
+}
+.intention-content .text {
+    width: 250px;
+}
+.ticket .text{font-size: 12px;display: inline;}
+.dig-selected a {
+    color: #333333;
+    cursor: default;
+    line-height: 18px;
+    white-space: nowrap;
+}
+.dig-selected a .delete {
+    background: url(../img/user/pickpad.gif) no-repeat right top rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin-left: 6px;
+    margin-right: -20px;
+    text-indent: -99999px;
+    width: 20px;
+}
+table.fwy-form-smart {
+    border-collapse: collapse;
+}
+.fwy-form-smart td, .fwy-form-smart th {
+    font-family: 'tahoma','simsun';
+    font-size: 14px;
+    line-height: 30px;
+    padding-bottom: 20px;
+    vertical-align: top;
+}
+.fwy-form-smart th em {
+    color: #FF0000;
+    font-family: 'simsun';
+    margin-right: 5px;
+    font-style: normal;
+}
+.fwy-form-smart td em.text-wrap, .fwy-form-base td em.text-wrap {
+    display: inline-block;
+    margin: 0;
+    padding: 0 5px;
+    vertical-align: top;
+}
+.fwy-form-smart th, .fwy-form-base th {
+    padding-right: 10px;
+}
+.fwy-form-smart tr.last-tr td, .fwy-form-base tr.last-tr td, .fwy-form-smart tr.last-tr th, .fwy-form-base tr.last-tr th {
+    padding-bottom: 11px;
+}
+.fwy-form-smart th {
+    font-weight: normal;
+    text-align: right;
+    color: #333;
+}
+.fwy-form-smart td input.text {
+    box-shadow: 0 0 3px -1px inset;
+    border: 1px solid #ccc;
+    border-width: 1px;
+    font-size: 14px;
+    height: 20px;
+    line-height: 18px;
+    padding: 4px;
+    vertical-align: top;
+}
+.fwy-form-smart td span.input {
+    display: inline-block;
+    vertical-align: top;
+}
+.fwy-form-smart td .radio, .fwy-form-smart td .checkbox {
+    vertical-align: top;
+}
+.fwy-form-smart td input.radio {
+    height: 15px;
+    margin: 8px 0 0;
+    width: 15px;
+}
+.fwy-form-smart td input.radio12 {
+    height: 15px;
+    margin: 8px 0 0;
+    vertical-align: top;
+    width: 15px;
+}
+.fwy-form-smart td label.radio {
+    display: inline-block;
+    font-size: 14px;
+}
+.fwy-form-smart td label.checkbox {
+    display: inline-block;
+}
+.fwy-form-smart td select {
+    border: 1px solid #C1C1C1;
+    font-size: 14px;
+    height: 30px;
+    line-height: 24px;
+    margin: 0;
+    padding: 4px;
+    vertical-align: top;
+}
+.fwy-form-smart td textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #C6C6C6 #EEEEEE #EEEEEE #C6C6C6;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'tahoma','simsun';
+    font-size: 14px;
+    height: 100px;
+    line-height: 18px;
+    margin: 0;
+    padding: 5px 6px;
+    resize: none;
+    text-align: left;
+    vertical-align: top;
+    width: 300px;
 }
