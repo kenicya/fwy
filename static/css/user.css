@@ -1487,3 +1487,70 @@ table.fwy-form-smart {
     vertical-align: top;
     width: 300px;
 }
+
+/*----个人中心-----*/
+/*---公共---*/
+.g-content { padding:40px 0px 15px;}
+.g-wrap { width:960px; margin:0px auto; border:1px solid #CCC; box-shadow: 0 0 8px 4px rgba(150, 152, 153, 0.3);  background:url(../img/user/L-nav-bg.jpg);}
+.g-wrap .L-nav {float:left; width:179px; background:url(../img/user/L-nav-bg.gif) no-repeat;}
+.g-wrap .R-room {float:right; width:779px; border-left:1px solid #999; background:#FFF; }
+.L-nav h2 { margin:30px 0px 20px 65px; color:#666;}
+.L-nav ul {margin-left:25px;}
+.L-nav li {height:35px; font-size:14px; text-align:center; line-height:35px;}
+.L-nav li a:hover {color:#666; text-decoration:underline;}
+.L-nav li a {color:#666;}
+.L-nav .selected { background:#FFF; border:1px solid #CCC; border-right:0 none; display:inline-block; width:155px; _width:154px; position:relative; margin-right:-px; font-weight:bold;}
+.R-room .box { width:690px; margin:0px auto; margin-top:40px; padding-bottom:60px;}
+.R-room .box h2 {font-weight:normal; border-bottom:1px solid #CCC; height:35px; line-height:35px; margin-bottom:20px;}
+/*----公共----*/
+
+/*--头像--*/
+.R-room .L-pic {float:left; width:360px; padding-left:40px; padding-top:25px; padding-bottom:50px;}
+.R-room .L-pic img { width:360px; height:380px;}
+.R-room .R-avatar {float:right; width:170px; padding:25px 50px 0px 50px;}
+.R-avatar h3 {font-weight:normal; font-size:13px; line-height:25px; margin-bottom:5px; color:#999;}
+.R-avatar .avatar1 { border:1px solid #CCC; overflow:hidden; margin-bottom:20px; height:150px; width:150px;}
+.R-avatar .avatar2 { border:1px solid #CCC; overflow:hidden; margin-bottom:20px; height:80px; width:80px;}
+.R-avatar .avatar3 { border:1px solid #CCC; overflow:hidden; margin-bottom:20px ;height:50px; width:50px;}
+
+/*--修改密码--*/
+.R-room .repair { width:690px; padding:0px 0px 100px 0px;}
+.repair-table { margin:0px auto; margin-top:40px;}
+.repair-table th  { width:100px; text-align:right; font-size:15px; font-weight:normal; color:#333;}
+.repair-table th, .repair-table td {height:50px;}
+.repair-table td {vertical-align:top; padding: 4px 0;}
+.repair-table .r-pwd { width: 235px; color: #000000; font-size: 14px; height: 18px; line-height: 18px; overflow: hidden; padding: 7px 10px; vertical-align: middle;  
+background: none repeat scroll 0 0 #F9F9F9; border-color: #C6C6C6 #EEEEEE #EEEEEE #C6C6C6;}
+.repair-table td a {vertical-align:bottom; margin-left:5px;}
+.repair-table .r-sub { cursor:pointer; height:33px; background:#F90; background:url(../img/user/pwdownload.jpg) no-repeat; border:none 0; width:107px; color:#FFF; font-size:15px;}
+
+/*--帐号管理--*/
+.R-room .hint { line-height:25px; text-align:center; background:#fff39f; border:1px solid #CCC; margin-bottom:30px;}
+.R-room .replace { line-height:30px; font-size:14px; padding-bottom:10px; border-bottom:1px solid #CCC; width:490px; margin:0px auto; margin-bottom:70px;}
+
+/*--隐私设置--*/
+.R-room h4 {line-height:30px; background:#f7f7f7; padding:0px 0px 0px 10px; font-size:14px; margin-bottom:5px;}
+.R-room .set-privacy { margin-bottom:20px;}
+.R-room .set-privacy h5 {padding:0px 0px 0px 10px; font-size:12px; line-height:25px; color:#666;}
+.R-room .set-privacy p {line-height:30px; padding:0px; margin:0px; text-indent:10px; font-size:12px; color:#999;}
+.R-room .set-privacy input {margin-right:8px; vertical-align:middle;}
+.R-room .set-privacy .save { text-align:center; padding-top:50px;}
+.set-privacy .save input { background:url(../img/user/pwdownload.jpg) no-repeat; width:109px; height:35px; cursor:pointer; color:#FFF}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
