@@ -909,7 +909,7 @@ border-radius: 4px;
   line-height: 30px;
   height: 30px;
   color: #333;
-  letter-spacing: 3px;
+  letter-spacing: 3px;cursor: pointer;
 }
 .k-yel-btn:hover{
 	background: url(../img/repeat.png) repeat-x 0 -309px;
@@ -935,25 +935,7 @@ border-radius: 4px;
 .warnbox:hover{
 	background-color: #faf2cc;
 }
-
-.rank-list {
-    background: url(../images/ph.jpg) no-repeat;
-}
-.rank-list li {
-    font-size: 13px;
-    height: 31px;
-    line-height: 14px;
-    padding-left: 26px;
-}
-
-.rank-list li a {
-    float: left;
-}
-.rank-list li span {
-    color: #666666;
-    float: right;
-    font-size: 12px;
-}
+.successbox{ background-color: #dff0d8;padding: 10px;border: 1px solid #C4F7AA;}
 /*-----------*/
 .b-b-s{border-bottom: 1px solid #CECBCE;}
 .bgg{background: #eee;}
