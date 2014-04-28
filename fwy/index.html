@@ -1,0 +1,830 @@
+<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=gb2312" />
+	<title>服务业人才网</title>
+	<meta name="keywords" content="服务业人才网" />
+	<meta name="description" content="服务业人才网" />
+	<link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="static/css/common.css" type="text/css" />
+	<script type="text/javascript" src="static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="static/js/tytabs.jquery.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="static/js/index.js"></script>
+
+</head>
+<body>
+	<div id="fullbg"></div>
+	<div class="wrap">
+		<!-- 头部start -->
+		<div class="header-w">
+			<div class="header">
+				<div class="logo">
+					<a href="#">
+						<img src="static/img/logo.png" alt=""></a>
+				</div>
+				<p class="fr reg">
+					没有账号？
+					<a href="#rhis" onclick="showBg('dialog','dialog_content');">注册</a>
+
+				</p>
+			</div>
+		</div>
+		<div class="nav-w">
+			<div class="row">
+				<ul class="nav">
+					<li class="active">
+						<a href="">首页</a>
+					</li>
+					<li>
+						<a href="">找职位</a>
+					</li>
+					<li>
+						<a href="">找人才</a>
+					</li>
+					<li>
+						<a href="">找企业</a>
+					</li>
+					<li>
+						<a href="">同道问答</a>
+					</li>
+					<li class="b-r">
+						<a href="">企业服务</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 头部end -->
+
+		<!-- 中间部分开始 -->
+		<div class="in-content">
+
+			<div class="row">
+				<div class="flexslider fl">
+					<ul class="slides">
+						<li>
+							<a href="#">
+								<img src="static/upload/img1.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="static/upload/img1.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="static/upload/img1.jpg" alt=""></a>
+						</li>
+					</ul>
+				</div>
+				<div class="login-w fr">
+					<h1 class="login-tit">登录服务业人才网</h1>
+					<div id="tabsholder">
+						<ul class="tabs">
+							<li id="tab1">个人登录</li>
+							<li id="tab2" style="background-color:#009933 ;">企业登录</li>
+
+						</ul>
+						<div class="contents marginbot">
+
+							<div id="content1" class="tabscontent">
+								<form id="login" method="POST" action="">
+									<div class="input-w">
+										<div class="hd">个人邮箱：</div>
+										<input type="text" maxlength="50" tips="请填写手机号或邮箱地址" class="l-input" name="email" id="J_loginName" autocomplete="off" > <em class="validation-icon"></em>
+										<div class="tips">请填写手机号或邮箱地址</div>
+									</div>
+									<div class="input-w">
+										<div class="hd">密码：</div>
+										<input type="password" tips="" maxlength="20" class="l-input" name="password"> <em class="validation-icon"></em>
+
+									</div>
+
+									<div class="btn-box">
+										<button class="l-submit" type="button">立即登录</button>
+									</div>
+									<div class="remember">
+
+										<label for="">
+											<input type="checkbox" checked="true" value="1" id="" name="rememberMe" class="ho">保持登录状态</label>
+										<a class="find-pass" href="#">忘记密码？</a>
+									</div>
+
+									<p class="tc reg-w">
+										还没有服务业人才网账户？
+										<a href="#" class="reg-b">立即注册</a>
+									</p>
+
+								</form>
+
+							</div>
+							<div id="content2" class="tabscontent">
+								<form id="login" method="POST" action="">
+									<div class="input-w">
+										<div class="hd">企业邮箱：</div>
+										<input type="text" maxlength="50" tips="请填写手机号或邮箱地址" class="l-input" name="email" id="J_loginName" autocomplete="off" >
+										<em class="validation-icon"></em>
+										<div class="tips">请填写手机号或邮箱地址</div>
+									</div>
+									<div class="input-w">
+										<div class="hd">密码：</div>
+										<input type="password" tips="" maxlength="20" class="l-input" name="password">
+										<em class="validation-icon"></em>
+
+									</div>
+
+									<div class="btn-box">
+										<button class="l-submit" type="button">立即登录</button>
+									</div>
+									<div class="remember">
+
+										<label for="">
+											<input type="checkbox" checked="true" value="1" id="" name="rememberMe" class="ho">保持登录状态</label>
+										<a class="find-pass" href="#">忘记密码？</a>
+									</div>
+									<p class="tc reg-w">
+										还没有服务业人才网账户？
+										<a href="#" class="reg-b">立即注册</a>
+									</p>
+								</form>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- 中间部分结束 -->
+	<div class="area-w">
+
+		<div class="area">
+			<!-- <form action="" class="tc">
+				<label for="s-key" class="s-l">职位搜索：</label>
+				<input type="text" name="s-key" class="s-text" placeholder="输入职位关键词：如销售总监等">
+				<input type="submit" name="s-submit" class="s-btn" value="搜索">
+				<span>
+					<a href="" class="s-more">更多职位搜索>></a>
+				</span>
+			</form> -->
+			<!-- 地区 -->
+
+			<ul class="city-w clear">
+				<span class="hot">热门省份：</span>
+				<li class="control">
+					<span class="sheng">北京</span>
+
+					<div class="city">
+						<div class="opbg"></div>
+						<a href="#">东城区</a>
+						<a href="#">西城区</a>
+						<a href="#">崇文区</a>
+						<a href="#">宣武区</a>
+						<a href="#">朝阳区</a>
+						<a href="#">丰台区</a>
+						<a href="#">石景山区</a>
+						<a href="#">海淀区</a>
+						<a href="#">门头沟区</a>
+						<a href="#">房山区</a>
+						<a href="#">通州区</a>
+						<a href="#">顺义区</a>
+						<a href="#">昌平区</a>
+						<a href="#">大兴区</a>
+						<a href="#">怀柔区</a>
+						<a href="#">平谷区</a>
+						<a href="#">密云县</a>
+						<a href="#">延庆县</a>
+					</div>
+				</li>
+				<li class="control">
+					<span class="sheng">上海</span>
+					<div class="city">
+						<div class="opbg"></div>
+						<a href="#">卢湾区</a>
+						<a href="#">徐汇区</a>
+						<a href="#">黄浦区</a>
+						<a href="#">长宁区</a>
+						<a href="#">静安区</a>
+						<a href="#">普陀区</a>
+						<a href="#">闸北区</a>
+						<a href="#">虹口区</a>
+						<a href="#">杨浦区</a>
+						<a href="#">闵行区</a>
+						<a href="#">宝山区</a>
+						<a href="#">嘉定区</a>
+						<a href="#">浦东新区</a>
+						<a href="#">金山区</a>
+						<a href="#">松江区</a>
+						<a href="#">青浦区</a>
+						<a href="#">南汇区</a>
+						<a href="#">奉贤区</a>
+						<a href="#">崇明县</a>
+					</div>
+				</li>
+				<li class="control">
+					<span class="sheng">天津</span>
+					<div class="city">
+						<div class="opbg"></div>
+						<a href="#">和平区</a>
+						<a href="#">河东区</a>
+						<a href="#">河西区</a>
+						<a href="#">南开区</a>
+						<a href="#">河北区</a>
+						<a href="#">红桥区</a>
+						<a href="#">塘沽区</a>
+						<a href="#">汉沽区</a>
+						<a href="#">大港区</a>
+						<a href="#">东丽区</a>
+						<a href="#">西青区</a>
+						<a href="#">津南区</a>
+						<a href="#">北辰区</a>
+						<a href="#">武清区</a>
+						<a href="#">宝坻区</a>
+
+					</div>
+				</li>
+				<li class="control">
+					<span class="sheng">重庆</span>
+					<div class="city">
+						<div class="opbg"></div>
+						<a href="#">万州区</a>
+						<a href="#">涪陵区</a>
+						<a href="#">渝中区</a>
+						<a href="#">大渡口区</a>
+						<a href="#">江北区</a>
+						<a href="#">沙坪坝区</a>
+						<a href="#">九龙坡区</a>
+						<a href="#">南岸区</a>
+						<a href="#">北碚区</a>
+						<a href="#">万盛区</a>
+						<a href="#">双桥区</a>
+						<a href="#">渝北区</a>
+						<a href="#">巴南区</a>
+						<a href="#">黔江区</a>
+						<a href="#">长寿区</a>
+						<a href="#">江津区</a>
+						<a href="#">合川区</a>
+						<a href="#">永川区</a>
+						<a href="#">南川区</a>
+
+					</div>
+				</li>
+
+				<li class="control">
+					<span class="sheng">广东</span>
+					<div class="city">
+						<div class="opbg"></div>
+						<a href="#">广州市</a>
+
+						<a href="#">韶关市</a>
+						<a href="#">深圳市</a>
+						<a href="#">珠海市</a>
+						<a href="#">汕头市</a>
+						<a href="#">佛山市</a>
+						<a href="#">江门市</a>
+						<a href="#">湛江市</a>
+						<a href="#">茂名市</a>
+						<a href="#">肇庆市</a>
+						<a href="#">惠州市</a>
+						<a href="#">梅州市</a>
+						<a href="#">汕尾市</a>
+						<a href="#">河源市</a>
+						<a href="#">阳江市</a>
+						<a href="#">清远市</a>
+						<a href="#">东莞市</a>
+						<a href="#">中山市</a>
+						<a href="#">潮州市</a>
+						<a href="#">揭阳市</a>
+						<a href="#">云浮市</a>
+					</div>
+				</li>
+
+				<li class="control">
+					<span class="sheng">四川</span>
+					<div class="city">
+						<div class="opbg"></div>
+						<a href="#">成都市</a>
+
+						<a href="#">自贡市</a>
+						<a href="#">攀枝花市</a>
+						<a href="#">泸州市</a>
+						<a href="#">德阳市</a>
+						<a href="#">绵阳市</a>
+						<a href="#">广元市</a>
+						<a href="#">遂宁市</a>
+						<a href="#">内江市</a>
+						<a href="#">乐山市</a>
+						<a href="#">南充市</a>
+						<a href="#">眉山市</a>
+						<a href="#">宜宾市</a>
+						<a href="#">广安市</a>
+
+					</div>
+				</li>
+
+			</ul>
+			<ul class="hot-con clear">
+				<span class="hot-c">热门城市：</span>
+				<li>
+					<a href="#">深圳</a>
+				</li>
+				<li>
+					<a href="#">广州</a>
+				</li>
+				<li>
+					<a href="">北京</a>
+				</li>
+				<li>
+					<a href="">上海</a>
+				</li>
+				<li>
+					<a href="">重庆</a>
+				</li>
+				<li>
+					<a href="">天津</a>
+				</li>
+				<li>
+					<a href="">杭州</a>
+				</li>
+				<li>
+					<a href="">南京</a>
+				</li>
+				<li>
+					<a href="">成都</a>
+				</li>
+			</ul>
+			<a href="city.html" class="more-city">更多城市</a>
+			<!-- 地区 -->
+		</div>
+
+	</div>
+
+	<!-- 广告开始 -->
+	<div class="row mt20">
+
+		<div class="fl">
+			<img src="./static/upload/1.jpg" alt=""></div>
+
+		<div class="fr">
+			<img src="./static/upload/2.jpg" alt=""></div>
+		<div class="tc">
+			<h2 class="mt55">优秀服务行业人才集中地</h2>
+			<h2 class="mt55">专业星级服务人才培训基地</h2>
+		</div>
+	</div>
+	<!-- 广告结束 -->
+	<!-- 内容 -->
+	<div class="row mt20">
+		<div class="w480 fl">
+			<div class="w-box">
+				<h2 class="w-tit">
+					餐饮业招聘
+					<span>
+						( <i class="red">20000</i>
+						)个职位
+					</span>
+					<a href="#" class="more">更多>></a>
+				</h2>
+				<div class="prom_list">
+					<dl>
+						<dt>
+							<ul>
+								<li class="pos">地点</li>
+								<li class="jobs">职位</li>
+								<li class="salary">年薪</li>
+							</ul>
+						</dt>
+						<dd>
+							<ul>
+								<li title="不限" class="pos">不限</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/6658206/job_4317029.shtml" title="饲料公司总经理">饲料公司总经理</a>
+								</li>
+								<li class="salary">70-100万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="北京" class="pos">北京</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/3125392/job_4350632.shtml" title="战略总监（规划方向）">战略总监（规划方向）</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="杭州" class="pos">杭州</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/5593255/job_3668659.shtml" title="雷克萨斯品牌总经理">雷克萨斯品牌总经理</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="菏泽" class="pos">菏泽</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/8326674/job_3728213.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-35万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="湖南省" class="pos">湖南省</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/1098060/job_4227495.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-50万</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="w-box mt20">
+				<h2 class="w-tit">
+					广告业招聘
+					<span>
+						( <i class="red">20000</i>
+						)个职位
+					</span>
+					<a href="#" class="more">更多>></a>
+				</h2>
+				<div class="prom_list">
+					<dl>
+						<dt>
+							<ul>
+								<li class="pos">地点</li>
+								<li class="jobs">职位</li>
+								<li class="salary">年薪</li>
+							</ul>
+						</dt>
+						<dd>
+							<ul>
+								<li title="不限" class="pos">不限</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/6658206/job_4317029.shtml" title="饲料公司总经理">饲料公司总经理</a>
+								</li>
+								<li class="salary">70-100万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="北京" class="pos">北京</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/3125392/job_4350632.shtml" title="战略总监（规划方向）">战略总监（规划方向）</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="杭州" class="pos">杭州</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/5593255/job_3668659.shtml" title="雷克萨斯品牌总经理">雷克萨斯品牌总经理</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="菏泽" class="pos">菏泽</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/8326674/job_3728213.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-35万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="湖南省" class="pos">湖南省</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/1098060/job_4227495.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-50万</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<div class="w480 fr">
+			<div class="w-box">
+				<h2 class="w-tit">
+					租赁业招聘
+					<span>
+						(
+						<i class="red">20000</i>
+						)个职位
+					</span>
+					<a href="#" class="more">更多>></a>
+				</h2>
+				<div class="prom_list">
+					<dl>
+						<dt>
+							<ul>
+								<li class="pos">地点</li>
+								<li class="jobs">职位</li>
+								<li class="salary">年薪</li>
+							</ul>
+						</dt>
+						<dd>
+							<ul>
+								<li title="不限" class="pos">不限</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/6658206/job_4317029.shtml" title="饲料公司总经理">饲料公司总经理</a>
+								</li>
+								<li class="salary">70-100万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="北京" class="pos">北京</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/3125392/job_4350632.shtml" title="战略总监（规划方向）">战略总监（规划方向）</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="杭州" class="pos">杭州</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/5593255/job_3668659.shtml" title="雷克萨斯品牌总经理">雷克萨斯品牌总经理</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="菏泽" class="pos">菏泽</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/8326674/job_3728213.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-35万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="湖南省" class="pos">湖南省</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/1098060/job_4227495.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-50万</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="w-box mt20">
+				<h2 class="w-tit">
+					代理业招聘
+					<span>
+						(
+						<i class="red">20000</i>
+						)个职位
+					</span>
+					<a href="#" class="more">更多>></a>
+				</h2>
+				<div class="prom_list">
+					<dl>
+						<dt>
+							<ul>
+								<li class="pos">地点</li>
+								<li class="jobs">职位</li>
+								<li class="salary">年薪</li>
+							</ul>
+						</dt>
+						<dd>
+							<ul>
+								<li title="不限" class="pos">不限</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/6658206/job_4317029.shtml" title="饲料公司总经理">饲料公司总经理</a>
+								</li>
+								<li class="salary">70-100万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="北京" class="pos">北京</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/3125392/job_4350632.shtml" title="战略总监（规划方向）">战略总监（规划方向）</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="杭州" class="pos">杭州</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/5593255/job_3668659.shtml" title="雷克萨斯品牌总经理">雷克萨斯品牌总经理</a>
+								</li>
+								<li class="salary">50-80万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="菏泽" class="pos">菏泽</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/8326674/job_3728213.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-35万</li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li title="湖南省" class="pos">湖南省</li>
+								<li class="jobs">
+									<a target="_blank" href="http://a.liepin.com/1098060/job_4227495.shtml" title="总经理">总经理</a>
+								</li>
+								<li class="salary">30-50万</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 内容end -->
+
+	<!-- 友情链接开始 -->
+
+	<div class="row mt20 w-box" id="tabsholder2">
+		<ul class="links tabs">
+			<li id="tabz1" class="current">友情链接</li>
+			<li id="tabz2">合作伙伴</li>
+
+		</ul>
+		<div class="p10">
+
+			<div class="l-content" id="contentz1">
+				<a target="_blank" title="乡巴佬下载" href="http://www.386w.com/">乡巴佬下载</a>
+				<a target="_blank" title="腾讯软件下载" href="http://pc.qq.com/">腾讯软件下载</a>
+				<a target="_blank" title="落吧书屋" href="http://www.luo8.com/">落吧书屋</a>
+				<a target="_blank" title="pp3电脑主题" href="http://www.pp3.cn">pp3电脑主题</a>
+				<a target="_blank" title="163免费网盘" href="http://www.163disk.com/">163免费网盘</a>
+				<a target="_blank" title="u盘启动盘" href="http://u.xinluobo.com/">u盘启动盘</a>
+				<a target="_blank" title="七彩空间" href="http://www.qicaispace.com/">七彩空间</a>
+				<a target="_blank" title="梦三国" href="http://msg.tgbus.com">梦三国</a>
+				<a target="_blank" title="周公解梦" href="http://www.jiemeng8.com/">周公解梦</a>
+				<a target="_blank" title="组词造句" href="http://www.xiaotongxing.net/">组词造句</a>
+				<a target="_blank" title="棋谱收藏站" href="http://game.onegreen.net/">棋谱收藏站</a>
+				<a target="_blank" title="繁体字转换器" href="http://www.fantizi5.com/">繁体字转换器</a>
+				<a target="_blank" title="街机游戏" href="http://game.onegreen.net/">街机游戏</a>
+				<a target="_blank" title="播放器之家" href="http://play.jb51.net/">播放器之家</a>
+				<a target="_blank" title="网页模板" href="http://www.cssmoban.com">网页模板</a>
+				<a target="_blank" title="win7系统下载" href="http://www.285868.com/">win7系统下载</a>
+				<a target="_blank" title="u盘修复工具" href="http://www.upantool.com/">u盘修复工具</a>
+				<a target="_blank" title="网络游戏论坛" href="http://dou.tgbus.com/">网络游戏论坛</a>
+				<a target="_blank" title="xp系统下载" href="http://www.xp74.com/">xp系统下载</a>
+				<a target="_blank" title="甜椒刷机" href="http://www.onekeyrom.com/">甜椒刷机</a>
+				<a target="_blank" title="个人简历" href="http://www.geren-jianli.com/">个人简历</a>
+				<a target="_blank" title="下载吧" href="http://www.xiazaiba.com/">下载吧</a>
+				<a target="_blank" title="我的异常网" href="http://www.myexception.cn/">我的异常网</a>
+				<a target="_blank" title="软件下载" href="http://www.cnzz.cc/">软件下载</a>
+				<a target="_blank" title="安卓游戏" href="http://android.9game.cn/">安卓游戏</a>
+				<a target="_blank" title="PPT模板下载" href="http://ppt.downhot.com/">PPT模板下载</a>
+				<a target="_blank" title="安卓软件下载" href="http://soft.anruan.com/">安卓软件下载</a>
+				<a target="_blank" title="qq个性签名" href="http://qianming.vipyl.com/">qq个性签名</a>
+				<a target="_blank" title="qq个性签名" href="http://www.111ttt.com/">交谊舞曲</a>
+				<a target="_blank" title="手机壁纸大全" href="http://sj.enterdesk.com/">手机壁纸大全</a>
+				<a target="_blank" title="手机壁纸大全" href="http://www.dj020.com/">舞曲大全</a>
+				<a target="_blank" title="手机壁纸大全" href="http://www.romzhijia.net/">rom之家</a>
+				<a target="_blank" title="ghost xp" href="http://bj.offcn.com/">北京人事考试网</a>
+				<a target="_blank" title="绝世唐门" href="http://www.douluodalu123.com/">绝世唐门</a>
+				<a target="_blank" title="小清新日记" href="http://www.telnote.cn/">小清新日记</a>
+				<a target="_blank" title="ipad3中文网" href="http://ipad.91.com/">ipad3中文网</a>
+				<a target="_blank" title="711软件站" href="http://www.soft711.com/">711软件站</a>
+				<a target="_blank" title="手机软件" href="http://soft.gamedog.cn/">手机软件</a>
+				<a target="_blank" title="逆战" href="http://nz.tgbus.com/">逆战</a>
+				<a target="_blank" title="软件盒子" href="http://www.itopdog.cn/">软件盒子</a>
+				<a target="_blank" title="win7论坛" href="http://www.dxztc.com/">win7论坛</a>
+			</div>
+			<div class="l-content" id="contentz2">
+				<a target="_blank" title="乡巴佬下载" href="http://www.386w.com/">乡巴佬下载</a>
+				<a target="_blank" title="腾讯软件下载" href="http://pc.qq.com/">腾讯软件下载</a>
+				<a target="_blank" title="落吧书屋" href="http://www.luo8.com/">落吧书屋</a>
+				<a target="_blank" title="pp3电脑主题" href="http://www.pp3.cn">pp3电脑主题</a>
+				<a target="_blank" title="163免费网盘" href="http://www.163disk.com/">163免费网盘</a>
+				<a target="_blank" title="u盘启动盘" href="http://u.xinluobo.com/">u盘启动盘</a>
+				<a target="_blank" title="七彩空间" href="http://www.qicaispace.com/">七彩空间</a>
+				<a target="_blank" title="梦三国" href="http://msg.tgbus.com">梦三国</a>
+				<a target="_blank" title="周公解梦" href="http://www.jiemeng8.com/">周公解梦</a>
+				<a target="_blank" title="组词造句" href="http://www.xiaotongxing.net/">组词造句</a>
+				<a target="_blank" title="棋谱收藏站" href="http://game.onegreen.net/">棋谱收藏站</a>
+				<a target="_blank" title="繁体字转换器" href="http://www.fantizi5.com/">繁体字转换器</a>
+				<a target="_blank" title="街机游戏" href="http://game.onegreen.net/">街机游戏</a>
+				<a target="_blank" title="播放器之家" href="http://play.jb51.net/">播放器之家</a>
+				<a target="_blank" title="网页模板" href="http://www.cssmoban.com">网页模板</a>
+				<a target="_blank" title="win7系统下载" href="http://www.285868.com/">win7系统下载</a>
+				<a target="_blank" title="u盘修复工具" href="http://www.upantool.com/">u盘修复工具</a>
+				<a target="_blank" title="网络游戏论坛" href="http://dou.tgbus.com/">网络游戏论坛</a>
+				<a target="_blank" title="xp系统下载" href="http://www.xp74.com/">xp系统下载</a>
+				<a target="_blank" title="甜椒刷机" href="http://www.onekeyrom.com/">甜椒刷机</a>
+				<a target="_blank" title="个人简历" href="http://www.geren-jianli.com/">个人简历</a>
+				<a target="_blank" title="下载吧" href="http://www.xiazaiba.com/">下载吧</a>
+				<a target="_blank" title="我的异常网" href="http://www.myexception.cn/">我的异常网</a>
+				<a target="_blank" title="软件下载" href="http://www.cnzz.cc/">软件下载</a>
+				<a target="_blank" title="安卓游戏" href="http://android.9game.cn/">安卓游戏</a>
+				<a target="_blank" title="PPT模板下载" href="http://ppt.downhot.com/">PPT模板下载</a>
+				<a target="_blank" title="安卓软件下载" href="http://soft.anruan.com/">安卓软件下载</a>
+				<a target="_blank" title="qq个性签名" href="http://qianming.vipyl.com/">qq个性签名</a>
+				<a target="_blank" title="qq个性签名" href="http://www.111ttt.com/">交谊舞曲</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 友情链接结束 -->
+
+	<!-- 尾部开始 -->
+	<div class="footer">
+
+		<p>
+
+			<a rel="nofollow" href="/support/about.html">关于本站</a>
+			<span>|</span>
+			<a rel="nofollow" href="/support/help.html">网站帮助</a>
+			<span>|</span>
+
+			<a rel="nofollow" href="/support/advertise.html">广告合作</a>
+			<span>|</span>
+			<a class="cur" href="/link/">友情链接</a>
+			<span>|</span>
+			<a href="/soft/">网站地图</a>
+			<span>|</span>
+			<a href="/sitemaps.xml">网站RSS</a>
+		</p>
+		<p>
+			Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+		</p>
+	</div>
+	<!-- 尾部结束 -->
+
+	<!-- 注册遮罩层 -->
+	<div id="dialog">
+		<div class="colsew">
+			<b class="logtit">注册</b>
+			<a onclick="closeBg();" class="colsebtn" href="#">X</a>
+		</div>
+		<div id="dialog_content">
+			<div class="reg-log">				
+				<div class="main">
+					<form method="POST" action="">
+						<div class="input-w">
+							<div class="hd">帐号：</div>
+							<input type="text" id="J_loginName" name="loginname" class="l-input" tips="请填写手机号或邮箱地址" maxlength="50"/>
+							<em class="validation-icon"></em>
+							<div class="tips"></div>
+						</div>
+						<div class="input-w">
+							<div class="hd">密码：</div>
+							<input type="password" name="password" class="l-input" tips="请填写4-20位非中文字符，区分大小写" />
+							<em class="validation-icon"></em>
+							<div class="tips"></div>
+						</div>
+						<div class="input-w">
+							<div class="hd">确认密码：</div>
+							<input type="password" name="password" class="l-input" tips="请填写4-20位非中文字符，区分大小写" />
+							<em class="validation-icon"></em>
+							<div class="tips"></div>
+						</div>
+						<div class="input-w">
+							<div class="hd">姓名：</div>
+							<input type="text" name="name" class="l-input" tips="填写真实姓名，让好机会找到你" />
+							<em class="validation-icon"></em>
+							<div class="tips"></div>
+						</div>
+						
+						<div class="input-w">
+							<div class="hd">验证码：</div>
+							<input type="text" name="captcha" maxlength="4" class="l-input-yan" tips="">
+							<img class="captcha-img" src="http://www.dajie.com/captcha/code?t1389322345817">
+							<em class="change-captcha" title="换一换">换一换</em>
+							<div class="tips"></div>
+						</div>
+						<div class="btn-box">
+							<button class="l-submit" type="button">立即注册</button>
+						</div>
+						<div class="provision">
+							我已阅读并同意<a href="#" target="_blank">服务业人才网服务条款</a>					
+						</div>
+						<input id="reg-type" name="type" type="hidden" value="0">
+						<input id="appkey" name="appKey" type="hidden" value="normal"/>
+						<input id="token" name="token" type="hidden" value="IPD8wpI4CLOy9F3usDNDT2lsKKWANup7oaF3V1"/>
+						<input id="successUrl" name="successUrl" type="hidden" value="http://www.dajie.com/account/regsucceed?f=reg"/>
+						<input id="custom-verify-mail-input" name="customVerifyMailFlag" type="hidden" value="1"/>
+					</form>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<!-- 注册遮罩层 -->
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!Doctype html>
+<html>
+<head>
+   <meta http-equiv="Content-type" content="text/html; charset=gb2312" />
+   <title>服务业人才网</title>
+   <meta name="keywords" content="服务业人才网" />
+   <meta name="description" content="服务业人才网" />
+   <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
+   <link rel="stylesheet" href="../static/css/common.css" type="text/css" />
+   <link rel="stylesheet" href="../static/css/user.css" type="text/css" />
+   <script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
+   <script type="text/javascript">
+  $(document).ready(function(){
+
+    //Top
+    <!--[if !IE 6]><!-->
+    $("#back-to-top").hide();  
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>100){
+      $("#back-to-top").fadeIn('fast');
+      }
+      else
+      {
+      $("#back-to-top").fadeOut('fast');
+      }
+      });
+      //返回顶部
+      $("#back-to-top").click(function(){
+      $('body,html').animate({scrollTop:0},1000);
+      return false;
+      });
+      <!--<![endif]-->
+      
+   $('.quick_menu li').mousemove(function(){
+       $(this).find('.quick_menu_box').slideDown();//可以设置切换时间
+       $(this).find('a').addClass("active");
+       $(this).find('i').addClass("active");
+     });
+     $('.quick_menu li').mouseleave(function(){
+       
+     $(this).find('.quick_menu_box').slideUp("fast");
+     $(this).find('i').removeClass("active");
+     $(this).find('a').removeClass("active");
+     }); 
+
+     
+   });
+</script>
+</head>
+<body>
+   <div class="wrap">
+      <!-- 头部start -->
+      <div class="header-w">
+         <div class="header">
+            <div class="logo">
+               <a href="#">
+                  <img src="../static/img/logo.png" alt=""></a>
+            </div>
+            <div class="quick_menu">
+               <ul>
+                  <li>
+                     <a href="#" title="账号设置" id="link_setting">
+                        <img id="icon_face"src="../static/img/user/face.gif" alt=""></a>
+                     <div class="quick_menu_box">
+                        <h2>账户设置</h2>
+                        <div class="quick_menu_con">
+                           <table class="p_info">
+                              <tbody>
+                                 <tr>
+                                    <td class="data-icon">
+                                       <img class="p_face" src="http://gm0.lietou-static.com/user/photo/minix/default_c_1.gif?0.6037496654935514"></td>
+                                    <td>龙华</td>
+                                    <td class="data-menu">
+                                       <a href="http://www.liepin.com/user/logout/">退出</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon"> <i class="icon icon-settings-profile"></i>
+                                    </td>
+                                    <td>账号信息</td>
+                                    <td class="data-menu">
+                                       <a href="http://c.liepin.com/profile/basic/">修改</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon"> <i class="icon icon-settings-password"></i>
+                                    </td>
+                                    <td>密码修改</td>
+                                    <td class="data-menu">
+                                       <a href="http://c.liepin.com/profile/modifypwd/">修改</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon">
+                                       <i class="icon icon-settings-privacy"></i>
+                                    </td>
+                                    <td>隐私设置</td>
+                                    <td class="data-menu">
+                                       <a href="http://c.liepin.com/profile/getsecret/">修改</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="data-icon">
+                                       <i class="icon icon-settings-help"></i>
+                                    </td>
+                                    <td>帮助中心</td>
+                                    <td class="data-menu">
+                                       <a href="http://www.liepin.com/help/">获得帮助</a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </li>
+                  <li >
+                     <a href="#" title="消息" id="link_msg">
+                        <i id="icon_msg"></i>
+                     </a>
+                     <div class="quick_menu_box">
+                        <h2>消息</h2>
+                        <div class="quick_menu_con">
+                           <table class="p_msg">
+                              <tbody>
+                                 <tr>
+                                    <td> <strong class="text-warning mrl5">3</strong>
+                                       条系统消息
+                                    </td>
+                                    <td class="data-menu">
+                                       <a href="http://www.liepin.com/help/">获得帮助</a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="nav-w">
+         <div class="row">
+            <ul class="nav">
+               <li class="active">
+                  <a href="">首页</a>
+               </li>
+               <li>
+                  <a href="">找职位</a>
+               </li>
+               <li>
+                  <a href="">找企业</a>
+               </li>
+               <li>
+                  <a href="">简历管理</a>
+               </li>
+               <li class="b-r">
+                  <a href="">个人中心</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- 头部end -->
+      <div class="resume_bg">
+         <div class="resume">
+            <div id="content">
+               <div class="nav2-box">
+                  <ul class="nav2">
+                     <li>
+                        <a  class="active" href="/resume/index">
+                           <span>我的简历</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="/jobapply/feedback">
+                           <span>我的投递反馈</span>
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="/intention/index">
+                           <span>我的求职意愿</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="subsubNav">
+                  <span>
+                     <a href="resume-message.html">简历管理</a>
+                  </span> <em>|</em>
+                  <span>
+                     <a target="_blank" href="preview-resume.html">预览简历</a>
+                  </span> <em>|</em>
+                  <span class="b">求职信</span>
+               </div>
+               <!-- 求职信start -->
+               <div class="box-sha p10">
+                  <p class="">
+                     <a href="add-resume.html" class="k-w-btn mr10">
+                        <em class="icon-edit"></em>
+                        创建简历
+                     </a>
+                     共可以创建4份简历，还可以创建2份。
+                  </p>
+                  <table class="resume-list">
+                  <tbody>
+                     <tr class="b-b-s bgg">
+                        <th width="">简历名称</th>
+                        <th width="50">语言</th>
+                        <th width="180">简历完整度</th>
+                        <th width="85">简历状态</th>
+                        <th width="160">更新日期</th>
+                        <th width="80">默认简历</th>
+                        <th width="233">操作</th>
+                     </tr>
+                     <tr class="b-b-s">
+                        <td>
+                           <a target="_blank" href="#">中文简历_20140428</a>
+                        </td>
+                        <td>中文</td>
+                        <td>
+                           <em class="rating"><em style="width: 70%;"></em></em> 
+                           <span class="percent">70%</span>
+                        </td>
+                        <td class="resume-status">
+                           <span class="green">审核通过</span>
+                        </td>
+                        <td class="update-time">2014-04-28 10:34</td>
+                        <td>默认简历</td>
+                        <td>
+                           <a class="resume-refresh" href="javascript:;">刷新</a>
+                           ｜
+                           <a target="_blank" href="preview-resume.html">预览</a>
+                           ｜
+                           <a href="edit-resume.html">修改</a>
+                           ｜
+                           <a class="delete-resume" href="#">删除</a>
+                        </td>
+                     </tr>
+                     <tr class="b-b-s">
+                        <td>
+                           <a target="_blank" href="#">Resume_142337</a>
+                        </td>
+                        <td>英文</td>
+                        <td>
+                           <em class="rating"><em style="width: 30px;"></em></em> 
+                           <span class="percent">30%</span>
+                        </td>
+                        <td class="resume-status">
+                           <div widthx="200" class="status-group-no">
+                              <span class="red">草稿</span>
+                              <span class="icon-arrow"></span>
+                              <span class="icon-arrow-sub"></span>
+                           </div>
+                        </td>
+                        <td class="update-time">2014-04-28 10:34</td>
+                        <td>
+                           <a class="resume-default" href="#">设为默认</a>
+                        </td>
+                        <td>
+                           <a class="resume-refresh" href="javascript:;">刷新</a>
+                           ｜
+                           <a target="_blank" href="preview-resume.html">预览</a>
+                           ｜
+                           <a href="edit-resume.html">修改</a>
+                           ｜
+                           <a class="delete-resume" href="#">删除</a>
+                        </td>
+                     </tr>
+                    
+                  </tbody>                
+                  </table>
+                  <div class="mt20 warnbox mb20">
+                     <h4>功能小贴士：</h4>
+                     <p>1、完整度高于60%的简历才能被猎头发现！</p>
+                     <p>2、更新简历状态：根据您目前的求职状态设置简历的开放程度，避免在您找到工作后，还有电话打扰您。 </p>
+                  </div>
+                           
+               </div>
+               <!-- 求职信end -->
+             </div>
+         </div>
+      </div>
+   </div>
+   <!-- 尾部开始 -->
+   <div class="footer">
+      <p>
+         <a rel="nofollow" href="/support/about.html">关于本站</a>
+         <span>|</span>
+         <a rel="nofollow" href="/support/help.html">网站帮助</a>
+         <span>|</span>
+         <a rel="nofollow" href="/support/advertise.html">广告合作</a>
+         <span>|</span>
+         <a class="cur" href="/link/">友情链接</a>
+         <span>|</span>
+         <a href="/soft/">网站地图</a>
+         <span>|</span>
+         <a href="/sitemaps.xml">网站RSS</a>
+      </p>
+      <p>
+         Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+      </p>
+   </div>
+   <!-- 尾部结束 -->
+   <div id="top">
+      <p id="back-to-top">
+         <a href="#top">回到顶部</a>
+      </p>
+      <p id="feed-back">
+         <a href="#">我要反馈</a>
+      </p>
+   </div>
+</body>
+</html>

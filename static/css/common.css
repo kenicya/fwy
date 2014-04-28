@@ -198,12 +198,14 @@ ul li {
 .w270{width: 270px;}
 .mt10{margin-top: 10px;}
 .mt20{margin-top: 20px;}
+.mb20{margin-bottom: 20px;}
 .p10{padding: 10px;}
 .tc{text-align: center;}
 .mt30{margin-top:30px;}
 .mt55{margin-top: 55px;}
 .ml20{margin-left: 20px;}
 .ml10{margin-left: 10px;}
+.mr10{margin-right: 10px;}
 .mrl5{margin-right: 5px;margin-left: 5px;}
 .pos-m{position: absolute;top: 50%;left: 50%;}
 /*warp*/
@@ -663,7 +665,7 @@ a.reg-b:hover{
 	
 }
 .w-tit{
-	background: url(../img/repeat.jpg) repeat-x;
+	background: url(../img/repeat.png) repeat-x;
 	height: 35px;
 	font-size: 14px;
 	position: relative;
@@ -711,7 +713,7 @@ a.reg-b:hover{
 .prom_list dd,.prom_list dl{
 	margin: 0;
 }
-/*脮脷脮脰虏茫*/
+/*脙鈥⒚兣∶冣⒚冣撁偮裁兟*/
 #fullbg{
 background-color: #000;
 display:none;
@@ -817,7 +819,8 @@ border-radius: 4px;
 #top{
   position:fixed;
   bottom:140px;
-  right:280px;
+  left:50%;
+  margin-left: 510px;
 }
 #back-to-top,#feed-back{
 	margin: 0;
@@ -846,7 +849,7 @@ border-radius: 4px;
       line-height: 20px;
 }
 #back-to-top a:hover{border-bottom: none;}
-/*字体颜色*/
+/*文字颜色*/
 .text-muted {
   color: #999999;
 }
@@ -898,7 +901,7 @@ border-radius: 4px;
 .f12{font-size: 12px;}
 
 /*btn*/
-.k-yel-btn{
+.k-yel-btn,.k-w-btn{
   background: url(../img/repeat.png) repeat-x 0 -278px;
   border: 1px solid #F09D1F;
   display: inline-block;
@@ -908,6 +911,49 @@ border-radius: 4px;
   color: #333;
   letter-spacing: 3px;
 }
-.ke-yel-btn:hover{
+.k-yel-btn:hover{
 	background: url(../img/repeat.png) repeat-x 0 -309px;
+	color: #333;
 }
+.k-w-btn{
+	background-position: 0 0;
+	border-color: #ddd;
+}
+/*icon*/
+.icon-edit{
+	background: url(../img/icon.png) no-repeat 0 -127px;
+	height: 14px;width: 14px;display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+/*提示框*/
+.warnbox{
+	 background-color: #fcf8e3;
+	 padding: 10px;
+	 border: 1px solid #F7EAB2;
+}
+.warnbox:hover{
+	background-color: #faf2cc;
+}
+
+.rank-list {
+    background: url(../images/ph.jpg) no-repeat;
+}
+.rank-list li {
+    font-size: 13px;
+    height: 31px;
+    line-height: 14px;
+    padding-left: 26px;
+}
+
+.rank-list li a {
+    float: left;
+}
+.rank-list li span {
+    color: #666666;
+    float: right;
+    font-size: 12px;
+}
+/*-----------*/
+.b-b-s{border-bottom: 1px solid #CECBCE;}
+.bgg{background: #eee;}
