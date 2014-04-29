@@ -236,28 +236,44 @@ ul li {
 .nav .b-r{border-right: 1px solid #7E0303;}
 .nav .active{background: #7E0303; }
 .footer {
-    background:#E5E5E5;   
+    background:#f9f9f9;   
     line-height: 24px;
     margin-top: 20px;
     padding: 35px 0;
     text-align: center;
+    border-top: 1px solid #ddd;
 }
-.footer a{margin: 5px 5px;color: #444;}
+.footer a{margin: 5px 5px;color: #666;}
 .footer a:hover{color:#FF6600;}
+.footer p{color: #999;}
+.f-contact{
+	background: url(../img/f-con.png) no-repeat 0 center;
+	padding-left: 55px;
+	line-height: 25px;
+	font-size: 14px;
+	color: #999;
+	border-right: 1px dotted #ccc;
+	float: left;
+	width: 170px;
+}
+.f-contact p{
+margin: 0;
+}
 /*in-content*/
 .in-content{
 	background: #7E0303;
-	height: 536px;
+	height: 450px;
 
 }
 .colf{color: #fff;}
 /*login*/
 .login-w{
-	width: 340px;
-	background: #fff;
-	margin-top: 44px;
-	border-radius: 4px;
-	border: 5px solid #666;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 0 18px 2px #333333;
+    margin-right: 20px;
+    margin-top: 25px;
+    width: 335px;
 }
 .login-tit{
  	background:#F5F5F5;
@@ -320,6 +336,7 @@ ul li {
     word-wrap: break-word;
     width: 200px;
 }
+.captcha-w{width: 80px;height: 35px;margin-left: 80px;border: none;}
 .change-captcha{
 	background: url(../img/index-icon.png) no-repeat 0 -176px;
     height: 15px;
@@ -349,9 +366,10 @@ ul li {
     box-shadow: 1px 0 1px #DCDCDC;
     color: #FFFFFF;
     font-size: 20px;
-    height: 50px;
+    height: 40px;
     letter-spacing: 15px;
-    width: 300px;
+    width: 240px;
+    font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
 
@@ -386,16 +404,18 @@ list-style-type:none;
 display:block;
 float:left;
 color:#333;
-font-size: 18px;
-background-color:#0099FF;
+font-size: 14px;
+background: url(../img/repeat.png) repeat-x 0 -44px;
 width: 50%;
 cursor:pointer;
-height: 50px;
-line-height: 50px;
-color: #fff;
+height: 40px;
+line-height: 40px;
 text-align: center;
+border-top: 1px solid #ddd;
 }
-
+ul.tabs .current{
+	background: #fff;
+}
 
 .reg-w{
 	line-height: 30px;
@@ -416,50 +436,19 @@ a.reg-b:hover{
 }
 
 /*.links*/
-
-ul.links {
-width:100%;
-overflow:hidden;
-margin-bottom: 0px;
-font-family: "Microsoft Yahei";
-background: url(../img/repeat.png) repeat-x;
-height: 30px;
-border-bottom: 2px solid #00CCFF;
+.flink{
+	border: 1px solid #ddd;
+	margin-top: 20px;
 }
-
-ul.links li {
-list-style-type:none;
-display:block;
-float:left;
-color:#333;
-font-size: 18px;
-width: 100px;
-cursor:pointer;
-height: 30px;
-line-height:30px;
-text-align: center;
-background: none;
-font-size: 14px;
-
-}
-ul.links .current{
-	background: #00CCFF;
-	color: #fff;
-}
-.l-content {
-padding:8px 0 0 0;
-display:none;
-width:100%;
-text-align:justify;
-}
-.l-content a{
+.flink h2{background: url(../img/repeat.png) repeat-x;line-height: 30px;border-bottom: 1px solid #ddd;}
+.flink h2 span{display: inline-block;padding-right: 10px;padding-left: 10px;font-size: 14px;}
+.flink a{
 	padding: 0 5px;
 	line-height: 20px;
-	font-family: "Microsoft Yahei";
 	font-size: 12px;
 	color: #666;
 }
-.l-content a:hover{
+.flink a:hover{
 	color: #FF6600;
 }
 
@@ -510,7 +499,7 @@ a.reg-b:hover{
 	background: #F2B94D;
 }
 /*silder*/
-.flexslider { position: relative; height: 450px; overflow: hidden; background: url(../img/loading.gif) 50% no-repeat; width: 620px;margin-top: 45px;}
+.flexslider { position: relative; height: 450px; overflow: hidden; background: url(../img/loading.gif) 50% no-repeat; width: 600px;margin-top: 0px;}
 .slides { position: relative; z-index: 1;}
 .slides li { height: 400px;}
 .flex-control-nav { position: absolute; bottom: 10px; z-index: 2; width: 100%; text-align: center;}
@@ -522,19 +511,19 @@ a.reg-b:hover{
 .area-w{
 	 background: url(../img/repeat.png) repeat-x 0 -45px;
     z-index: 10;
-    height: 180px;
+    height: 92px;
     border-bottom: 1px solid #eee;
 }
 .area{
 	width: 980px;
 	margin: 0 auto;
-	height: 150px;
+	height: 92px;
 	overflow: visible;
 	z-index: 10;
 	position: relative;
 }
 .city-w{
-    padding-top: 40px;
+    padding-top: 15px;
     position: relative;
     z-index: 2;
 }
@@ -601,7 +590,7 @@ a.reg-b:hover{
 	line-height: 22px;
 }
 .hot-con{
-	margin-top: 20px;
+	margin-top: 6px;
 	z-index: 1;
 }
 .hot-con li{
@@ -626,7 +615,7 @@ a.reg-b:hover{
     right: 10px;
     text-align: center;
     width: 100px;
-    top: 78px;
+    top: 50px;
 }
 /*search*/
 .s-l{
@@ -713,7 +702,7 @@ a.reg-b:hover{
 .prom_list dd,.prom_list dl{
 	margin: 0;
 }
-/*Ã•ÃšÃ�Ã�Â²Ã�*/
+/*Ãƒâ€¢ÃƒÅ¡Ãƒâ¢Ãƒâ“Ã‚Â²ÃƒÂ*/
 #fullbg{
 background-color: #000;
 display:none;
@@ -815,7 +804,7 @@ border-radius: 4px;
 }
 
 
-/*���ض���*/
+/*·µ»Ø¶¥²¿*/
 #top{
   position:fixed;
   bottom:140px;
@@ -849,7 +838,7 @@ border-radius: 4px;
       line-height: 20px;
 }
 #back-to-top a:hover{border-bottom: none;}
-/*������ɫ*/
+/*ÎÄ×ÖÑÕÉ«*/
 .text-muted {
   color: #999999;
 }
@@ -899,7 +888,8 @@ border-radius: 4px;
 }
 .m0{margin-top: 0;margin-bottom: 0;}
 .f12{font-size: 12px;}
-
+.f14{font-size: 14px;}
+.f18{font-size: 18px;}
 /*btn*/
 .k-yel-btn,.k-w-btn{
   background: url(../img/repeat.png) repeat-x 0 -278px;
@@ -910,6 +900,8 @@ border-radius: 4px;
   height: 30px;
   color: #333;
   letter-spacing: 3px;cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
 }
 .k-yel-btn:hover{
 	background: url(../img/repeat.png) repeat-x 0 -309px;
@@ -919,6 +911,10 @@ border-radius: 4px;
 	background-position: 0 0;
 	border-color: #ddd;
 }
+.k-w-btn:hover{
+	background-position: 0 -242px;
+	color: #333;
+}
 /*icon*/
 .icon-edit{
 	background: url(../img/icon.png) no-repeat 0 -127px;
@@ -926,7 +922,7 @@ border-radius: 4px;
 	vertical-align: middle;
 	margin-right: 5px;
 }
-/*��ʾ��*/
+/*ÌáÊ¾¿ò*/
 .warnbox{
 	 background-color: #fcf8e3;
 	 padding: 10px;
@@ -939,3 +935,19 @@ border-radius: 4px;
 /*-----------*/
 .b-b-s{border-bottom: 1px solid #CECBCE;}
 .bgg{background: #eee;}
+.vm{vertical-align: middle;}
+.resume-rate{
+    border: 1px solid #1E8D31;
+    display: inline-block;
+    height: 10px;
+    line-height: 10px;
+    text-align: left;
+    vertical-align: middle;
+    width: 100px;
+}
+.resume-rate em{
+    background: url(../img/repeat.png) repeat-x 0 -340px;
+    display: inline-block;
+    height: 11px;
+}
+.hr-banner{background: url(../img/3.jpg) no-repeat center;height: 400px;}

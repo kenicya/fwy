@@ -6,22 +6,29 @@ $(document).ready(function(){
 							tabinit:"1",
 							fadespeed:"fast"
 							});
-	$("#tabsholder2").tytabs({
-							prefixtabs:"tabz",
-							prefixcontent:"contentz",
-							 classcontent:"l-content",
-							 classtabs:"links",							
-							tabinit:"1",						
-							fadespeed:"normal"
-							});
-
-
-   
+  
     // 幻灯片
     $('.flexslider').flexslider({
 		directionNav: false,
 		pauseOnAction: false
 	});
+	    <!--[if !IE 6]><!-->
+    $("#back-to-top").hide();  
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>100){
+      $("#back-to-top").fadeIn('fast');
+      }
+      else
+      {
+      $("#back-to-top").fadeOut('fast');
+      }
+      });
+      //返回顶部
+      $("#back-to-top").click(function(){
+      $('body,html').animate({scrollTop:0},1000);
+      return false;
+      });
+      <!--<![endif]-->
 
 	// 地区
 	

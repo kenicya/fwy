@@ -1560,4 +1560,128 @@ background: none repeat scroll 0 0 #F9F9F9; border-color: #C6C6C6 #EEEEEE #EEEEE
 .R-room .set-privacy .save { text-align:center; padding-top:50px;}
 .set-privacy .save input { background:url(../img/user/pwdownload.jpg) no-repeat; width:109px; height:35px; cursor:pointer; color:#FFF}
 
+/*编辑简历*/
+table.fwy-form-base {
+    border-collapse: collapse;
+}
 
+.form-area .fwy-form-base td, .form-area .fwy-form-base th {
+    padding-bottom: 15px;
+}
+.fwy-form-base th {
+    font-weight: normal;
+    text-align: right;
+}
+.fwy-form-base td, .fwy-form-base th {
+    font-size: 12px;
+    line-height: 26px;
+    padding-bottom: 20px;
+    vertical-align: middle;
+}
+.fwy-form-smart th, .fwy-form-base th {
+    padding-right: 10px;
+}
+.fwy-form-base th em {
+    color: #FF0000;
+    font-family: 'simsun';
+    margin-right: 5px;
+    font-style: normal;
+}
+
+.form-area .fwy-form-base td input.text {
+    width: 230px;
+}
+.fwy-form-base td input.text {
+
+    background: #F9F9F9;
+    border-color: #C6C6C6 #EEEEEE #EEEEEE #C6C6C6;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 18px;
+    padding: 2px 6px;
+    vertical-align: top;
+    width: 20px;
+}
+.fwy-form-base td select {
+    border: 1px solid #C1C1C1;
+    font-size: 12px;
+    height: 26px;
+    line-height: 20px;
+    margin: 0;
+    padding: 3px;
+    vertical-align: top;
+}
+.form-area .fwy-form-base td input.year {
+    width: 45px;
+}
+.fwy-form-base td span.input {
+    display: inline-block;
+    vertical-align: top;
+}
+.form-area .fwy-form-base td input.month {
+    width: 35px;
+}
+.selectResult {
+    background: url(../img/result-arrow.gif) no-repeat right 14px;
+    border: 1px solid #CCCCCC;
+    color: #999999;
+    line-height: 28px;
+    height: 28px;
+    padding: 3px 30px 5px 10px;
+    cursor: pointer;
+}
+.selectResult .sheng{font-style: normal;}
+input.selectResult{
+    cursor: auto;
+    background: none;
+    width: 170px;
+    margin-right: 10px;
+}
+
+.fwy-form-base td .other-textarea {
+    height: 20px;
+    line-height: 20px;
+    padding: 4px;
+    width: 476px;
+    font-size: 12px;
+}
+.pickpane {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    clear: both;
+    margin-top: -1px;
+    position: absolute;
+    width: 160px;
+    z-index: 9990;
+}
+.fwy-form-base td .textarea-check-tip {
+    text-align: right;
+    margin: 0;
+    width: 380px;
+}
+
+.form-area .fwy-form-base td .edit-textarea {
+    background: #FFFFFF;
+}
+.fwy-form-base td .edit-textarea {
+    background: #F9F9F9;
+    height: 70px;
+    width: 390px;
+}
+.fwy-form-base td textarea {
+    background: #FFFFFF;
+    border-color: #C6C6C6 #EEEEEE #EEEEEE #C6C6C6;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    height: 100px;
+    line-height: 18px;
+    margin: 0;
+    padding: 3px 6px;
+    resize: none;
+    text-align: left;
+    vertical-align: top;
+    width: 300px;
+}

@@ -1,0 +1,162 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=gb2312" />
+  <title>服务业人才网</title>
+  <meta name="keywords" content="服务业人才网" />
+  <meta name="description" content="服务业人才网" />
+  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../static/css/common.css" type="text/css" />
+  <script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="../static/js/tytabs.jquery.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+  $("#tabsholder").tytabs({
+              prefixtabs:"tab",
+              prefixcontent:"content",
+               classcontent:"tabscontent",
+              tabinit:"1",
+              fadespeed:"fast"
+              });
+});
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 头部start -->
+    <div class="header-w">
+      <div class="header">
+        <div class="logo">
+          <a href="#">
+            <img src="../static/img/logo.png" alt=""></a>
+        </div>
+        <p class="fr reg">
+          <a href="usercenter/register.html">用户注册</a>
+          |
+          <a href="usercenter/HRregister.html">企业注册</a>
+        </p>
+      </div>
+    </div>
+    <div class="nav-w">
+      <div class="row">
+        <ul class="nav">
+          <li class="active">
+            <a href="">首页</a>
+          </li>
+          <li>
+            <a href="">找职位</a>
+          </li>
+          <li>
+            <a href="">找企业</a>
+          </li>
+          <li>
+            <a href="">找人才</a>
+          </li>
+          <li>
+            <a href="">简历管理</a>
+          </li>
+          <li class="b-r">
+            <a href="">个人中心</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 头部end -->
+    <div class="hr-banner">
+      <div class="row pt20" style="height:380px;">
+         <div class="login-w fr">      
+          <div id="tabsholder">
+            <ul class="tabs">
+              <li id="tab1" class="current">企业注册</li>
+              <li id="tab2">企业登录</li>
+            </ul>
+            <div class="contents marginbot">
+
+              <div class="tabscontent" id="content1" style="display: block;">
+                <form action="" method="POST" id="login">
+                  <div class="input-w">
+                    <div class="hd">邮箱/电话：</div>
+                    <input type="text" autocomplete="off" id="J_loginName" name="email" class="l-input" tips="请填写手机号或邮箱地址" maxlength="50" style="height:35px;"> <em class="validation-icon"></em>
+                    <div class="tips">请填写手机号或邮箱地址</div>
+                  </div>
+                  <div class="input-w">
+                    <div class="hd">用户密码：</div>
+                    <input style="height:35px;" type="password" name="password" class="l-input" maxlength="20" tips=""> <em class="validation-icon"></em>
+                  </div>
+                   <div class="input-w">
+                    <div class="hd">确认密码：</div>
+                    <input style="height:35px;" type="password" name="password" class="l-input" maxlength="20" tips=""> <em class="validation-icon"></em>
+                  </div>
+                  <div class="input-w">
+                      <div class="hd">验证码：</div>
+                      <input type="text" tips="" class="captcha-w" maxlength="4" name="captcha">
+                      <img src="http://www.dajie.com/captcha/code?t1389322345817" class="captcha-img">
+                      <em title="换一换" class="change-captcha">换一换</em>
+                      <div class="tips">请输入正确的验证码</div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="l-submit">立即注册</button>
+                  </div>
+                </form>
+
+              </div>
+              <div class="tabscontent" id="content2" style="display: none;">
+                <form action="" method="POST" id="login">
+                  <div class="input-w">
+                    <div class="hd">企业邮箱：</div>
+                    <input style="height:35px;" type="text" autocomplete="off" id="J_loginName" name="email" class="l-input" tips="请填写手机号或邮箱地址" maxlength="50">
+                    <em class="validation-icon"></em>
+                    <div class="tips">请填写手机号或邮箱地址</div>
+                  </div>
+                  <div class="input-w">
+                    <div class="hd">用户密码：</div>
+                    <input  style="height:35px;" type="password" name="password" class="l-input" maxlength="20" tips="">
+                    <em class="validation-icon"></em>
+
+                  </div>
+
+                  <div class="btn-box">
+                    <button type="button" class="l-submit">立即登录</button>
+                  </div>
+                  <div class="remember">
+
+                    <label for="">
+                      <input type="checkbox" class="ho" name="rememberMe" id="" value="1" checked="true">保持登录状态</label>
+                    <a href="#" class="find-pass">忘记密码？</a>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  <!-- 尾部开始 --> 
+  <div class="footer">
+    <div class="clear row">
+      <div class="footertit f-contact">
+        <p>服务热线（免话费）</p>
+        <p class="f18"><b>400-88888888</b></p>
+        <p class="f12">工作日：9:00-19:00</p>
+      </div>
+    <p>
+            <a href="">关于</a>&nbsp;|
+            <a href="">职位</a>&nbsp;|
+            <a href="">公司</a>&nbsp;|
+            <a href="">人才</a>&nbsp;|
+            <a href="">行业</a>&nbsp;|
+            <a href="">意见反馈</a>&nbsp;|
+            <a href="">服务与声明</a>
+        </p>
+    <p>
+      Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+    </p>
+    </div>
+  </div>
+  <!-- 尾部结束 --> 
+
+  </div>
+</body>
+</html>

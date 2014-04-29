@@ -10,20 +10,9 @@
    <link rel="stylesheet" href="../static/css/user.css" type="text/css" />
    <script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
    <script type="text/javascript">
-  $(document).ready(function(){
-   $('.quick_menu li').mousemove(function(){
-       $(this).find('.quick_menu_box').slideDown();//可以设置切换时间
-       $(this).find('a').addClass("active");
-       $(this).find('i').addClass("active");
-     });
-     $('.quick_menu li').mouseleave(function(){
-       
-     $(this).find('.quick_menu_box').slideUp("fast");
-     $(this).find('i').removeClass("active");
-     $(this).find('a').removeClass("active");
-     }); 
 
-      //Top
+  $(document).ready(function(){
+          //Top
     <!--[if !IE 6]><!-->
     $("#back-to-top").hide();  
     $(window).scroll(function(){
@@ -40,7 +29,22 @@
       $('body,html').animate({scrollTop:0},1000);
       return false;
       });
-      <!--<![endif]-->});</script>
+      <!--<![endif]-->
+
+   $('.quick_menu li').mousemove(function(){
+       $(this).find('.quick_menu_box').slideDown();//可以设置切换时间
+       $(this).find('a').addClass("active");
+       $(this).find('i').addClass("active");
+     });
+     $('.quick_menu li').mouseleave(function(){
+       
+     $(this).find('.quick_menu_box').slideUp("fast");
+     $(this).find('i').removeClass("active");
+     $(this).find('a').removeClass("active");
+     }); 
+
+ });
+</script>
 </head>
 <body>
    <div class="wrap">
@@ -147,6 +151,9 @@
                   <a href="">找企业</a>
                </li>
                <li>
+                  <a href="">找人才</a>
+               </li>
+               <li>
                   <a href="">简历管理</a>
                </li>
                <li class="b-r">
@@ -185,1051 +192,1710 @@
                      <a target="_blank" href="preview-resume.html">预览简历</a>
                   </span> <em>|</em>
                   <span>
-                     <a href="resume-message.html">求职信</a>
+                     <a href="resume-letter.html">求职信</a>
                   </span>
                </div>
+               <!-- 右边简历开始-->
+               <div class="warnbox clear green f14">
+                  <div class="fl f18">
+                     <strong>创建简历</strong>
+                  </div>
+                  <div class="fr">
+                     <span>简历完整度：</span> <em class="resume-rate"><em style="width: 70%;"></em></em> 
+                     <span class="percent">70%</span>
+                  </div>
+               </div>
+               <div class="resume-main clear box-sha">
 
-               <div class="resume-main clear">
+                 
 
-                  <!-- 右边简历开始-->
-   
-                     <!-- 基本信息开始 -->
-                     <div class="item-section">
-                        <div class="mask-area">
-                           <h3>
-                              <a itemid="11392599" itemtype="base" rel="base" class="edit-btn J_editBase disable" href="#" style="display: none;">编辑</a>
-                              <span class="b f14">基本信息</span>
-                           </h3>
+                  <!-- 基本信息开始 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a class="edit-btn disable" href="#" style="display: none;">编辑</a>
+                           <span class="b f14">基本信息</span>
+                        </h3>
+                        <div class="item-bd">
+                           <div id="base-form" class="form-area">
+                              <form method="post" action="/resume/basic/edit" id="form-base">
+                                 <input type="hidden" value="do" name="">
+                                 <input type="hidden" value="" name="">
+                                 <input type="hidden" value="basic" name="type">
+                                 <table width="100%" class="fwy-form-base copy">
+                                    <colgroup>
+                                    <col width="180">
+                                    <col width="*"></colgroup>
+                                 <tbody>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          姓名:
+                                       </th>
+                                       <td class="input">
+                                          <input type="text" value="冯惠雅" maxlength="5" ajaxcheck="true" name="name" class="text J_checkBase" id="employer-input" autocomplete="off">
+                                          <div class="error" style="display:none;">请填写真实姓名，2-5个汉字</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          性别:
+                                       </th>
+                                       <td>
+                                          <input type="radio" value="1" name="gender">
+                                          <label for="gender1" style="margin-right:15px;" class="radio">男</label>
+                                          <input type="radio" checked="checked" value="2" name="gender">
+                                          <label for="gender2" class="radio">女</label>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          现居地:
+                                       </th>
+                                       <td id="livecity-linkup">
+                                          <select class="J_checkBase city" style="width:80px">
+                                             <option value="">请选择</option>
+                                             <option value="110000">北京</option>
+                                             <option value="120000">天津</option>
+                                             <option value="130000">河北</option>
+                                             <option value="140000">山西</option>
+                                             <option value="150000">内蒙古</option>
+                                             <option value="210000">辽宁</option>
+                                             <option value="220000">吉林</option>
+                                             <option value="230000">黑龙江</option>
+                                             <option value="310000">上海</option>
+                                             <option value="320000">江苏</option>
+                                             <option value="330000">浙江</option>
+                                             <option value="340000">安徽</option>
+                                             <option value="350000">福建</option>
+                                             <option value="360000">江西</option>
+                                             <option value="370000">山东</option>
+                                             <option value="410000">河南</option>
+                                             <option value="420000">湖北</option>
+                                             <option value="430000">湖南</option>
+                                             <option selected="" value="440000">广东</option>
+                                             <option value="450000">广西</option>
+                                             <option value="460000">海南</option>
+                                             <option value="500000">重庆</option>
+                                             <option value="510000">四川</option>
+                                             <option value="520000">贵州</option>
+                                             <option value="530000">云南</option>
+                                             <option value="540000">西藏</option>
+                                             <option value="610000">陕西</option>
+                                             <option value="620000">甘肃</option>
+                                             <option value="630000">青海</option>
+                                             <option value="640000">宁夏</option>
+                                             <option value="650000">新疆</option>
+                                             <option value="800000">港澳台</option>
+                                             <option value="810000">海外</option>
+                                          </select>
+                                          <select id="basic-livecity-select" class="J_checkBase city" name="livecity" style="width:80px">
+                                             <option value="440100">广州</option>
+                                             <option value="440200">韶关</option>
+                                             <option value="440300">深圳</option>
+                                             <option value="440400">珠海</option>
+                                             <option value="440500">汕头</option>
+                                             <option value="440600">佛山</option>
+                                             <option value="440700">江门</option>
+                                             <option value="440800">湛江</option>
+                                             <option value="440900">茂名</option>
+                                             <option value="441200">肇庆</option>
+                                             <option value="441300">惠州</option>
+                                             <option selected="" value="441400">梅州</option>
+                                             <option value="441500">汕尾</option>
+                                             <option value="441600">河源</option>
+                                             <option value="441700">阳江</option>
+                                             <option value="441800">清远</option>
+                                             <option value="441900">东莞</option>
+                                             <option value="442000">中山</option>
+                                             <option value="445100">潮州</option>
+                                             <option value="445200">揭阳</option>
+                                             <option value="445300">云浮</option>
+                                             <option value="445400">顺德</option>
+                                          </select>
+                                          <div class="error" style="display:none;">请选择目前居住地</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          户口地:
+                                       </th>
+                                       <td id="domicile-linkup" class="input">
+                                          <select class="J_checkBase city" style="width:80px">
+                                             <option value="">请选择</option>
+                                             <option value="110000">北京</option>
+                                             <option value="120000">天津</option>
+                                             <option value="130000">河北</option>
+                                             <option value="140000">山西</option>
+                                             <option value="150000">内蒙古</option>
+                                             <option value="210000">辽宁</option>
+                                             <option value="220000">吉林</option>
+                                             <option value="230000">黑龙江</option>
+                                             <option value="310000">上海</option>
+                                             <option value="320000">江苏</option>
+                                             <option value="330000">浙江</option>
+                                             <option value="340000">安徽</option>
+                                             <option value="350000">福建</option>
+                                             <option value="360000">江西</option>
+                                             <option value="370000">山东</option>
+                                             <option value="410000">河南</option>
+                                             <option value="420000">湖北</option>
+                                             <option value="430000">湖南</option>
+                                             <option selected="" value="440000">广东</option>
+                                             <option value="450000">广西</option>
+                                             <option value="460000">海南</option>
+                                             <option value="500000">重庆</option>
+                                             <option value="510000">四川</option>
+                                             <option value="520000">贵州</option>
+                                             <option value="530000">云南</option>
+                                             <option value="540000">西藏</option>
+                                             <option value="610000">陕西</option>
+                                             <option value="620000">甘肃</option>
+                                             <option value="630000">青海</option>
+                                             <option value="640000">宁夏</option>
+                                             <option value="650000">新疆</option>
+                                             <option value="800000">港澳台</option>
+                                             <option value="810000">海外</option>
+                                          </select>
+                                          <select id="basic-domicile-select" class="J_checkBase city" name="domicile" style="width:80px">
+                                             <option value="440100">广州</option>
+                                             <option value="440200">韶关</option>
+                                             <option value="440300">深圳</option>
+                                             <option value="440400">珠海</option>
+                                             <option value="440500">汕头</option>
+                                             <option value="440600">佛山</option>
+                                             <option value="440700">江门</option>
+                                             <option value="440800">湛江</option>
+                                             <option value="440900">茂名</option>
+                                             <option value="441200">肇庆</option>
+                                             <option value="441300">惠州</option>
+                                             <option selected="" value="441400">梅州</option>
+                                             <option value="441500">汕尾</option>
+                                             <option value="441600">河源</option>
+                                             <option value="441700">阳江</option>
+                                             <option value="441800">清远</option>
+                                             <option value="441900">东莞</option>
+                                             <option value="442000">中山</option>
+                                             <option value="445100">潮州</option>
+                                             <option value="445200">揭阳</option>
+                                             <option value="445300">云浮</option>
+                                             <option value="445400">顺德</option>
+                                          </select>
+
+                                          <div class="error" style="display:none;">请选择户口所在地区</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          出生日期:
+                                       </th>
+                                       <td class="input">
+                                          <input type="hidden" class="J_checkBase" value="1991-03-09" name="birthday" id="profile-birthdate-input">
+                                          <select class="J_checkBase" id="profile-birthdate-input-year">
+                                             <option value=""></option>
+                                             <option value="1961">1961</option>
+                                             <option value="1962">1962</option>
+                                             <option value="1963">1963</option>
+                                             <option value="1964">1964</option>
+                                             <option value="1965">1965</option>
+                                             <option value="1966">1966</option>
+                                             <option value="1967">1967</option>
+                                             <option value="1968">1968</option>
+                                             <option value="1969">1969</option>
+                                             <option value="1970">1970</option>
+                                             <option value="1971">1971</option>
+                                             <option value="1972">1972</option>
+                                             <option value="1973">1973</option>
+                                             <option value="1974">1974</option>
+                                             <option value="1975">1975</option>
+                                             <option value="1976">1976</option>
+                                             <option value="1977">1977</option>
+                                             <option value="1978">1978</option>
+                                             <option value="1979">1979</option>
+                                             <option value="1980">1980</option>
+                                             <option value="1981">1981</option>
+                                             <option value="1982">1982</option>
+                                             <option value="1983">1983</option>
+                                             <option value="1984">1984</option>
+                                             <option value="1985">1985</option>
+                                             <option value="1986">1986</option>
+                                             <option value="1987">1987</option>
+                                             <option value="1988">1988</option>
+                                             <option value="1989">1989</option>
+                                             <option value="1990">1990</option>
+                                             <option selected="" value="1991">1991</option>
+                                             <option value="1992">1992</option>
+                                             <option value="1993">1993</option>
+                                             <option value="1994">1994</option>
+                                             <option value="1995">1995</option>
+                                             <option value="1996">1996</option>
+                                             <option value="1997">1997</option>
+                                             <option value="1998">1998</option>
+                                          </select>
+                                          <span class="input">年</span>
+                                          <select class="J_checkBase" id="profile-birthdate-input-month">
+                                             <option value=""></option>
+                                             <option value="01">1</option>
+                                             <option value="02">2</option>
+                                             <option selected="selected" value="03">3</option>
+                                             <option value="04">4</option>
+                                             <option value="05">5</option>
+                                             <option value="06">6</option>
+                                             <option value="07">7</option>
+                                             <option value="08">8</option>
+                                             <option value="09">9</option>
+                                             <option value="10">10</option>
+                                             <option value="11">11</option>
+                                             <option value="12">12</option>
+                                          </select>
+                                          <span class="input">月</span>
+                                          <select class="J_checkBase" id="profile-birthdate-input-date">
+                                             <option value=""></option>
+                                             <option value="01">1</option>
+                                             <option value="02">2</option>
+                                             <option value="03">3</option>
+                                             <option value="04">4</option>
+                                             <option value="05">5</option>
+                                             <option value="06">6</option>
+                                             <option value="07">7</option>
+                                             <option value="08">8</option>
+                                             <option selected="selected" value="09">9</option>
+                                             <option value="10">10</option>
+                                             <option value="11">11</option>
+                                             <option value="12">12</option>
+                                             <option value="13">13</option>
+                                             <option value="14">14</option>
+                                             <option value="15">15</option>
+                                             <option value="16">16</option>
+                                             <option value="17">17</option>
+                                             <option value="18">18</option>
+                                             <option value="19">19</option>
+                                             <option value="20">20</option>
+                                             <option value="21">21</option>
+                                             <option value="22">22</option>
+                                             <option value="23">23</option>
+                                             <option value="24">24</option>
+                                             <option value="25">25</option>
+                                             <option value="26">26</option>
+                                             <option value="27">27</option>
+                                             <option value="28">28</option>
+                                             <option value="29">29</option>
+                                             <option value="30">30</option>
+                                             <option value="31">31</option>
+                                          </select>
+                                          <span class="input">日</span>
+
+                                          <div class="error" style="display: none; ">请选择出生日期</div>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          工作经验:
+                                       </th>
+                                       <td class="input">
+                                          <select class="J_checkBase" style="width:110px" id="work-start-year-input" name="workYear">
+                                             <option value="">请选择</option>
+                                             <option value="1">刚参加工作</option>
+                                             <option value="2">已工作1年</option>
+                                             <option value="3">已工作2年</option>
+                                             <option value="4">已工作3年</option>
+                                             <option value="5">已工作4年</option>
+                                             <option value="6">已工作5年</option>
+                                             <option value="7">已工作6年</option>
+                                             <option value="8">已工作7年</option>
+                                             <option value="9">8年及以上</option>
+                                          </select>
+                                          <div class="error" style="display: none;">请选择工作经验</div>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>身高:</th>
+                                       <td class="input">
+                                          <input type="text" maxlength="3" value="" name="height" placeholder="单位：cm" class="text g9">
+                                          <div class="error" style="display: none; ">请正确填写身高</div>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>体重:</th>
+                                       <td class="input">
+                                          <input type="text" maxlength="3" value="" name="weight" placeholder="单位：kg" class="text g9">
+                                          <div class="error" style="display: none; ">请正确填写体重</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>民族:</th>
+                                       <td>
+                                          <input type="text" value="" name="nation" blanksubmit="true" maxlength="10" class="text">
+                                          <div class="error" style="display: none; ">请正确填写民族</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>身份证号:</th>
+                                       <td>
+                                          <input type="text" id="resume-idno-input" name="idCardNum" class="text" value="" maxlength="18">
+                                          <div class="error" style="display: none; ">请正确填写身份证号</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>政治面貌:</th>
+                                       <td class="input">
+                                          <input type="radio" value="10" name="political" id="political10">
+                                          <label for="political10" class="radio">党员</label>
+                                          <input type="radio" value="11" name="political" id="political11">
+                                          <label for="political11" class="radio">团员</label>
+                                          <input type="radio" value="12" name="political" id="political12">
+                                          <label for="political12" class="radio">群众</label>
+                                          <input type="radio" value="13" name="political" id="political13">
+                                          <label for="political13" class="radio">民主党派</label>
+                                          <input type="radio" value="14" name="political" id="political14">
+                                          <label for="political14" class="radio">其它</label>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>婚姻状况:</th>
+                                       <td class="input">
+                                          <input type="radio" value="11" name="marriage" id="marriage11">
+                                          <label for="marriage11" class="radio">未婚</label>
+                                          <input type="radio" value="12" name="marriage" id="marriage12">
+                                          <label for="marriage12" class="radio">已婚</label>
+                                          <input type="radio" value="13" name="marriage" id="marriage13">
+                                          <label for="marriage13" class="radio">离异</label>
+                                       </td>
+                                    </tr>
+                                    <tr class="last-tr">
+                                       <th>到岗时间:</th>
+                                       <td class="input">
+                                          <select name="startWorking">
+                                             <option value="0">请选择</option>
+                                             <option value="1">1周内</option>
+                                             <option value="2">1个月内</option>
+                                             <option value="3">1～3个月</option>
+                                             <option value="4">3个月以上</option>
+                                             <option value="5">面议</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>&nbsp;</th>
+                                       <td class="input button">
+                                          <a id="J_baseSubmit" class="k-yel-btn" href="javascript:void(0);">保存</a>
+                                          <a itemtype="base" class="k-w-btn" href="javascript:void(0);">取消</a>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </form>
+
+                        </div>
+                        <!-- 隐藏部分 -->
+                        <div id="base-info" class="info-area clearfix hidden" style="display: none;">
+                           <div class="u-photo">
+                              <div class="photo-area">
+                                 <a href="">
+                                    <img src=""></a>
+                                 <a style="display:none;" class="change-btn" href="">更换头像</a>
+
+                                 <div style="display: none" id="photo-mask" class="photo-mask"></div>
+                              </div>
+                              <div class="showphoto">
+                                 <input type="checkbox" checked="checked" id="photo_checkbox">
+                                 <label class="checkbox" for="photo_checkbox">在简历中显示</label>
+                              </div>
+                           </div>
+                           <table>
+                              <colgroup>
+                              <col width="99">
+                              <col width="*"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>姓名:</th>
+                                 <td>冯惠雅(女)</td>
+                              </tr>
+
+                              <tr>
+                                 <th>现居地:</th>
+                                 <td>
+                                    广东
+                                      梅州
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>户口地:</th>
+                                 <td>
+                                    广东
+                                      梅州
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>出生日期:</th>
+                                 <td>1991-03-09</td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+                     </div>
+                     <!-- 隐藏部分 -->
+                   </div>
+                     </div>
+                   </div>        
+                  <!-- 基本信息结束 -->
+                  <!-- 联系方式开始 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a itemtype="contact" rel="contact" class="edit-btn disable" href="#" style="display: none;">编辑</a>
+                           <span class="b f14">联系方式</span>
+                        </h3>
+                        <div class="item-bd">
+                           <div class="form-area" id="contact-form">
+                              <form id="form-contact" method="post" action="/resume/basic/edit">
+                                 <input type="hidden" value="do" name="method">
+                                 <input type="hidden" value="" name="CSRFToken">
+                                 <input type="hidden" value="contact" name="type">
+                                 <table width="100%" class="fwy-form-base copy">
+                                    <colgroup>
+                                    <col width="180">
+                                    <col width="*"></colgroup>
+                                 <tbody>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          手机:
+                                       </th>
+                                       <td class="input">
+                                          <input type="hidden" value="" id="mobile-auth">
+                                          <input type="text" id="mobileZipcode" style="width:50px;" value="0086" maxlength="7" name="mobZipcode" class="text J_checkContact g" blanksubmit="true" blankvalue="0086" blankclass="g">
+                                          -
+                                          <input type="text" id="mobile" reg="fun:mobile" style="width:154px;" value="13824573452" maxlength="20" name="mob" class="text J_checkContact">
+                                          <em class="sync"></em>
+
+                                          <div class="error" style="display:none;">请输入正确的手机号码</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          邮箱:
+                                       </th>
+                                       <td class="input">
+                                          <input type="text" id="emailInput" value="572751316@qq.com" maxlength="50" name="email" class="text J_checkContact" reg="email">
+                                          <em class="sync"></em>
+
+                                          <div class="error" style="display: none; ">请输入正确的电子邮件</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>电话:</th>
+                                       <td class="input">
+                                          <input type="text" style="width:50px;" value="" name="telZipcode" reg="fun:ziptest" maxlength="4" class="text J_checkContact g g6" blanksubmit="true" blankvalue="国内区号" blankclass="g6" id="telZipcode">
+                                          -
+                                          <input type="text" style="width:154px;" value="" name="tel" reg="fun:teltest" maxlength="10" blankvalue="电话号码" blanksubmit="true" blankclass="g6" class="text J_checkContact g6" id="telephone">
+                                          <em class="sync"></em>
+                                          <div class="error" style="display: none; ">请输入3-4位国内区号和4-10位电话号码</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>QQ:</th>
+                                       <td class="input">
+                                          <input type="text" blanksubmit="true" value="572751316" name="qq" maxlength="50" class="text J_checkContact" reg="numeric">
+                                          <em class="sync"></em>
+
+                                          <div class="error" style="display: none; ">请输入正确QQ号</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>MSN:</th>
+                                       <td class="input">
+                                          <input type="text" blanksubmit="true" value="" name="msn" class="text J_checkContact" reg="email">
+                                          <em class="sync"></em>
+
+                                          <div class="error" style="display: none; ">请输入正确的MSN</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>通信地址:</th>
+                                       <td class="input">
+                                          <input type="text" blanksubmit="true" value="" name="address" class="text J_checkContact" reg="^.{2,40}$">
+
+                                          <div class="error" style="display: none; ">请输入正确的通信地址</div>
+                                       </td>
+                                    </tr>
+                                    <tr class="last-tr">
+                                       <th>邮政编码:</th>
+                                       <td class="input">
+                                          <input type="text" blanksubmit="true" value="" name="postcode" class="text J_checkContact" maxlength="6" reg="^\d{6,6}$">
+
+                                          <div class="error" style="display: none; ">请输入正确的邮政编码</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>&nbsp;</th>
+                                       <td class="input button">
+                                          <a itemtype="contact" id="J_contactSubmit" class="k-yel-btn" href="javascript:void(0);">
+                                             <span>保存</span>
+                                          </a>
+                                          <a itemtype="contact" class="k-w-btn" href="javascript:void(0);">
+                                             <span>取消</span>
+                                          </a>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </form>
+
+                        </div>
+                        <!-- 隐藏部分 -->
+                        <div id="contact-info" class="info-area hidden" style="display: none;">
+                           <table>
+                              <colgroup>
+                              <col width="99">
+                              <col width="*"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>手机:</th>
+                                 <td>13824573452</td>
+                              </tr>
+                              <tr>
+                                 <th>邮箱:</th>
+                                 <td>572751316@qq.com</td>
+                              </tr>
+                              <tr>
+                                 <th>QQ:</th>
+                                 <td>572751316</td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+                     </div>
+                     <!-- 隐藏部分 --> </div>
+                     </div>
+                  </div>
+                  <!-- 联系方式结束 -->
+                  <!-- 求职意愿开始 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a style="display: none;" href="#" class="edit-btn J_event" rel="edit" maxnum="10">编辑</a>
+                           <span class="b f14">职业意向</span>
+                        </h3>
+                        <div class="item-bd">
+                           <!-- 隐藏部分 -->
+                           <div style="display: none;" id="hope-info" class="info-area">
+                              <table width="100%">
+                                 <colgroup>
+                                 <col width="90">
+                                 <col width="*"></colgroup>
+                              <tbody>
+                                 <tr>
+                                    <th class="mt10">期望行业：</th>
+                                    <td>IT行业</td>
+
+                                 </tr>
+                                 <tr>
+                                    <th class="mt10">期望职位：</th>
+                                    <td>计算机网络</td>
+
+                                 </tr>
+                                 <tr>
+                                    <th class="mt10">期望地点：</th>
+                                    <td>梅州</td>
+
+                                 </tr>
+                                 <tr>
+                                    <th class="mt10">期望月薪：</th>
+                                    <td>
+                                       6000元/月
+                                       <span class="green ml10">已勾选为”面议“</span>
+                                    </td>
+
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- 隐藏部分 -->
+                        <form style="display: block;" id="hope-info" class="form-area">
+
+                           <table width="100%" class="fwy-form-base copy">
+                              <colgroup>
+                              <col width="180">
+                              <col width="*"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th class="mt10">期望行业：</th>
+                                 <td>
+                                    <input type="text" style="display: none;" id="cert-input">
+                                    <div id="cert-result" class="selectResult clearfix dig-selected w270">
+                                       <a value="5544509" name="certId" class="ticket clean g3" href="javascript:void(0);">
+                                          <span class="text">普通话等级证书</span>
+                                          <span class="delete">移除</span>
+                                       </a>
+                                    </div>
+                                    <input type="hidden" id="cert-hidden" value="4,22" name="certIds">
+                                    <a class="arrowhandler" style="display:none" id="cert-link" href="javascript:void(0);">打开</a>
+                                 </td>
+
+                              </tr>
+                              <tr>
+                                 <th class="mt10">期望职位：</th>
+                                 <td>
+                                    <input type="text" style="display: none;" id="cert-input">
+                                    <div id="cert-result" class="selectResult clearfix dig-selected w270">
+                                       <a value="5544509" name="certId" class="ticket clean g3" href="javascript:void(0);">
+                                          <span class="text">普通话等级证书</span>
+                                          <span class="delete">移除</span>
+                                       </a>
+                                    </div>
+                                    <input type="hidden" id="cert-hidden" value="4,22" name="certIds">
+                                    <a class="arrowhandler" style="display:none" id="cert-link" href="javascript:void(0);">打开</a>
+                                 </td>
+
+                              </tr>
+                              <tr>
+                                 <th class="mt10">期望地点：</th>
+                                 <td>
+                                    <input type="text" style="display: none;" id="cert-input">
+                                    <div id="cert-result" class="selectResult clearfix dig-selected w270">请选择</div>
+                                    <input type="hidden" id="cert-hidden" value="4,22" name="certIds">
+                                    <a class="arrowhandler" style="display:none" id="cert-link" href="javascript:void(0);">打开</a>
+                                 </td>
+
+                              </tr>
+                              <tr>
+                                 <th class="mt10">期望月薪：</th>
+                                 <td>
+                                    <input type="text" style="display: none;" id="cert-input">
+                                    <input id="cert-result" class="selectResult noclearfix w270" type="text" placeholder="期望月薪"/>
+                                    元/月
+                                    <input type="checkbox" class="ml10 vm">显示为面议</td>
+
+                              </tr>
+                              <tr>
+                                 <th></th>
+                                 <td class="input button">
+                                    <a itemtype="cert" id="J_formSubmit" class="k-yel-btn" href="javascript:void(0);">
+                                       <span>保存</span>
+                                    </a>
+                                    <a itemtype="cert" class="k-w-btn" href="javascript:void(0);">
+                                       <span>取消</span>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </form>
+                     </div>
+                     </div>
+                  </div>
+                  <!--求职意愿end -->
+                  <!-- 教育经验 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                     <h3>
+                        <a href="#" class="add-btn J_event" itemtype="edu" rel="add" maxnum="10" style="display:none;">添加</a>
+                        <span class="b f14">教育经历</span>
+                     </h3>
+                     <div class="item-bd">
+
+                        <div id="edu-form" class="form-area">
+                           <form method="POST" action="/resume/edu/create" id="form-edu">
+                              <input type="hidden" value="" name="CSRFToken">
+                              <table width="100%" class="fwy-form-base th-left">
+                                 <colgroup>
+                                 <col width="180">
+                                 <col width="*">
+                                 </colgroup>
+                                 <tbody>
+                                 <tr>
+                                    <th>
+                                       <em>*</em>
+                                       就读时间:
+                                    </th>
+                                    <td class="input">
+                                       <input type="text" value="" maxlength="4" name="start" id="work-startdate-year" class="text year J_checkInput2">
+                                       <span class="input">年</span>
+                                       <input type="text" value="" maxlength="2" name="start" id="startdate-month" class="text month">
+                                       <span class="input">月&nbsp;至</span>
+                                       <input type="text" value="" maxlength="4" name="end" id="enddate-year" class="text year">
+                                       <span class="input">年</span>
+                                       <input type="text" value="" maxlength="2" name="end" id="enddate-month" class="text month">
+                                       <span class="input">月</span>
+                                       <div class="error" style="display: none; ">请填写正确的就读时间</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th>
+                                       <em>*</em>
+                                       学校名称:
+                                    </th>
+                                    <td class="input">
+                                      <input type="text" value="" maxlength="20" name="schoolName" class="text J_checkInput2" id="schoolName-input" autocomplete="off">
+                                       <div class="pickpane" style="width: 242px; display: none;">
+                                          <ul class="menu"></ul>
+                                       </div>
+                                             
+                                       &nbsp;&nbsp;
+                                       <div class="error" style="display:none;">请正确填写学校名称</div>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <th>
+                                       <em>*</em>
+                                       专业名称:
+                                    </th>
+                                    <td class="input">
+                                       <input type="text" value="" maxlength="15" name="majorName" id="majorname-input" class="text J_checkInput2">
+                                       <div class="error" style="display:none;">请填写专业名称</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th>
+                                       <em>*</em>
+                                       专业分类:
+                                    </th>
+                                    <td class="input" id="major-linkup">
+                                       <select id="specialty-sort-select" style="width:120px;" class="form-item-margin J_checkInput2">
+                                          <option value="">请选择</option>
+                                          <option value="1">哲学</option>
+                                          <option value="2">经济学</option>
+                                          <option value="3">法学</option>
+                                          <option value="4">教育学</option>
+                                          <option value="5">文学</option>
+                                          <option value="6">历史学</option>
+                                          <option value="7">理学</option>
+                                          <option value="8">工学</option>
+                                          <option value="9">农学</option>
+                                          <option value="10">医学</option>
+                                          <option value="11">管理学</option>
+                                       </select>
+                                       <select class="J_checkInput2" style="width:122px;" id="edu-major-select" name="major">
+                                          <option value="">请选择</option>
+                                       </select>
+                                       <em class="sync"></em>
+                                       <div class="error" style="display: none; ">请选择专业分类</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th>
+                                       <em>*</em>
+                                       学历:
+                                    </th>
+                                    <td class="input">
+                                       <select reg="^[^0]" class="J_checkInput2 public-select" name="degree">
+                                          <option value="">请选择</option>
+                                          <option value="10">博士研究生</option>
+                                          <option value="12">硕士研究生</option>
+                                          <option value="13">本科</option>
+                                          <option value="14">专科</option>
+                                          <option value="16">其他</option>
+                                       </select>
+                                       <em class="sync"></em>
+                                       <div class="error" style="display: none; ">请选择学历</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th>学位:</th>
+                                    <td>
+                                       <select class="public-select" name="graduate">
+                                          <option value="">请选择</option>
+                                          <option value="1">学士</option>
+                                          <option value="2">双学士</option>
+                                          <option value="3">硕士</option>
+                                          <option value="4">MBA</option>
+                                          <option value="5">博士</option>
+                                       </select>
+                                    </td>
+                                 </tr>
+
+                                 <tr>
+                                    <th>&nbsp;</th>
+                                    <td class="input button">
+                                       <a itemtype="edu" id="J_formSubmit2" class="k-yel-btn" href="javascript:void(0);">
+                                          <span>保存</span>
+                                       </a>
+                                       <a itemtype="edu" class="k-w-btn" href="javascript:void(0);">
+                                          <span>取消</span>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                               </table>
+                              <input type="hidden" value="do" name="method">
+                              <input type="hidden" value="true" name="changeIdentity" id="changeIdentity">
+                              <input type="hidden" id="id-startDate" value="" name="startDate">
+                              <input type="hidden" id="id-endDate" value="" name="endDate">
+                           </form>
+
+                        </div>
+                        <!-- 隐藏部分 -->
+                        <div class="info-area hidden" id="edu-info" style="display: none;">
+                           <table width="100%">
+                              <colgroup>
+                              <col width="160">
+                              <col width="155">
+                              <col width="80">
+                              <col width="*">
+                              <col width="65"></colgroup>
+                           <thead>
+                              <tr class="g9">
+                                 <td>毕业院校</td>
+                                 <td>就读时间</td>
+                                 <td>学历</td>
+                                 <td>专业</td>
+                                 <td></td>
+                              </tr>
+                           </thead>
+                           <tbody class="table-list">
+                              <tr>
+                                 <td>
+                                    <div style="width:120px" class="g6 break break">嘉应学院</div>
+                                 </td>
+                                 <td>2010-9 至 2014-7</td>
+                                 <td>本科</td>
+                                 <td>
+                                    <div class="g6 break">计算机科学与技术</div>
+                                 </td>
+                                 <td class="padding">
+                                    <a rel="edit" class="edit t-color J_event disable" itemid="3350782" itemtype="edu" href="#">编辑</a>
+                                    <a class="del t-color J_event disable" itemid="3350782" rel="del" itemtype="edu" href="#">删除</a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           </table>
+                        </div>
+                        <!-- 隐藏部分 -->
+                       </div>
+                     </div>
+                  </div>
+                  <!-- 教育经验 -->
+                  <!-- 语言能力 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a href="#" class="add-btn J_event" itemtype="lang" rel="add" maxnum="10" style="display:none;">添加</a>
+                           <span class="b f14">语言能力</span>
+                        </h3>
+                        <div class="item-bd">
+                           <div id="lang-form" class="form-area">
+                              <form id="form-lang" method="post" action="/resume/lang/create">
+                                 <input type="hidden" value="do" name="method">
+                                 <input type="hidden" value="ZCldcqmaCfrhwDH-7ggcqMom_Yn1CPmtHyWJw0k8" name="CSRFToken">
+                                 <table width="100%" id="resume-lanuage-dialog-form-table" class="fwy-form-base">
+                                    <colgroup>
+                                    <col width="80">
+                                    <col width="100">
+                                    <col width="65">
+                                    <col width="100">
+                                    <col width="65">
+                                    <col width="*"></colgroup>
+                                 <tbody>
+                                    <tr>
+                                       <th> <em>*</em>
+                                          语言:
+                                       </th>
+                                       <td class="input">
+                                          <select class="J_checkInput" id="languagename-select" name="lang" style="width:100px">
+                                             <option value="">请选择</option>
+                                             <option value="1100">英语</option>
+                                             <option value="1200">日语</option>
+                                             <option value="1300">法语</option>
+                                             <option value="1400">德语</option>
+                                             <option value="1500">俄语</option>
+                                             <option value="1600">韩语</option>
+                                             <option value="1700">西班牙语</option>
+                                             <option value="1800">葡萄牙语</option>
+                                             <option value="1900">阿拉伯语</option>
+                                             <option value="2000">意大利语</option>
+                                             <option value="2100">中文普通话</option>
+                                             <option value="2200">粤语</option>
+                                             <option value="2300">上海话</option>
+                                             <option value="2400">闽南语</option>
+                                             <option value="2500">朝鲜语</option>
+                                          </select>
+                                          <div class="error" style="display: none; ">请选择语言名称</div>
+                                       </td>
+                                       <th> <em>*</em>
+                                          听说:
+                                       </th>
+                                       <td class="input">
+                                          <select class="J_checkInput" id="oral-select" style="width:100px" name="oral">
+                                             <option value="">请选择</option>
+                                             <option value="11">良好</option>
+                                             <option value="13">精通</option>
+                                          </select>
+                                          <div class="error" style="display: none; ">请选择熟练程度</div>
+                                       </td>
+                                       <th>
+                                          <em>*</em>
+                                          读写:
+                                       </th>
+                                       <td class="input">
+                                          <select class="J_checkInput" id="rw-select" style="width:100px" name="rw">
+                                             <option value="">请选择</option>
+                                             <option value="11">良好</option>
+                                             <option value="13">精通</option>
+                                          </select>
+                                          <div class="error" style="display: none; ">请选择熟练程度</div>
+                                       </td>
+                                    </tr>
+                                    <tr class="last-tr J_tr">
+                                       <th>等级考试:</th>
+                                       <td colspan="5" class="input">
+                                          <div class="list">
+                                             <select class="exam-select" name="grade">
+                                                <option value="">请选择</option>
+                                             </select>
+                                             <input type="text" style="width:60px" class="text score g9" value="" name="score" maxlength="5">
+                                             <label>分</label>
+
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr class="exam J_tr" style="display:none;">
+                                       <th></th>
+                                       <td colspan="5" class="input">
+                                          <select class="exam-select" style="width:200px" name="grade">
+                                             <option>请选择</option>
+                                          </select>
+                                          <input type="text" style="width:60px" class="text score g9" maxlength="5" name="score">
+                                          分
+                                          <a href="javascript:void(0);" class="removeme">删除</a>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>&nbsp;</th>
+                                       <td colspan="5" class="input button">
+                                          <a itemtype="lang" id="J_formSubmit" class="k-yel-btn" href="javascript:void(0);">
+                                             <span>保存</span>
+                                          </a>
+                                          <a itemtype="lang" class="k-w-btn" href="javascript:void(0);">
+                                             <span>取消</span>
+                                          </a>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </form>
+
+                        </div>
+                        <!-- 隐藏部分 -->
+                        <div class="info-area hidden" id="lang-info" style="display: none;">
+                           <table width="100%">
+                              <colgroup>
+                              <col width="70">
+                              <col width="80">
+                              <col width="60">
+                              <col width="*">
+                              <col width="65"></colgroup>
+                           <thead>
+                              <tr class="g9">
+                                 <td>语言</td>
+                                 <td>听说</td>
+                                 <td>读写</td>
+                                 <td>等级考试</td>
+                                 <td></td>
+                              </tr>
+                           </thead>
+                           <tbody class="table-list">
+                              <tr class="">
+                                 <td>英语</td>
+                                 <td>良好</td>
+                                 <td>良好</td>
+                                 <td>
+                                    <div style="width:285px" class="break">
+                                       大学英语考试四级
+                                              (455分)
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <a itemtype="lang" rel="edit" itemid="2765331" title="修改语言能力" class="edit t-color J_event" href="#">编辑</a>
+                                    <a itemtype="lang" itemid="2765331" rel="del" class="del t-color J_event" href="#">删除</a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           </table>
+                        </div>
+                        <!-- 隐藏部分 -->
+                      </div>
+                     </div>
+                  </div>
+                  <!-- 语言能力end -->
+                  <!-- 证书 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a href="#" class="edit-btn J_event" itemtype="cert" rel="edit" maxnum="10" style="display:none;">编辑</a>
+                           <span class="b f14">证书</span>
+                        </h3>
+                        <div class="item-bd">
+                           <form method="post" action="/resume/cert/create" id="form-cert">
+                                 <input type="hidden" value="do" name="method">
+                                 <input type="hidden" value="" name="CSRFToken">
+                                 <table width="100%" class="fwy-form-base">
+                                    <colgroup>
+                                    <col width="90">
+                                    <col width="*"></colgroup>
+                                     <tbody>
+                                    <tr>
+                                       <th>证书名称：</th>
+                                       <td>
+                                          <input type="text" style="display: none;" id="cert-input">
+                                          <div id="cert-result" class="selectResult clearfix dig-selected w480">
+                                             <a value="5544509" name="certId" class="ticket clean g3" href="javascript:void(0);">
+                                                <span class="text">普通话等级证书</span>
+                                                <span class="delete">移除</span>
+                                             </a>
+                                             <a value="5544510" name="certId" class="ticket clean g3" href="javascript:void(0);">
+                                                <span class="text">大学英语四级</span>
+                                                <span class="delete">移除</span>
+                                             </a>
+                                             <em class="sheng">可再选4项</em>
+                                          </div>
+                                          <input type="hidden" id="cert-hidden" value="4,22" name="certIds">
+                                          <a class="arrowhandler" style="display:none" id="cert-link" href="javascript:void(0);">打开</a>
+                                       </td>
+
+                                    </tr>
+                                    <tr class="last-tr">
+                                       <th></th>
+                                       <td>
+                                          <div style="padding:0" class="textarea-box hidden">
+                                             <textarea maxnum="30" blanksubmit="true" name="cert" blankclass="g9" class="textarea-con other-textarea J_checkInput g9" placeholder="这里可以填写其他证书"></textarea>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th></th>
+                                       <td class="input button">
+                                          <a itemtype="cert" id="J_formSubmit" class="k-yel-btn" href="javascript:void(0);">
+                                             <span>保存</span>
+                                          </a>
+                                          <a itemtype="cert" class="k-w-btn" href="javascript:void(0);">
+                                             <span>取消</span>
+                                          </a>
+                                       </td>
+                                    </tr>
+                                     </tbody>
+                                 </table>
+                           </form>
+                             <style type="text/css">
+                               #cert-dialog-content-pickarea{width:720px; _width:auto;}/*解决chrome下瞬间被撑开的问题*/
+                             </style>
+                             <!-- 隐藏部分 -->
+                              <div class="info-area hidden" id="cert-info" style="display: none;">
+                                 <table width="100%">
+                                    <tbody class="table-list">
+                                       <tr>
+                                          <td>
+                                             <div class="break" style="width: 510px">
+                                                普通话等级证书，
+                                            大学英语四级
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <!-- 隐藏部分 -->
+                        </div>
+                    </div>
+                  </div>
+                  <!-- 证书end -->
+
+                  <!-- 工作经验 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a href="#" class="add-btn J_event" itemtype="practice" rel="add" maxnum="10" style="display:none;">添加</a>
+                           <span class="b f14">工作经历</span>
+                        </h3>
+                        <div class="item-bd">
+                           <div id="practice-form" class="form-area">
+                              <form method="post" action="" id="form-practice">
+                                 <input type="hidden" value="" name="CSRFToken">
+                                 <table width="100%" class="fwy-form-base">
+                                    <colgroup>
+                                    <col width="140">
+                                    <col width="*"></colgroup>
+                                     <tbody>
+                                    <tr>
+                                       <th> <em>*</em>
+                                          公司名称:
+                                       </th>
+                                       <td colspan="3" class="input matchbox-wrap">
+                                             <input type="text" value="" maxlength="40" name="corpName" class="text J_check" id="employer-input" autocomplete="off">
+                                          <div class="error" style="display:none;">请填写正确的公司名称</div>
+                                       </td>
+
+                                    </tr>
+                                    <tr>
+                                       <th>工作城市:</th>
+                                       <td colspan="3" id="jobCity-linkup">
+                                          <select style="width:122px;" class="form-item-margin">
+                                             <option value="">请选择</option>
+                                             <option value="110000">北京</option>
+                                             <option value="120000">天津</option>
+                                             <option value="130000">河北</option>
+                                             <option value="140000">山西</option>
+                                             <option value="150000">内蒙古</option>
+                                             <option value="210000">辽宁</option>
+                                             <option value="220000">吉林</option>
+                                             <option value="230000">黑龙江</option>
+                                             <option value="310000">上海</option>
+                                             <option value="320000">江苏</option>
+                                             <option value="330000">浙江</option>
+                                             <option value="340000">安徽</option>
+                                             <option value="350000">福建</option>
+                                             <option value="360000">江西</option>
+                                             <option value="370000">山东</option>
+                                             <option value="410000">河南</option>
+                                             <option value="420000">湖北</option>
+                                             <option value="430000">湖南</option>
+                                             <option value="440000">广东</option>
+                                             <option value="450000">广西</option>
+                                             <option value="460000">海南</option>
+                                             <option value="500000">重庆</option>
+                                             <option value="510000">四川</option>
+                                             <option value="520000">贵州</option>
+                                             <option value="530000">云南</option>
+                                             <option value="540000">西藏</option>
+                                             <option value="610000">陕西</option>
+                                             <option value="620000">甘肃</option>
+                                             <option value="630000">青海</option>
+                                             <option value="640000">宁夏</option>
+                                             <option value="650000">新疆</option>
+                                             <option value="800000">港澳台</option>
+                                             <option value="810000">海外</option>
+                                          </select>
+                                          <select style="width:122px;" name="jobCity" id="practice-jobCity-select"></select>
+
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>所在部门:</th>
+                                       <td colspan="3">
+                                          <input type="text" maxlength="15" reg="^.{0,15}$" blanksubmit="true" class="text J_check" value="" name="department"></td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          职位名称:
+                                       </th>
+                                       <td colspan="3" class="input">
+                                          <input type="text" maxlength="15" reg="^.{2,15}$" id="position-input" class="text J_check" value="" name="position">
+                                          <em class="sync"></em>
+                                          <div class="error" style="display:none;">请填写正确的职位名称</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          所属行业:
+                                       </th>
+                                       <td colspan="3" class="input">
+                                          <input type="text" id="industry-input" class="text J_check select-beauty" readonly="yes" reg="^.+$" value="">
+                                          <em class="sync"></em>
+                                          <input type="hidden" id="industry-hidden" name="positionIndustry" value="0">
+                                          <a style="display:none" class="arrowhandler" id="industry-link" href="javascript:void(0);">打开</a>
+                                          <div class="error" style="display: none; ">请选择所属行业</div>
+                                       </td>
+
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          职位类别:
+                                       </th>
+                                       <td colspan="3" class="input">
+                                          <input type="text" class="text J_check select-beauty" reg="^.+$" id="profession-input" value="">
+                                          <em class="sync"></em>
+                                          <input type="hidden" id="profession-hidden" value="0" name="positionFunction">
+                                          <a class="arrowhandler" style="display:none" id="profession-link" href="javascript:void(0);">打开</a>
+                                          <div class="error" style="display: none; ">请选择职位类别</div>
+                                       </td>
+
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          职位级别:
+                                       </th>
+                                       <td colspan="3" class="input">
+                                          <select class="select J_check public-select" reg="^[^0]" name="positionExperience">
+                                             <option value="">请选择</option>
+                                             <option value="1">实习/见习</option>
+                                             <option value="2">初级</option>
+                                             <option value="3">资深(非管理岗)</option>
+                                             <option value="4">经理/主管</option>
+                                             <option value="5">总监/部门负责人</option>
+                                             <option value="6">执行官/总裁</option>
+                                          </select>
+                                          <em class="sync"></em>
+                                          <div class="error" style="display: none; ">请选择职位级别</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          <em>*</em>
+                                          在职时间:
+                                       </th>
+                                       <td colspan="3" class="input">
+                                          <input type="text" value="" maxlength="4" name="start" id="work-startdate-year" class="text year J_check" reg="fun:$.formValidateFn.time,work,td">
+
+                                          <span class="input">年</span>
+                                          <input type="text" value="" maxlength="2" name="start" id="startdate-month" class="text month">
+                                          <span class="input">月&nbsp;至</span>
+                                          <input type="text" value="" maxlength="4" name="end" id="enddate-year" class="text year">
+                                          <span class="input">年</span>
+                                          <input type="text" value="" maxlength="2" name="end" id="enddate-month" class="text month">
+                                          <span class="input">月</span>
+                                          <input type="checkbox" id="enddate-present-checkbox" value="present" name="withoutEnd" class="checkbox radio">
+                                          <span for="enddate-present-checkbox" class="input f12">至今</span>
+                                          <em class="sync"></em>
+                                          <div class="error" style="display: none; ">请填写正确的在职时间</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>薪水（税前）:</th>
+                                       <td colspan="3" class="input">
+                                          <input type="text" maxlength="7" reg="^\d+(\d|(\.[0-9]{1,2}))$" blanksubmit="true" class="text J_check" value="" name="salary">
+                                          <span class="input">RMB/月</span>
+                                          <div class="error" style="display: none; ">请填写准确的薪水</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>汇报对象:</th>
+                                       <td width="140">
+                                          <input type="text" maxlength="15" reg="^.{0,15}$" style="width:137px" class="text" value="" name="leaderPosition"></td>
+                                       <td align="right" width="90">
+                                          <span class="input">下属人数：</span>
+                                       </td>
+                                       <td class="input">
+                                          <input type="text" style="width:137px" reg="^\d{1,6}$" blanksubmit="true" class="text J_check" maxlength="6" value="" name="subordinateCnt">
+                                          <div class="error" style="display: none; ">请正确填写下属人数</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th class="label" style="padding-bottom:10px;">工作描述:</th>
+                                       <td colspan="3" class="input textarea-box" style="padding-bottom:10px;">
+                                          <textarea maxnum="400" style="width:373px;height:60px;font-size:12px" class="textarea-con J_check g9" blankclass="g9" blankvalue="描述工作职责范围及成绩等（限400字）" name="descr" reg="^.{0,400}$" blanksubmit="true"></textarea>
+                                          <p class="textarea-check-tip">
+                                             <span class="J_lastNum g9">
+                                                <span>0</span>
+                                                /400
+                                             </span>
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>&nbsp;</th>
+                                       <td colspan="3" class="input button">
+                                          <a itemtype="practice" id="J_practiceSubmit" class="k-yel-btn" href="javascript:void(0);">
+                                             <span>保存</span>
+                                          </a>
+                                          <a itemtype="practice" class="k-w-btn" href="javascript:void(0);">
+                                             <span>取消</span>
+                                          </a>
+                                       </td>
+                                    </tr>
+                                    </tbody>
+                                 </table>
+
+                                 <input type="hidden" value="do" name="method">
+                                 <input type="hidden" value="" name="id">
+                                 <input type="hidden" value="1" name="jobKind">
+                                 <input type="hidden" value="true" name="changIdentity" id="changeIdentity">
+                                 <input type="hidden" id="id-startDate" value="" name="startDate">
+                                 <input type="hidden" id="id-endDate" value="" name="endDate">
+                              </form>
+                           </div>
+
+                           <!-- 隐藏部分 -->
+                           <div class="info-area hidden" id="practice-info" style="display: none;">
+                              <table width="100%">
+                                 <colgroup>               
+                                 <col width="160">               
+                                 <col width="155">               
+                                 <col width="*">               
+                                 <col width="65"></colgroup>
+                              <thead>
+                                 <tr>
+                                    <td>工作公司</td>
+                                    <td>在职时间</td>
+                                    <td>职位名称</td>
+                                    <td>&nbsp;</td>
+                                 </tr>
+                              </thead>
+                              <tbody class="table-list">
+                                 <tr>
+                                    <td>
+                                       <div style="width:132px" class="break">梅州星空网络有限公司</div>
+                                    </td>
+                                    <td>2013-12 至 今</td>
+                                    <td>
+                                       <div style="width:102px" class="break">前端程序员</div>
+                                    </td>
+                                    <td class="padding">
+                                       <a itemtype="practice" rel="edit" itemid="5361587" class="edit t-color J_event disable" href="#">编辑</a>
+                                       <a itemtype="practice" itemid="5361587" rel="del" class="del t-color J_event disable" href="#">删除</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>
+                                       <div style="width:132px" class="break">追风有限公司</div>
+                                    </td>
+                                    <td>2013-3 至 今</td>
+                                    <td>
+                                       <div style="width:102px" class="break">web前端程序员</div>
+                                    </td>
+                                    <td class="padding">
+                                       <a itemtype="practice" rel="edit" itemid="5361575" class="edit t-color J_event disable" href="#">编辑</a>
+                                       <a itemtype="practice" itemid="5361575" rel="del" class="del t-color J_event disable" href="#">删除</a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           </div>
+                           <!-- 隐藏部分 -->
+                        </div>
+                     </div>
+                 </div>
+                  <!-- 工作经验 -->
+                  <!-- 项目经验 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a href="#" class="add-btn J_event" itemtype="project" rel="add" maxnum="10" style="display:none;">添加</a>
+                           <span class="b f14">项目经验</span>
+                        </h3>             
                            <div class="item-bd">
-                              <div id="base-form" class="form-area">
-                                 <form method="post" action="/resume/basic/edit" id="form-base">
+                              <div id="project-form" class="form-area">
+                                 <form id="form-project" method="post" action="/resume/project/create">
                                     <input type="hidden" value="do" name="method">
-                                    <input type="hidden" value="ZS6KJR0HTRNdoagqGkdAIN5v91cYB_BpG0q6dp8*" name="CSRFToken">
-                                    <input type="hidden" value="basic" name="type">
-                                    <table width="100%" class="dj-form-base copy">
+                                    <input type="hidden" value="ZWZxQ9PDz4mD_bUR3LLKJ587F9jlt_AN1az14sg*" name="CSRFToken">
+                                    <table width="100%" class="fwy-form-base">
                                        <colgroup>
-                                       <col width="180">
+                                       <col width="120">
                                        <col width="*"></colgroup>
                                     <tbody>
                                        <tr>
-                                          <th>
-                                             <em>*</em>
-                                             姓名:
+                                          <th> <em>*</em>
+                                             项目名称:
                                           </th>
                                           <td class="input">
-                                             <input type="text" value="冯惠雅" maxlength="5" ajaxcheck="true" ajaxreg="name:namecallback" reg="^([\u4e00-\u9fa5]){2,5}$" name="name" class="text J_checkBase" id="employer-input" autocomplete="off">
-                                             <em class="sync"></em>
-                                             <div class="error" style="display:none;">请填写真实姓名，2-5个汉字</div>
+                                             <input type="text" id="projectname-input" class="text J_checkInput" name="name" maxlength="80" value="">
+                                             <div class="error" style="display: none; ">请填写项目名称</div>
                                           </td>
                                        </tr>
                                        <tr>
-                                          <th>
-                                             <em>*</em>
-                                             性别:
-                                          </th>
-                                          <td>
-                                             <input type="radio" value="1" name="gender">
-                                             <label for="gender1" style="margin-right:15px;" class="radio">男</label>
-                                             <input type="radio" checked="checked" value="2" name="gender">
-                                             <label for="gender2" class="radio">女</label>
-                                             <em class="sync"></em>
-                                          </td>
-                                       </tr>
-
-                                       <tr>
-                                          <th>
-                                             <em>*</em>
-                                             现居地:
-                                          </th>
-                                          <td id="livecity-linkup">
-                                             <select class="J_checkBase city" style="width:80px">
-                                                <option value="">请选择</option>
-                                                <option value="110000">北京</option>
-                                                <option value="120000">天津</option>
-                                                <option value="130000">河北</option>
-                                                <option value="140000">山西</option>
-                                                <option value="150000">内蒙古</option>
-                                                <option value="210000">辽宁</option>
-                                                <option value="220000">吉林</option>
-                                                <option value="230000">黑龙江</option>
-                                                <option value="310000">上海</option>
-                                                <option value="320000">江苏</option>
-                                                <option value="330000">浙江</option>
-                                                <option value="340000">安徽</option>
-                                                <option value="350000">福建</option>
-                                                <option value="360000">江西</option>
-                                                <option value="370000">山东</option>
-                                                <option value="410000">河南</option>
-                                                <option value="420000">湖北</option>
-                                                <option value="430000">湖南</option>
-                                                <option selected="" value="440000">广东</option>
-                                                <option value="450000">广西</option>
-                                                <option value="460000">海南</option>
-                                                <option value="500000">重庆</option>
-                                                <option value="510000">四川</option>
-                                                <option value="520000">贵州</option>
-                                                <option value="530000">云南</option>
-                                                <option value="540000">西藏</option>
-                                                <option value="610000">陕西</option>
-                                                <option value="620000">甘肃</option>
-                                                <option value="630000">青海</option>
-                                                <option value="640000">宁夏</option>
-                                                <option value="650000">新疆</option>
-                                                <option value="800000">港澳台</option>
-                                                <option value="810000">海外</option>
-                                             </select>
-                                             <select id="basic-livecity-select" class="J_checkBase city" name="livecity" style="width:80px">
-                                                <option value="440100">广州</option>
-                                                <option value="440200">韶关</option>
-                                                <option value="440300">深圳</option>
-                                                <option value="440400">珠海</option>
-                                                <option value="440500">汕头</option>
-                                                <option value="440600">佛山</option>
-                                                <option value="440700">江门</option>
-                                                <option value="440800">湛江</option>
-                                                <option value="440900">茂名</option>
-                                                <option value="441200">肇庆</option>
-                                                <option value="441300">惠州</option>
-                                                <option selected="" value="441400">梅州</option>
-                                                <option value="441500">汕尾</option>
-                                                <option value="441600">河源</option>
-                                                <option value="441700">阳江</option>
-                                                <option value="441800">清远</option>
-                                                <option value="441900">东莞</option>
-                                                <option value="442000">中山</option>
-                                                <option value="445100">潮州</option>
-                                                <option value="445200">揭阳</option>
-                                                <option value="445300">云浮</option>
-                                                <option value="445400">顺德</option>
-                                             </select>
-                                             <em class="sync"></em>
-
-                                             <div class="error" style="display:none;">请选择目前居住地</div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th>
-                                             <em>*</em>
-                                             户口地:
-                                          </th>
-                                          <td id="domicile-linkup" class="input">
-                                             <select class="J_checkBase city" style="width:80px">
-                                                <option value="">请选择</option>
-                                                <option value="110000">北京</option>
-                                                <option value="120000">天津</option>
-                                                <option value="130000">河北</option>
-                                                <option value="140000">山西</option>
-                                                <option value="150000">内蒙古</option>
-                                                <option value="210000">辽宁</option>
-                                                <option value="220000">吉林</option>
-                                                <option value="230000">黑龙江</option>
-                                                <option value="310000">上海</option>
-                                                <option value="320000">江苏</option>
-                                                <option value="330000">浙江</option>
-                                                <option value="340000">安徽</option>
-                                                <option value="350000">福建</option>
-                                                <option value="360000">江西</option>
-                                                <option value="370000">山东</option>
-                                                <option value="410000">河南</option>
-                                                <option value="420000">湖北</option>
-                                                <option value="430000">湖南</option>
-                                                <option selected="" value="440000">广东</option>
-                                                <option value="450000">广西</option>
-                                                <option value="460000">海南</option>
-                                                <option value="500000">重庆</option>
-                                                <option value="510000">四川</option>
-                                                <option value="520000">贵州</option>
-                                                <option value="530000">云南</option>
-                                                <option value="540000">西藏</option>
-                                                <option value="610000">陕西</option>
-                                                <option value="620000">甘肃</option>
-                                                <option value="630000">青海</option>
-                                                <option value="640000">宁夏</option>
-                                                <option value="650000">新疆</option>
-                                                <option value="800000">港澳台</option>
-                                                <option value="810000">海外</option>
-                                             </select>
-                                             <select id="basic-domicile-select" class="J_checkBase city" name="domicile" style="width:80px">
-                                                <option value="440100">广州</option>
-                                                <option value="440200">韶关</option>
-                                                <option value="440300">深圳</option>
-                                                <option value="440400">珠海</option>
-                                                <option value="440500">汕头</option>
-                                                <option value="440600">佛山</option>
-                                                <option value="440700">江门</option>
-                                                <option value="440800">湛江</option>
-                                                <option value="440900">茂名</option>
-                                                <option value="441200">肇庆</option>
-                                                <option value="441300">惠州</option>
-                                                <option selected="" value="441400">梅州</option>
-                                                <option value="441500">汕尾</option>
-                                                <option value="441600">河源</option>
-                                                <option value="441700">阳江</option>
-                                                <option value="441800">清远</option>
-                                                <option value="441900">东莞</option>
-                                                <option value="442000">中山</option>
-                                                <option value="445100">潮州</option>
-                                                <option value="445200">揭阳</option>
-                                                <option value="445300">云浮</option>
-                                                <option value="445400">顺德</option>
-                                             </select>
-
-                                             <div class="error" style="display:none;">请选择户口所在地区</div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th>
-                                             <em>*</em>
-                                             出生日期:
+                                          <th> <em>*</em>
+                                             团队规模:
                                           </th>
                                           <td class="input">
-                                             <input type="hidden" class="J_checkBase" value="1991-03-09" name="birthday" id="profile-birthdate-input">
-                                             <select class="J_checkBase" id="profile-birthdate-input-year">
-                                                <option value=""></option>
-                                                <option value="1961">1961</option>
-                                                <option value="1962">1962</option>
-                                                <option value="1963">1963</option>
-                                                <option value="1964">1964</option>
-                                                <option value="1965">1965</option>
-                                                <option value="1966">1966</option>
-                                                <option value="1967">1967</option>
-                                                <option value="1968">1968</option>
-                                                <option value="1969">1969</option>
-                                                <option value="1970">1970</option>
-                                                <option value="1971">1971</option>
-                                                <option value="1972">1972</option>
-                                                <option value="1973">1973</option>
-                                                <option value="1974">1974</option>
-                                                <option value="1975">1975</option>
-                                                <option value="1976">1976</option>
-                                                <option value="1977">1977</option>
-                                                <option value="1978">1978</option>
-                                                <option value="1979">1979</option>
-                                                <option value="1980">1980</option>
-                                                <option value="1981">1981</option>
-                                                <option value="1982">1982</option>
-                                                <option value="1983">1983</option>
-                                                <option value="1984">1984</option>
-                                                <option value="1985">1985</option>
-                                                <option value="1986">1986</option>
-                                                <option value="1987">1987</option>
-                                                <option value="1988">1988</option>
-                                                <option value="1989">1989</option>
-                                                <option value="1990">1990</option>
-                                                <option selected="" value="1991">1991</option>
-                                                <option value="1992">1992</option>
-                                                <option value="1993">1993</option>
-                                                <option value="1994">1994</option>
-                                                <option value="1995">1995</option>
-                                                <option value="1996">1996</option>
-                                                <option value="1997">1997</option>
-                                                <option value="1998">1998</option>
+                                             <select class="J_checkInput" id="teamscale-select" name="teamScale">
+                                                <option value="">请选择</option>
+                                                <option value="1">1-3人</option>
+                                                <option value="2">4-7人</option>
+                                                <option value="3">8-10人</option>
+                                                <option value="4">11-20人</option>
+                                                <option value="5">21人以上</option>
                                              </select>
+                                             <div class="error" style="display: none; ">请选择团队规模</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <th>项目简介:</th>
+                                          <td class="input textarea-box">
+                                             <textarea maxnum="400" name="descr" blankclass="g9" blankvalue="描述项目内容(限400字)" reg="^.{0,400}$" blanksubmit="true" class="textarea-con edit-textarea J_checkInput show g9" id="project-synopsis"></textarea>
+                                             <p class="textarea-check-tip" style="width: 404px;">
+                                                <span class="J_lastNum g9">
+                                                   <span>0</span>
+                                                   /400
+                                                </span>
+                                             </p>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <th>
+                                             <em>*</em>
+                                             项目角色:
+                                          </th>
+                                          <td class="input" style="position:relative;">
+                                             <div style="position:relative;">
+                                                <input type="text" class="text J_checkInput" id="position-input" name="position" maxlength="60" value="">
+                                                <div class="error" style="display: none; ">请填写项目角色</div>
+                                             </div>
+                                          </td>
+                                       </tr>
+
+                                       <tr>
+                                          <th>
+                                             <em>*</em>
+                                             参与时间:
+                                          </th>
+                                          <td class="input">
+                                             <input type="text" value="" maxlength="4" name="start" id="startdate-year" class="text year J_checkInput" reg="fun:$.formValidateFn.time,work,td">
                                              <span class="input">年</span>
-                                             <select class="J_checkBase" id="profile-birthdate-input-month">
-                                                <option value=""></option>
-                                                <option value="01">1</option>
-                                                <option value="02">2</option>
-                                                <option selected="selected" value="03">3</option>
-                                                <option value="04">4</option>
-                                                <option value="05">5</option>
-                                                <option value="06">6</option>
-                                                <option value="07">7</option>
-                                                <option value="08">8</option>
-                                                <option value="09">9</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                             </select>
+                                             <input type="text" value="" maxlength="2" name="start" id="startdate-month" class="text month">
+                                             <span class="input">月&nbsp;至</span>
+                                             <input type="text" value="" maxlength="4" name="end" id="enddate-year" class="text year">
+                                             <span class="input">年</span>
+                                             <input type="text" value="" maxlength="2" name="end" id="enddate-month" class="text month">
                                              <span class="input">月</span>
-                                             <select class="J_checkBase" id="profile-birthdate-input-date">
-                                                <option value=""></option>
-                                                <option value="01">1</option>
-                                                <option value="02">2</option>
-                                                <option value="03">3</option>
-                                                <option value="04">4</option>
-                                                <option value="05">5</option>
-                                                <option value="06">6</option>
-                                                <option value="07">7</option>
-                                                <option value="08">8</option>
-                                                <option selected="selected" value="09">9</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                                <option value="13">13</option>
-                                                <option value="14">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
-                                                <option value="21">21</option>
-                                                <option value="22">22</option>
-                                                <option value="23">23</option>
-                                                <option value="24">24</option>
-                                                <option value="25">25</option>
-                                                <option value="26">26</option>
-                                                <option value="27">27</option>
-                                                <option value="28">28</option>
-                                                <option value="29">29</option>
-                                                <option value="30">30</option>
-                                                <option value="31">31</option>
-                                             </select>
-                                             <span class="input">日</span>
-
-                                             <div class="error" style="display: none; ">请选择出生日期</div>
-                                          </td>
-                                       </tr>
-
-                                       <tr>
-                                          <th>
-                                             <em>*</em>
-                                             工作经验:
-                                          </th>
-                                          <td class="input">
-                                             <select class="J_checkBase" style="width:110px" id="work-start-year-input" name="workYear">
-                                                <option value="">请选择</option>
-                                                <option value="1">刚参加工作</option>
-                                                <option value="2">已工作1年</option>
-                                                <option value="3">已工作2年</option>
-                                                <option value="4">已工作3年</option>
-                                                <option value="5">已工作4年</option>
-                                                <option value="6">已工作5年</option>
-                                                <option value="7">已工作6年</option>
-                                                <option value="8">已工作7年</option>
-                                                <option value="9">8年及以上</option>
-                                             </select>
-                                             <div class="error" style="display: none;">请选择工作经验</div>
-                                          </td>
-                                       </tr>
-
-                                       <tr>
-                                          <th>身高:</th>
-                                          <td class="input">
-                                             <input type="text" maxlength="3" value="" name="height" blanksubmit="true" reg="integer" blankvalue="单位：cm" class="text J_checkBase g9">
-                                             <div class="error" style="display: none; ">请正确填写身高</div>
-                                          </td>
-                                       </tr>
-
-                                       <tr>
-                                          <th>体重:</th>
-                                          <td class="input">
-                                             <input type="text" maxlength="3" value="" name="weight" blanksubmit="true" reg="integer" blankvalue="单位：kg" class="text J_checkBase g9">
-                                             <div class="error" style="display: none; ">请正确填写体重</div>
+                                             <input type="checkbox" id="enddate-present-checkbox" value="present" name="withoutEnd" class="checkbox radio">
+                                             <span for="enddate-present-checkbox" class="checkbox f12">至今</span>
+                                             <div class="error" style="display: none; ">请填写正确的参与时间</div>
                                           </td>
                                        </tr>
                                        <tr>
-                                          <th>民族:</th>
-                                          <td>
-                                             <input type="text" value="" name="nation" blanksubmit="true" reg="^([\u4e00-\u9fa5]){0,10}$" maxlength="10" class="text J_checkBase">
-                                             <div class="error" style="display: none; ">请正确填写民族</div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th>身份证号:</th>
-                                          <td>
-                                             <input type="text" id="resume-idno-input" name="idCardNum" blanksubmit="true" reg="idcard" class="text J_checkBase" value="" maxlength="18">
-                                             <div class="error" style="display: none; ">请正确填写身份证号</div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th>政治面貌:</th>
-                                          <td class="input">
-                                             <input type="radio" value="10" name="political" "="" id="political10">
-                                             <label for="political10" class="radio">党员</label>
-                                             <input type="radio" value="11" name="political" "="" id="political11">
-                                             <label for="political11" class="radio">团员</label>
-                                             <input type="radio" value="12" name="political" "="" id="political12">
-                                             <label for="political12" class="radio">群众</label>
-                                             <input type="radio" value="13" name="political" "="" id="political13">
-                                             <label for="political13" class="radio">民主党派</label>
-                                             <input type="radio" value="14" name="political" "="" id="political14">
-                                             <label for="political14" class="radio">其它</label>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th>婚姻状况:</th>
-                                          <td class="input">
-                                             <input type="radio" value="11" name="marriage" "="" id="marriage11">
-                                             <label for="marriage11" class="radio">未婚</label>
-                                             <input type="radio" value="12" name="marriage" "="" id="marriage12">
-                                             <label for="marriage12" class="radio">已婚</label>
-                                             <input type="radio" value="13" name="marriage" "="" id="marriage13">
-                                             <label for="marriage13" class="radio">离异</label>
-                                          </td>
-                                       </tr>
-                                       <tr class="last-tr">
-                                          <th>到岗时间:</th>
-                                          <td class="input">
-                                             <select name="startWorking">
-                                                <option value="0">请选择</option>
-                                                <option value="1">1周内</option>
-                                                <option value="2">1个月内</option>
-                                                <option value="3">1～3个月</option>
-                                                <option value="4">3个月以上</option>
-                                                <option value="5">面议</option>
-                                             </select>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th>&nbsp;</th>
-                                          <td class="sync-info">
-                                             <span>标识</span>
-                                             <em class="sync"></em>
-                                             <span>的信息将会同步到“我的档案中”</span>
+                                          <th>项目成果:</th>
+                                          <td class="input textarea-box">
+                                             <textarea maxnum="400" name="achievement" blankclass="g9" blankvalue="描述你在项目执行过程中积累的能力及验证项目效果的指标（限400字）" blanksubmit="true" reg="^.{0,400}$" class="textarea-con edit-textarea J_checkInput show g9" id="project-merit"></textarea>
+                                             <p class="textarea-check-tip" style="width: 404px;">
+                                                <span class="J_lastNum g9">
+                                                   <span>0</span>
+                                                   /400
+                                                </span>
+                                             </p>
                                           </td>
                                        </tr>
                                        <tr>
                                           <th>&nbsp;</th>
                                           <td class="input button">
-                                             <a id="J_baseSubmit" class="fresh formValidateSubmit margin" itemtype="base" href="javascript:void(0);">
+                                             <a itemtype="project" id="J_formSubmit" class="k-yel-btn" href="javascript:void(0);">
                                                 <span>保存</span>
                                              </a>
-                                             <a itemtype="base" class="normal J_cancel" href="javascript:void(0);">
+                                             <a itemtype="project" class="k-w-btn" href="javascript:void(0);">
                                                 <span>取消</span>
                                              </a>
                                           </td>
                                        </tr>
                                     </tbody>
-                                 </table>
-                              </form>
-
-                           </div>
-                           <div id="base-info" class="info-area clearfix hidden" style="display: none;">
-                              <div class="u-photo">
-                                 <div class="photo-area">
-                                    <a href="http://www.dajie.com/settings/avatar?redir=http://job.dajie.com/resume/index">
-                                       <img src="http://0.f1.dajieimg.com/group1/M00/3A/7A/CgpAmVLJYk-AGCo9AAAAoLwQons721m.jpg"></a>
-                                    <a style="display:none;" class="change-btn" href="http://www.dajie.com/settings/avatar?redir=http://job.dajie.com/resume/index">更换头像</a>
-
-                                    <div style="display: none" id="photo-mask" class="photo-mask"></div>
-                                 </div>
-                                 <div class="showphoto">
-                                    <input type="checkbox" checked="checked" id="photo_checkbox">
-                                    <label class="checkbox" for="photo_checkbox">在简历中显示</label>
-                                 </div>
+                                    </table>
+                                  </form>
                               </div>
-                              <table>
+                           <!-- 隐藏部分 -->
+                           <div class="info-area hidden" id="project-info" style="display: none;">
+                              <table width="100%">
                                  <colgroup>
-                                 <col width="99">
-                                 <col width="*"></colgroup>
-                              <tbody>
-                                 <tr>
-                                    <th>姓名:</th>
-                                    <td>冯惠雅(女)</td>
+                                 <col width="160">
+                                 <col width="155">
+                                 <col width="*">
+                                 <col width="65"></colgroup>
+                              <thead>
+                                 <tr class="g9">
+                                    <td>项目名称</td>
+                                    <td>参与时间</td>
+                                    <td>担任职务</td>
+                                    <td></td>
                                  </tr>
-
+                              </thead>
+                              <tbody class="table-list">
                                  <tr>
-                                    <th>现居地:</th>
                                     <td>
-                                       广东
-                    梅州
+                                       <div style="width:132px" class="break ">web开发</div>
                                     </td>
-                                 </tr>
-                                 <tr>
-                                    <th>户口地:</th>
+                                    <td>2013-6 至 2013-9</td>
                                     <td>
-                                       广东
-                梅州
+                                       <div style="width:166px" class="break">网站前端程序员</div>
                                     </td>
-                                 </tr>
-                                 <tr>
-                                    <th>出生日期:</th>
-                                    <td>1991-03-09</td>
+                                    <td class="padding">
+                                       <a class="edit t-color J_event disable" title="修改项目经验" itemid="1031925" itemtype="project" rel="edit" href="#">编辑</a>
+                                       <a itemid="1031925" itemtype="project" rel="del" class="del t-color J_event disable" href="#">删除</a>
+                                    </td>
                                  </tr>
                               </tbody>
-                           </table>
-
-                        </div>
+                               </table>
+                           </div>
+                           <!-- 隐藏部分 -->
+                         </div>
                      </div>
-                     <div class="resume-masking" style="height: 695px; width: 673px;"></div>
                   </div>
-               </div>
-            </div>
-            <!-- 基本信息结束 -->
-            <!-- 联系方式开始 -->
-            <div class="item-section">
-               <div class="mask-area">
-                  <h3>
-                     <a style="display: block;" href="#" class="edit-btn J_editBase" rel="contact" itemtype="contact">编辑</a>
-                     <span class="b f14">联系方式</span>
-                  </h3>
-                  <div class="item-bd">
-                     <div style="display: block;" class="info-area" id="contact-info">
-                        <table>
-                           <colgroup>
-                           <col width="99">
-                           <col width="*"></colgroup>
-                        <tbody>
-                           <tr>
-                              <th>手机:</th>
-                              <td>13824573452</td>
-                           </tr>
-                           <tr>
-                              <th>邮箱:</th>
-                              <td>572751316@qq.com</td>
-                           </tr>
-                           <tr>
-                              <th>QQ:</th>
-                              <td>572751316</td>
-                           </tr>
-                        </tbody>
-                     </table>
+                  <!-- 项目经验 -->
+                  <!-- 其他信息 -->
+                  <div class="item-section">
+                     <div class="mask-area">
+                        <h3>
+                           <a href="#" class="add-btn J_event" itemtype="other" rel="add" maxnum="8">添加</a>
+                           <span class="b f14">其他信息</span>
+                        </h3>
+                           <div class="item-bd">
+                              <div id="other-form" class="form-area">
+                                 <form id="form-other" method="post" action="/resume/other/create">
+                                    <input type="hidden" value="do" name="method">
+                                    <input type="hidden" value="ZFhMG1s2VKrcdmvym2pZuP14Taj86siWX6LQim9I" name="CSRFToken">
+                                    <table width="100%" class="fwy-form-base">
+                                       <colgroup>
+                                          <col width="120">
+                                          <col width="*">
+                                       </colgroup>
+                                       <tbody>
 
+                                       <tr>
+                                          <th> <em>*</em>
+                                             标题:
+                                          </th>
+                                          <td class="input">
+                                             <select class="text J_checkInput" id="resume-other-title-select" name="title">
+                                                <option value="">请选择</option>
+                                                 <option value="自我评价">自我评价</option>
+                                                  <option value="兴趣爱好">兴趣爱好</option>
+                                                <option value="特长">特长</option>
+                                                <option value="职业特长">职业特长</option>
+                                                <option value="宗教信仰">宗教信仰</option>
+                                             </select>
+                                             <div class="error" style="display: none; ">请选择标题</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <th> <em>*</em>
+                                             描述:
+                                          </th>
+                                          <td class="input textarea-box">
+                                             <textarea maxnum="1000" name="description" reg="^.{0,1000}$" blankclass="g9" blankvalue="(限1000字)" class="textarea-con edit-textarea J_checkInput g9"></textarea>
+                                             <p class="textarea-check-tip" style="width: 404px;">
+                                                <span class="J_lastNum g9">
+                                                   <span>0</span>
+                                                   /1000
+                                                </span>
+                                             </p>
+
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <th>&nbsp;</th>
+                                          <td class="input button">
+                                             <a itemtype="other" id="J_formSubmit" class="k-yel-btn" href="javascript:void(0);">
+                                                <span>保存</span>
+                                             </a>
+                                             <a itemtype="other" class="k-w-btn" href="javascript:void(0);">
+                                                <span>取消</span>
+                                             </a>
+                                          </td>
+                                       </tr>
+                                       </tbody>
+                                    </table>
+                                 </form>
+                             </div>
+                             <!-- 隐藏部分 -->
+                              <div class="info-area hidden" id="other-info" style="display: none;">
+                                 <table width="100%">
+                                    <colgroup>
+                                    <col width="160">
+                                    <col width="*">
+                                    <col width="65"></colgroup>
+                                 <thead>
+                                    <tr class="g9">
+                                       <td>标题</td>
+                                       <td>描述</td>
+                                       <td></td>
+                                    </tr>
+                                 </thead>
+                                 <tbody class="table-list">
+                                    <tr>
+                                       <td>兴趣爱好</td>
+                                       <td>
+                                          <div class="break " style="width: 330px;">我性格开朗，平时喜欢打球、唱歌...</div>
+                                       </td>
+                                       <td class="padding">
+                                          <a class="edit t-color J_event disable" itemid="1762630" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+                                          <a class="del t-color J_event disable" rel="del" itemid="1762630" itemtype="other" href="#">删除</a>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <td>自我评价</td>
+                                       <td>
+                                          <div class="break " style="width: 330px;">我个性开朗，做事认真负责，与人...</div>
+                                       </td>
+                                       <td class="padding">
+                                          <a class="edit t-color J_event disable" itemid="1762628" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+                                          <a class="del t-color J_event disable" rel="del" itemid="1762628" itemtype="other" href="#">删除</a>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <td>特长</td>
+                                       <td>
+                                          <div class="break" style="width: 330px;">专业特长是web前端开发，同时...</div>
+                                       </td>
+                                       <td class="padding">
+                                          <a class="edit t-color J_event disable" itemid="1762675" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+                                          <a class="del t-color J_event disable" rel="del" itemid="1762675" itemtype="other" href="#">删除</a>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <td>职业目标</td>
+                                       <td>
+                                          <div class="break " style="width: 330px;">我的职业目标就是想当一名优秀的...</div>
+                                       </td>
+                                       <td class="padding">
+                                          <a class="edit t-color J_event disable" itemid="1762654" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+                                          <a class="del t-color J_event disable" rel="del" itemid="1762654" itemtype="other" href="#">删除</a>
+                                       </td>
+                                    </tr>
+
+                                    <tr>
+                                       <td>职业技能</td>
+                                       <td>
+                                          <div class="break " style="width: 330px;">在校期间，我系统的学习了计算机...</div>
+                                       </td>
+                                       <td class="padding">
+                                          <a class="edit t-color J_event disable" itemid="1762669" rel="edit" title="修改其他信息" itemtype="other" href="#">编辑</a>
+                                          <a class="del t-color J_event disable" rel="del" itemid="1762669" itemtype="other" href="#">删除</a>
+                                       </td>
+                                    </tr>
+
+                                 </tbody>
+                                  </table>
+                              </div>
+                              <!-- 隐藏部分 -->
+                          </div>
+                     </div>
                   </div>
+                  <!-- 其他信息 -->
+               <!-- 右边简历结束 -->
                </div>
-            </div>
-         </div>
-         <!-- 联系方式结束 -->
-         <!-- 教育经验 -->
-         <div class="item-section">
-            <div class="mask-area">
-               <h3>
-                  <a href="#" class="add-btn J_event" itemtype="edu" rel="add" maxnum="10">添加</a>
-                  <span class="b f14">教育经历</span>
-               </h3>
-               <div class="item-bd">
-
-                  <div id="edu-info" class="info-area">
-                     <table width="100%">
-                        <colgroup>
-                        <col width="160">
-                        <col width="155">
-                        <col width="80">
-                        <col width="*">
-                        <col width="65"></colgroup>
-                     <thead>
-                        <tr class="g9">
-                           <td>毕业院校</td>
-                           <td>就读时间</td>
-                           <td>学历</td>
-                           <td>专业</td>
-                           <td></td>
-                        </tr>
-                     </thead>
-                     <tbody class="table-list">
-                        <tr>
-                           <td>
-                              <div class="g6 break break" style="width:120px">嘉应学院</div>
-                           </td>
-                           <td>2010-9 至 2014-7</td>
-                           <td>本科</td>
-                           <td>
-                              <div class="g6 break">计算机科学与技术</div>
-                           </td>
-                           <td class="padding">
-                              <a href="#" itemtype="edu" itemid="3350782" class="edit t-color J_event" rel="edit">编辑</a>
-                              <a href="#" itemtype="edu" rel="del" itemid="3350782" class="del t-color J_event">删除</a>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
-         </div>
+          </div>
+        </div>
       </div>
-      <!-- 教育经验 -->
-      <!-- 语言能力 -->
-      <div class="item-section">
-         <div class="mask-area">
-            <h3>
-               <a href="#" class="add-btn J_event" itemtype="lang" rel="add" maxnum="10">添加</a>
-               <span class="b f14">语言能力</span>
-            </h3>
-            <div class="item-bd">
-               <div id="lang-info" class="info-area">
-                  <table width="100%">
-                     <colgroup>
-                     <col width="70">
-                     <col width="80">
-                     <col width="60">
-                     <col width="*">
-                     <col width="65"></colgroup>
-                  <thead>
-                     <tr class="g9">
-                        <td>语言</td>
-                        <td>听说</td>
-                        <td>读写</td>
-                        <td>等级考试</td>
-                        <td></td>
-                     </tr>
-                  </thead>
-                  <tbody class="table-list">
-                     <tr class="">
-                        <td>英语</td>
-                        <td>良好</td>
-                        <td>良好</td>
-                        <td>
-                           <div class="break" style="width:285px">
-                              大学英语考试四级
-                                  (455分)
-                           </div>
-                        </td>
-                        <td>
-                           <a href="#" class="edit t-color J_event" title="修改语言能力" itemid="2765331" rel="edit" itemtype="lang">编辑</a>
-                           <a href="#" class="del t-color J_event" rel="del" itemid="2765331" itemtype="lang">删除</a>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </div>
-         </div>
-      </div>
-
+   <!-- 尾部开始 -->   
+   <div class="footer">
+      <p>
+         <a rel="nofollow" href="/support/about.html">关于本站</a>
+         <span>|</span>
+         <a rel="nofollow" href="/support/help.html">网站帮助</a>
+         <span>|</span>
+         <a rel="nofollow" href="/support/advertise.html">广告合作</a>
+         <span>|</span>
+         <a class="cur" href="/link/">友情链接</a>
+         <span>|</span>
+         <a href="/soft/">网站地图</a>
+         <span>|</span>
+         <a href="/sitemaps.xml">网站RSS</a>
+      </p>
+      <p>
+         Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+      </p>
    </div>
-   <!-- 语言能力end -->
-   <!-- 证书 -->
-   <div class="item-section">
-      <div class="mask-area">
-         <h3>
-            <a href="#" class="edit-btn J_event" itemtype="cert" rel="edit" maxnum="10">编辑</a>
-            <span class="b f14">证书</span>
-         </h3>
-         <div class="item-bd">
-            <div id="cert-info" class="info-area">
-               <table width="100%">
-                  <tbody class="table-list">
-                     <tr>
-                        <td>
-                           <div style="width: 510px" class="break">
-                              普通话等级证书，
-                          大学英语四级
-                           </div>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </div>
-         </div>
-      </div>
+   <!-- 尾部结束 -->   
+   <div id="top">
+      <p id="back-to-top">
+         <a href="#top">回到顶部</a>
+      </p>
+      <p id="feed-back">
+         <a href="#">我要反馈</a>
+      </p>
    </div>
-   <!-- 证书end -->
-   <!-- 技能 -->
-   <div class="item-section">
-      <div class="mask-area">
-         <h3>
-            <a style="display: block;" href="#" class="edit-btn J_event" itemtype="itskill" rel="edit" maxnum="10">编辑</a>
-            <span class="b f14">IT技能</span>
-         </h3>
-         <div class="item-bd">
-            <div style="display: block;" id="itskill-info" class="info-area">
-
-               <table width="100%">
-                  <colgroup>
-                  <col width="90">
-                  <col width="*"></colgroup>
-               <tbody class="table-list">
-                  <input type="hidden" name="here">
-                  <tr>
-                     <th>精通的技能：</th>
-                     <td>
-                        <div style="width: 420px" class="break">
-                           HTML，
-                                                    Dreamweaver
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th>熟悉的技能：</th>
-                     <td>
-                        <div style="width: 420px" class="break">
-                           Word，
-                                              Excel，
-                                              PowerPoint，
-                                              PHP，
-                                              MySQL，
-                                              HTML，
-                                              CSS，
-                                              Dreamweaver，
-                                              JavaScript，
-                                              Photoshop
-                        </div>
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-      </div>
-   </div>
-</div>
-<!-- 技能end -->
-<!-- 校内职务 -->
-<div class="item-section">
-   <div class="mask-area">
-      <h3>
-         <a href="#" class="add-btn J_event" itemtype="position" rel="add" maxnum="10">添加</a>
-         <span class="b f14">校内职务</span>
-      </h3>
-      <div class="item-bd">
-         <div id="position-info" class="info-area">
-            <table width="100%">
-               <colgroup>
-               <col width="160">
-               <col width="155">
-               <col width="*">
-               <col width="65"></colgroup>
-            <thead>
-               <tr class="g9">
-                  <td>职务名称</td>
-                  <td>任职时间</td>
-                  <td>学校</td>
-                  <td></td>
-               </tr>
-            </thead>
-            <tbody class="table-list">
-               <tr>
-                  <td>
-                     <div class="break" style="width:102px">副班长</div>
-                  </td>
-                  <td>
-                     2012-09
-                     <span>至</span>
-                     今
-                  </td>
-                  <td>
-                     <div class="break" style="width:172px">嘉应学院</div>
-                  </td>
-                  <td class="padding">
-                     <a href="#" rel="edit" itemtype="position" itemid="2338551" title="修改校内职务" class="edit t-color J_event">编辑</a>
-                     <a href="#" rel="del" itemtype="position" itemid="2338551" class="del t-color J_event">删除</a>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
-   </div>
-</div>
-</div>
-<!-- 校内职务end -->
-<!-- 奖励 -->
-<div class="item-section">
-<div class="mask-area">
-   <h3>
-      <a href="#" class="add-btn J_event" itemtype="scholarship" rel="add" maxnum="15">添加</a>
-      <span class="b f14">校内奖励</span>
-   </h3>
-   <div class="item-bd">
-      <div id="scholarship-info" class="info-area">
-         <table width="100%">
-            <colgroup>
-            <col width="160">
-            <col width="155">
-            <col width="*">
-            <col width="65"></colgroup>
-         <thead>
-            <tr class="g9">
-               <td>奖项名称</td>
-               <td>获得时间</td>
-               <td>学校</td>
-               <td></td>
-            </tr>
-         </thead>
-         <tbody class="table-list">
-            <tr>
-               <td>
-                  <div class="break" style="width:130px">计算机学院优秀学生干部</div>
-               </td>
-               <td>2013-10</td>
-               <td>嘉应学院</td>
-               <td class="padding">
-                  <a href="#" itemtype="scholarship" itemid="6094983" rel="edit" title="修改校内奖励" class="edit t-color J_event">编辑</a>
-                  <a href="#" itemtype="scholarship" itemid="6094983" rel="del" class="del t-color J_event">删除</a>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <div class="break" style="width:130px">计算机学院优秀学生三等奖学金</div>
-               </td>
-               <td>2013-10</td>
-               <td>嘉应学院</td>
-               <td class="padding">
-                  <a href="#" itemtype="scholarship" itemid="6094982" rel="edit" title="修改校内奖励" class="edit t-color J_event">编辑</a>
-                  <a href="#" itemtype="scholarship" itemid="6094982" rel="del" class="del t-color J_event">删除</a>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <div class="break" style="width:130px">计算机学院优秀学生三等奖学金</div>
-               </td>
-               <td>2012-10</td>
-               <td>嘉应学院</td>
-               <td class="padding">
-                  <a href="#" itemtype="scholarship" itemid="6094981" rel="edit" title="修改校内奖励" class="edit t-color J_event">编辑</a>
-                  <a href="#" itemtype="scholarship" itemid="6094981" rel="del" class="del t-color J_event">删除</a>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <div class="break" style="width:130px">计算机学院优秀学生三等奖学金</div>
-               </td>
-               <td>2011-12</td>
-               <td>嘉应学院</td>
-               <td class="padding">
-                  <a href="#" itemtype="scholarship" itemid="5023985" rel="edit" title="修改校内奖励" class="edit t-color J_event">编辑</a>
-                  <a href="#" itemtype="scholarship" itemid="5023985" rel="del" class="del t-color J_event">删除</a>
-               </td>
-            </tr>
-         </tbody>
-      </table>
-   </div>
-</div>
-</div>
-</div>
-<!-- 奖励end -->
-<!-- 工作经验 -->
-<div class="item-section">
-<div class="mask-area">
-<h3>
-   <a href="#" class="add-btn J_event" itemtype="practice" rel="add" maxnum="10">添加</a>
-   <span class="b f14">工作经历</span>
-</h3>
-<div class="item-bd">
-
-   <div id="practice-info" class="info-area">
-      <table width="100%">
-         <colgroup>
-         <col width="160">
-         <col width="155">
-         <col width="*">
-         <col width="65"></colgroup>
-      <thead>
-         <tr>
-            <td>工作公司</td>
-            <td>在职时间</td>
-            <td>职位名称</td>
-            <td>&nbsp;</td>
-         </tr>
-      </thead>
-      <tbody class="table-list">
-         <tr>
-            <td>
-               <div class="break" style="width:132px">梅州星空网络有限公司</div>
-            </td>
-            <td>2013-12 至 今</td>
-            <td>
-               <div class="break" style="width:102px">前端程序员</div>
-            </td>
-            <td class="padding">
-               <a href="#" class="edit t-color J_event" itemid="5361587" rel="edit" itemtype="practice">编辑</a>
-               <a href="#" class="del t-color J_event" rel="del" itemid="5361587" itemtype="practice">删除</a>
-            </td>
-         </tr>
-         <tr>
-            <td>
-               <div class="break" style="width:132px">追风有限公司</div>
-            </td>
-            <td>2013-3 至 今</td>
-            <td>
-               <div class="break" style="width:102px">web前端程序员</div>
-            </td>
-            <td class="padding">
-               <a href="#" class="edit t-color J_event" itemid="5361575" rel="edit" itemtype="practice">编辑</a>
-               <a href="#" class="del t-color J_event" rel="del" itemid="5361575" itemtype="practice">删除</a>
-            </td>
-         </tr>
-      </tbody>
-   </table>
-</div>
-</div>
-</div>
-</div>
-<!-- 工作经验 -->
-<!-- 项目经验 -->
-<div class="item-section">
-<div class="mask-area">
-<h3>
-<a href="#" class="add-btn J_event" itemtype="project" rel="add" maxnum="10">添加</a>
-<span class="b f14">项目经验</span>
-</h3>
-<div class="item-bd">
-<div id="project-info" class="info-area">
-   <table width="100%">
-      <colgroup>
-      <col width="160">
-      <col width="155">
-      <col width="*">
-      <col width="65"></colgroup>
-   <thead>
-      <tr class="g9">
-         <td>项目名称</td>
-         <td>参与时间</td>
-         <td>担任职务</td>
-         <td></td>
-      </tr>
-   </thead>
-   <tbody class="table-list">
-      <tr>
-         <td>
-            <div class="break " style="width:132px">web开发</div>
-         </td>
-         <td>2013-6 至 2013-9</td>
-         <td>
-            <div class="break" style="width:166px">网站前端程序员</div>
-         </td>
-         <td class="padding">
-            <a href="#" rel="edit" itemtype="project" itemid="1031925" title="修改项目经验" class="edit t-color J_event">编辑</a>
-            <a href="#" class="del t-color J_event" rel="del" itemtype="project" itemid="1031925">删除</a>
-         </td>
-      </tr>
-   </tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<!-- 项目经验 -->
-<!-- 培训经验 -->
-<div class="item-section">
-<div class="mask-area">
-<h3>
-<a href="#" class="add-btn J_event" itemtype="training" rel="add" maxnum="10">添加</a>
-<span class="b f14">培训经历</span>
-</h3>
-<div class="item-bd">
-<div id="training-info" class="info-area">
-<div class="blank-area">
-   <p class="g9">相关的培训经历可以提高你的职场竞争力。</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- 培训经验 -->
-<!-- 其他信息 -->
-<div class="item-section">
-<div class="mask-area">
-<h3>
-<a href="#" class="add-btn J_event" itemtype="other" rel="add" maxnum="8">添加</a>
-<span class="b f14">其他信息</span>
-</h3>
-<div class="item-bd">
-<div id="other-info" class="info-area">
-<table width="100%">
-   <colgroup>
-   <col width="160">
-   <col width="*">
-   <col width="65"></colgroup>
-<thead>
-   <tr class="g9">
-      <td>标题</td>
-      <td>描述</td>
-      <td></td>
-   </tr>
-</thead>
-<tbody class="table-list">
-   <tr>
-      <td>兴趣爱好</td>
-      <td>
-         <div style="width: 330px;" class="break ">我性格开朗，平时喜欢打球、唱歌...</div>
-      </td>
-      <td class="padding">
-         <a href="#" itemtype="other" title="修改其他信息" rel="edit" itemid="1762630" class="edit t-color J_event">编辑</a>
-         <a href="#" itemtype="other" itemid="1762630" rel="del" class="del t-color J_event">删除</a>
-      </td>
-   </tr>
-
-   <tr>
-      <td>自我评价</td>
-      <td>
-         <div style="width: 330px;" class="break ">我个性开朗，做事认真负责，与人...</div>
-      </td>
-      <td class="padding">
-         <a href="#" itemtype="other" title="修改其他信息" rel="edit" itemid="1762628" class="edit t-color J_event">编辑</a>
-         <a href="#" itemtype="other" itemid="1762628" rel="del" class="del t-color J_event">删除</a>
-      </td>
-   </tr>
-
-   <tr>
-      <td>特长</td>
-      <td>
-         <div style="width: 330px;" class="break ">专业特长是web前端开发，同时...</div>
-      </td>
-      <td class="padding">
-         <a href="#" itemtype="other" title="修改其他信息" rel="edit" itemid="1762675" class="edit t-color J_event">编辑</a>
-         <a href="#" itemtype="other" itemid="1762675" rel="del" class="del t-color J_event">删除</a>
-      </td>
-   </tr>
-
-   <tr>
-      <td>职业目标</td>
-      <td>
-         <div style="width: 330px;" class="break ">我的职业目标就是想当一名优秀的...</div>
-      </td>
-      <td class="padding">
-         <a href="#" itemtype="other" title="修改其他信息" rel="edit" itemid="1762654" class="edit t-color J_event">编辑</a>
-         <a href="#" itemtype="other" itemid="1762654" rel="del" class="del t-color J_event">删除</a>
-      </td>
-   </tr>
-
-   <tr>
-      <td>职业技能</td>
-      <td>
-         <div style="width: 330px;" class="break ">在校期间，我系统的学习了计算机...</div>
-      </td>
-      <td class="padding">
-         <a href="#" itemtype="other" title="修改其他信息" rel="edit" itemid="1762669" class="edit t-color J_event">编辑</a>
-         <a href="#" itemtype="other" itemid="1762669" rel="del" class="del t-color J_event">删除</a>
-      </td>
-   </tr>
-
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<!-- 其他信息 -->
-<!-- 附件信息 -->
-<div class="item-section">
-<div class="mask-area">
-<h3>
-<a href="#" class="add-btn J_event" itemtype="affix" rel="add" maxnum="5">添加</a>
-<span class="b f14">附件/作品</span>
-</h3>
-<div class="item-bd">
-<div id="affix-info" class="info-area">
-<div class="blank-area">
-<p class="g9">你可以上传英文简历、设计的作品等。</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- 附件 -->
-<!-- 右边简历结束 -->
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- 尾部开始 -->
-<div class="footer">
-<p>
-<a rel="nofollow" href="/support/about.html">关于本站</a>
-<span>|</span>
-<a rel="nofollow" href="/support/help.html">网站帮助</a>
-<span>|</span>
-<a rel="nofollow" href="/support/advertise.html">广告合作</a>
-<span>|</span>
-<a class="cur" href="/link/">友情链接</a>
-<span>|</span>
-<a href="/soft/">网站地图</a>
-<span>|</span>
-<a href="/sitemaps.xml">网站RSS</a>
-</p>
-<p>
-Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
-</p>
-</div>
-<!-- 尾部结束 -->
-<div id="top">
-<p id="back-to-top">
-<a href="#top">回到顶部</a>
-</p>
-<p id="feed-back">
-<a href="#">我要反馈</a>
-</p>
-</div>
 </body>
 </html>
