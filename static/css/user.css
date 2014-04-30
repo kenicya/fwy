@@ -1629,7 +1629,7 @@ table.fwy-form-base {
     color: #999999;
     line-height: 28px;
     height: 28px;
-    padding: 3px 30px 5px 10px;
+    padding: 2px 30px 2px 10px;
     cursor: pointer;
 }
 .selectResult .sheng{font-style: normal;}
@@ -1638,6 +1638,7 @@ input.selectResult{
     background: none;
     width: 170px;
     margin-right: 10px;
+    font-size: 12px;
 }
 
 .fwy-form-base td .other-textarea {
@@ -1684,4 +1685,145 @@ input.selectResult{
     text-align: left;
     vertical-align: top;
     width: 300px;
+}
+/*企业用户*/
+.welcome{color: #fff;}
+i.hr-account,i.hr-logout{
+    background: url(../img/icon.png) no-repeat 0 -159px;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 1px;
+    overflow: hidden;
+    vertical-align: text-top;
+    width: 16px;
+}
+i.hr-logout{background-position: 0 -143px;}
+a.hr-accounts{color:#73C9FF;margin-left: 10px;}
+#hr-publish{margin-top: 40px;margin-bottom: 40px;}
+#hr-publish li {
+    background: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    color: #666666;
+    float: left;
+    height: 210px;
+    margin-left: 101px;
+    padding: 20px;
+    position: relative;
+    width: 160px;
+}
+#hr-publish li:after {
+    backface-visibility: hidden;
+    bottom: 10px;
+    box-shadow: 20px -30px 60px rgba(0, 0, 0, 0.3);
+    content: "";
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    transform: rotate(6deg);
+    width: 40%;
+    z-index: -1;
+}
+#hr-publish li:hover {
+    background-color: #FFFFFF;
+    border-color: #C4DEEE;
+    box-shadow: 0 0 5px #C4DEEE inset;
+}
+#hr-publish li .type-icon, #hr-publish li .type-action {
+    text-align: center;
+}
+#hr-publish li .type-action {
+    margin: 5px 0 10px;
+}
+#hr-publish li .type-action .btn {
+    padding: 8px 28px;
+}
+#hr-publish li .type-introduce {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+#hr-publish li .icon-publish-type {
+    background-image: url("../img/publish.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 105px;
+    line-height: 105px;
+    vertical-align: middle;
+    width: 105px;
+}
+#hr-publish li .icon-publish-type-junior {
+    background-position: 0 0;
+}
+#hr-publish li .icon-publish-type-highend {
+    background-position: 0 -105px;
+}
+#hr-publish li .icon-publish-type-delegate {
+    background-position: 0 -210px;
+}
+#hr-publish li .icon-publish-type-internal {
+    background-position: 0 -315px;
+}
+#hr-publish li .icon-free {
+    background-position: 0 -420px;
+    height: 48px;
+    line-height: normal;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 47px;
+}
+.control-box{border: 1px solid #ddd;margin-top: 20px; box-shadow: 0 1px 4px 1px #DDDDDD}
+.control-box .box-title {
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #DDDDDD;
+    line-height: 35px;
+    padding: 5px 15px;
+}
+.control-box .box-title .additional {
+    color: #999999;
+    float: right;
+    line-height: 35px;
+    position: relative;
+    right: 0;
+    top: 0;
+}
+.help-required {
+    color: #FF6600;
+    display: inline-block;
+    font-family: "宋体",Arial,Helvetica,Arial,sans-serif;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.control-box .box-title h2 {
+    font-size: 14px;
+    line-height: 35px;
+    margin: 0;
+}
+
+.steps-box .steps-item {
+    padding: 10px 0 10px 60px;
+}
+.step-title{
+  color: #4D9012;
+font-size: 16px;
+font-weight: bold;
+line-height: 40px;
+margin-bottom: 20px;
+}
+
+.step-title em {
+    background: url(../img/stepbg.png) repeat;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    width: 30px;
 }

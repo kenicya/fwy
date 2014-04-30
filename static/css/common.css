@@ -1,4 +1,5 @@
 @charset "gb2312";
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
 	display: block
 }
@@ -195,6 +196,7 @@ ul li {
 .w480{width: 480px;overflow: hidden;position: relative;}
 .w500{width: 500px;overflow: hidden;}
 .w700{width: 700px;}
+.w220{width: 220px;}
 .w270{width: 270px;}
 .mt10{margin-top: 10px;}
 .mt20{margin-top: 20px;}
@@ -204,6 +206,7 @@ ul li {
 .mt30{margin-top:30px;}
 .mt55{margin-top: 55px;}
 .ml20{margin-left: 20px;}
+.pb20{padding-bottom: 20px;}
 .ml10{margin-left: 10px;}
 .mr10{margin-right: 10px;}
 .mrl5{margin-right: 5px;margin-left: 5px;}
@@ -272,7 +275,7 @@ margin: 0;
     border-radius: 4px;
     box-shadow: 0 0 18px 2px #333333;
     margin-right: 20px;
-    margin-top: 25px;
+    margin-top: 18px;
     width: 335px;
 }
 .login-tit{
@@ -951,3 +954,31 @@ border-radius: 4px;
     height: 11px;
 }
 .hr-banner{background: url(../img/3.jpg) no-repeat center;height: 400px;}
+/*表单*/
+.k-input,.k-input60{
+	width: 312px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    padding: 0 4px;
+    font-size: 12px;
+}
+.k-input60{
+	width: 60px;
+}
+/*about*/
+.hr{height: 1px;border-bottom: 1px dashed #B8E093;}
+.u_top_w{background: #660000;height: 100px;}
+.u_top{width: 980px;margin: 0 auto;position: relative;height: 50px;}
+.u_top .logo{position: absolute;top: 10px;}
+.u_top .ad{position: absolute;left: 200px;top: 50%;}
+.u_wrap{padding-bottom: 50px;background: #C4D4ED url(../img/user/bg.png) no-repeat 30% 2px;}
+.u_main{margin-top: 100px;padding-bottom: 50px;}
+.u_r_bg{background: #A1C0EF;}
+.u_tit{text-align: center;margin-top: 30px;color: #fff;}
+.abg{background: url(../img/amenu.png) repeat-y;}
+.about-menu{}
+.about-menu li a{line-height: 35px; height: 35px;display: block;font-size: 15px;padding-left: 20px;color: #666;
+}
+.about-menu li a:hover{background: #d8d5d5;}

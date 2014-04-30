@@ -1,0 +1,333 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=gb2312" />
+  <title>服务业人才网</title>
+  <meta name="keywords" content="服务业人才网" />
+  <meta name="description" content="服务业人才网" />
+  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../static/css/common.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/user.css" type="text/css" />
+  <script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+  <div class="wrap">
+    <!-- 头部start -->
+    <div class="header-w">
+      <div class="header">
+        <div class="logo">
+          <a href="#">
+            <img src="../static/img/logo.png" alt=""></a>
+        </div>
+        <div class="fr mt20">
+          <span class="welcome">
+            <span title="华红科技">您好，华红科技</span>
+            <a href="" class="hr-accounts"> <i class="hr-account"></i>
+              账号管理
+            </a>
+          </span>
+          <a href="http://www.liepin.com/user/logout" class="hr-accounts"> <i class="hr-logout"></i>
+            安全退出
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-w">
+      <div class="row">
+        <ul class="nav">
+          <li>
+            <a href="">首页</a>
+          </li>
+          <li>
+            <a  class="active" href="">发布职位</a>
+          </li>
+          <li>
+            <a href="">找企业</a>
+          </li>
+          <li>
+            <a href="">找人才</a>
+          </li>
+          <li>
+            <a href="">简历管理</a>
+          </li>
+          <li class="b-r">
+            <a href="">个人中心</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 头部end -->
+    <!-- 内容开始 -->
+    <div class="row">
+      <div class="warnbox mt20 text-danger">
+        您已注册成功并获得了1000积分，但您当前使用的为预览版，不能进行任何操作，
+        <a class="submit-info" href="javascript:;">提交公司信息</a>
+        审核通过后即可下载免费简历。
+      </div>
+      <!--编辑职位 -->
+      <div class="control-box">
+        <form class="" action="" method="post">
+          <div class="box-title">
+            <div class="additional">
+              <span class="help-required">*</span>
+              为必填项
+            </div>
+            <h2>
+              初级职位发布
+              <span style="color:green; font-weight: normal;font-size:12px;">（每发一个初级职位奖励20积分，每天最多奖励100积分）</span>
+            </h2>
+          </div>
+          <div class="steps-box mt20">
+            <!-- 第一步 -->          
+            <div class="steps-item">
+              <div class="step-title">
+                  <em>1</em>职位基本信息
+              </div>
+              <table width="100%" class="fwy-form-base copy">
+                <colgroup>
+                <col width="180">
+                <col width="*"></colgroup>
+                 <tbody>
+                <tr>
+                  <th class="mt10"><em>*</em>职位名称：</th>
+                  <td>
+                   <input type="text" id="" class="k-input" name="name" placeholder="如：招聘策划" >
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10"><em>*</em>职能分类：</th>
+                  <td>
+                    <input type="text" id="cert-input" style="display: none;">
+                    <div class="selectResult clearfix dig-selected w270" id="cert-result">
+                      <a href="javascript:void(0);" class="ticket clean g3" name="certId" value="5544509">
+                        <span class="text">普通话等级证书</span>
+                        <span class="delete">移除</span>
+                      </a>
+                    </div>
+                    <input type="hidden" name="certIds" value="4,22" id="cert-hidden">
+                    <a href="javascript:void(0);" id="cert-link" style="display:none" class="arrowhandler">打开</a>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10"><em>*</em>工作地点：</th>
+                  <td>
+                    <input type="text" id="cert-input" style="display: none;">
+                    <div class="selectResult clearfix dig-selected w270" id="cert-result">请选择</div>
+                    <input type="hidden" name="certIds" value="4,22" id="cert-hidden">
+                    <a href="javascript:void(0);" id="cert-link" style="display:none" class="arrowhandler">打开</a>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10"><em>*</em>所属部门：</th>
+                  <td>
+                    <input type="text" class="selectResult noclearfix w270" id="cert-result">
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10"><em>*</em>税前年薪：</th>
+                  <td>
+                    <input type="text" class="k-input60" id="cert-result">
+                    <span class="text-warning mr10">万元</span>至
+                    <input type="text" class="k-input60" id="cert-result">
+                    <span class="text-warning">万元</span>
+                    <input type="checkbox" class="ml10 vm mr10">显示为面议</td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td class="input button">
+                    <a href="javascript:void(0);" class="k-yel-btn" id="J_formSubmit" itemtype="cert">
+                      <span>保存</span>
+                    </a>
+                    <a href="javascript:void(0);" class="k-w-btn" itemtype="cert">
+                      <span>取消</span>
+                    </a>
+                  </td>
+                </tr>
+                 </tbody>
+              </table>
+            </div>
+            <div class="hr"></div>
+            <!-- 第一步结束 -->
+           <!-- 第二步 -->          
+            <div class="steps-item">
+              <div class="step-title">
+                  <em>1</em>职位要求
+              </div>
+              <table width="100%" class="fwy-form-base copy">
+                <colgroup>
+                <col width="180">
+                <col width="*"></colgroup>
+                 <tbody>
+                <tr>
+                  <th class="mt10">年龄要求：</th>
+                  <td>
+                    <select id="profile-birthdate-input-year" class="J_checkBase">
+                       <option value="">请选择</option>
+                       <option value="1961">20</option>
+                       <option value="1962">25</option>
+                       <option value="1963">30</option>
+                       <option value="1964">35</option>
+                       <option value="1965">40</option>
+                       <option value="1966">45</option>
+                       <option value="1967">50</option>
+                       <option value="1968">55</option>
+                       <option value="1969">60</option>
+                       <option value="1970">65</option>                                   
+                    </select><sapn class="mr10 ml10">至</sapn>
+                     <select id="profile-birthdate-input-year" class="J_checkBase">
+                       <option value="">请选择</option>
+                       <option value="1962">25</option>
+                       <option value="1963">30</option>
+                       <option value="1964">35</option>
+                       <option value="1965">40</option>
+                       <option value="1966">45</option>
+                       <option value="1967">50</option>
+                       <option value="1968">55</option>
+                       <option value="1969">60</option>
+                       <option value="1970">65</option>                                   
+                    </select>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10">性别要求：</th>
+                  <td>
+                     <select id="" class="J_checkBase">
+                       <option value="">不限</option>
+                       <option value="1962">男</option>
+                       <option value="1963">女</option>                                
+                    </select>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10">专业要求：</th>
+                  <td>
+                   <input type="text" class="selectResult noclearfix w270" id="cert-result" value="不限">
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10">所属部门：</th>
+                  <td>
+                    <input type="text" class="selectResult noclearfix w270" id="cert-result">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="mt10">期望人选所在行业：</th>
+                  <td>
+                    <input type="text" id="cert-input" style="display: none;">
+                    <div class="selectResult clearfix dig-selected w270" id="cert-result">请选择</div>
+                    <input type="hidden" name="certIds" value="4,22" id="cert-hidden">
+                    <a href="javascript:void(0);" id="cert-link" style="display:none" class="arrowhandler">打开</a>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th class="mt10">工作年限：</th>
+                  <td>
+                    <input type="text" class="k-input60" id="cert-result">
+                   年以上
+                 </td>
+                </tr>
+
+                 <tr>
+                  <th class="mt10">学历要求：</th>
+                  <td>
+                    <select id="profile-birthdate-input-year" class="J_checkBase">
+                       <option value="">不限</option>
+                       <option value="1961">博士后</option>
+                       <option value="1962">博士</option>
+                       <option value="1963">MBA/EMBA</option>
+                       <option value="1964">硕士</option>
+                       <option value="1965">本科</option>
+                       <option value="1966">大专</option>
+                       <option value="1967">中专</option>
+                       <option value="1968">中技</option>
+                       <option value="1969">其他</option>
+                     </select>
+                     <span class="ml10">
+                      是否全日制统招：
+                      <label class="mr10"><input type="radio" value="1" name="quanri" class="radio" autocomplete="off">是</label>
+                      <label><input type="radio" checked="checked" value="0" name="quanri" class="radio">不限</label>
+                    </span>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th> <em>*</em>
+                    职位描述:
+                  </th>
+                  <td class="input textarea-box">
+                    <textarea class="textarea-con edit-textarea J_checkInput g9" blankvalue="(限1000字)" blankclass="g9" reg="^.{0,1000}$" name="description" maxnum="1000"></textarea>
+                    <p style="width: 404px;" class="textarea-check-tip">
+                      <span class="J_lastNum g9">
+                        <span>0</span>
+                        /1000
+                      </span>
+                    </p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td class="input button">
+                    <a href="javascript:void(0);" class="k-yel-btn" id="J_formSubmit" itemtype="cert">
+                      <span>保存</span>
+                    </a>
+                    <a href="javascript:void(0);" class="k-w-btn" itemtype="cert">
+                      <span>取消</span>
+                    </a>
+                  </td>
+                </tr>
+                 </tbody>
+              </table>
+            </div>
+            <div class="hr"></div>
+            <!-- 第二步结束 -->
+
+          </div>
+        </form>
+     </div>
+     <!-- 编辑职位结束 -->
+
+   </div>
+  <!-- 内容结束 -->
+  <!-- 尾部开始 -->
+  <div class="footer">
+    <div class="clear row">
+      <div class="footertit f-contact">
+        <p>服务热线（免话费）</p>
+        <p class="f18"> <b>400-88888888</b>
+        </p>
+        <p class="f12">工作日：9:00-19:00</p>
+      </div>
+      <p>
+        <a href="">关于</a>
+        &nbsp;|
+        <a href="">职位</a>
+        &nbsp;|
+        <a href="">公司</a>
+        &nbsp;|
+        <a href="">人才</a>
+        &nbsp;|
+        <a href="">行业</a>
+        &nbsp;|
+        <a href="">意见反馈</a>
+        &nbsp;|
+        <a href="">服务与声明</a>
+      </p>
+      <p>
+        Copyright &copy; 2014 www.fwy.com All Rights Reserved ICP备xxxxxxxx号
+      </p>
+    </div>
+  </div>
+  <!-- 尾部结束 -->
+</div>
+</body>
+</html>

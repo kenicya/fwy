@@ -7,6 +7,7 @@
   <meta name="description" content="服务业人才网" />
   <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../static/css/common.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/user.css" type="text/css" />
   <script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="../static/js/tytabs.jquery.min.js"></script>
   <script type="text/javascript">
@@ -63,8 +64,8 @@ $(document).ready(function(){
     </div>
     <!-- 头部end -->
     <div class="hr-banner">
-      <div class="row pt20" style="height:380px;">
-         <div class="login-w fr">      
+      <div class="row pt20">
+         <div class="login-w fr pb20 mb20">      
           <div id="tabsholder">
             <ul class="tabs">
               <li id="tab1" class="current">企业注册</li>
@@ -94,16 +95,24 @@ $(document).ready(function(){
                       <em title="换一换" class="change-captcha">换一换</em>
                       <div class="tips">请输入正确的验证码</div>
                   </div>
+                  <p class="ml20">
+
+                    <input type="checkbox" checked="true" value="1" class="vm" id="accept">
+                    <label class="vm" for="accept">
+                      我已阅读并同意
+                      <a href="">《服务业人才网用户协议》</a>
+                    </label>
+
+                  </p>
                   <div class="btn-box">
                     <button type="button" class="l-submit">立即注册</button>
                   </div>
-                </form>
-
+                </form>            
               </div>
               <div class="tabscontent" id="content2" style="display: none;">
                 <form action="" method="POST" id="login">
                   <div class="input-w">
-                    <div class="hd">企业邮箱：</div>
+                    <div class="hd">邮箱/号码：</div>
                     <input style="height:35px;" type="text" autocomplete="off" id="J_loginName" name="email" class="l-input" tips="请填写手机号或邮箱地址" maxlength="50">
                     <em class="validation-icon"></em>
                     <div class="tips">请填写手机号或邮箱地址</div>
