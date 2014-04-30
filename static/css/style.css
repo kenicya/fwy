@@ -1,0 +1,65 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*------找职位content开�?-------*/
+p {padding:0px; margin:0px;}
+
+.z-content {margin:15px auto; width:980px;}
+
+.seek-wrap { background:linear-gradient(#6AB8E2, #398AB5) repeat scroll 0 0 #398AB5; margin-bottom:20px; border-color: #6AB8E2; border-radius:3px; overflow:hidden; 
+position: relative; z-index:10;}
+.seek-wrap form {font-size:14px; padding: 20px 10px; position:relative; color:#FFF;}
+.b-input { float:left;  height:27px; margin-top:5px;  background:#FFF; margin-left:5px; border-radius: 3px;}
+.seek-wrap .seek-sort { line-height:30px; float:left;}
+.seek-sort .hy-sort {float:left; line-height:35px; margin-left:10px;}
+.seek-sort .zn-sort {float:left; margin-left:30px;line-height:35px;}
+.seek-sort .dd-sort {float:left; margin-left:30px;line-height:35px;}
+.seek-sort .gjc-sort {float:left; margin-left:10px;}
+.seek-sort .fb-sort {float:left; margin-left:30px;line-height:35px;}
+.b-input .input-box1 {float:left;}
+.b-input .input-box2 {float:left;}
+.b-input .input-box3 {float:left;}
+.b-input .input-box4 {float:left;}
+.b-input .input-box5 {float:left;}
+.input-box1 { cursor:pointer; height:25px; width:255px; font-size:12px; border-radius: 3px; margin-left:5px; border:0 none; color: #000000;line-height:30px; 
+background: url(../img/filter-select-drop.gif) no-repeat right center;}
+.input-box2 { cursor:pointer; height:25px; width:275px; font-size:12px; border-radius: 3px; margin-left:5px; border:0 none; color: #000000;line-height:30px; 
+background: url(../img/filter-select-drop.gif) no-repeat right center;}
+.input-box3 { cursor:pointer; height:25px; width:125px; font-size:12px; border-radius: 3px; margin-left:5px; border:0 none; color: #000000;line-height:30px; 
+background: url(../img/filter-select-drop.gif) no-repeat right center;}
+.input-box4 { cursor:pointer; height:25px; width:633px; font-size:12px; border-radius: 3px; margin-left:5px; border:0 none; color: #000000;line-height:30px; 
+background: url(../img/filter-select-drop.gif) no-repeat right center;}
+.input-box5 {cursor:pointer; height:25px; width:125px; font-size:12px; border-radius: 3px; margin-left:5px; border:0 none; color: #000000; line-height:30px; 
+background: url(../img/filter-select-drop.gif) no-repeat right center;}
+.seek-wrap .ss-btn a { background:url(../img/btn.png) no-repeat; background-position: 0 -192px; width:91px; height:30px;  display:inline-block; text-align:center; padding-top:10px; margin-left:358px; border-radius:5px;}
+
+
+.main-left {float:left; width:770px;}
+.main-right {float:right; width:170px;}
+.main-left .filter {background-color: #EFEFEF; line-height: 30px; padding: 0 10px;}
+.filter b {color:#F90;}
+.main-left .filter-select {width:150px; background-color:#FFFFFF; border:1px solid #CCCCCC; border-radius:3px; float:right; margin: 3px 0 0 10px; position:relative;}
+.main-left .filter-select .hd {background-color:#F6F6F6; border:1px solid #FFFFFF; border-radius:3px; line-height:20px; padding-left:5px; padding-right:20px; position:relative;}	
+.main-left .filter-select .hd .drop {background: url(../img/filter-select-drop.gif) no-repeat center center rgba(0, 0, 0, 0); border-left:1px solid #CCCCCC; height:20px; overflow: hidden;
+position: absolute; right:0; top:0; width:16px;}
+.main-left .job-list {margin-top:5px;}
+.main-left .job-list a{border-bottom: 1px dashed #CCCCCC; color: #333333; cursor: pointer; display: block; padding: 10px;}
+.main-left .job-list a:hover { background:#f8f8f8;}
+.main-left .pager {background-color:#EFEFEF; padding: 5px 10px;}
+.main-left .pager .pager-bar {color:#777777; font-family:Arial; font-size:12px; height:22px; line-height:18px; text-align:right; white-space:nowrap;}
+.pager .pager-bar a {border: 1px solid #9AAFE5; border-radius: 2px; color:#2E6AB1; padding: 0 6px; display:inline-block; height:18px; margin: 0 1px; overflow:hidden; text-align:center; 
+vertical-align: middle;}
+.pager .pager-bar .goto {margin-left: 10px;}
+.pager .pager-bar .goto input {color: #999999; font-family: Arial; font-size:12px; height:14px; line-height:12px; margin: 0 5px; text-align:center; width:20px;}
+.pager .pager-bar a.current {background-color:#2E6AB1; border: 1px solid #2E6AB1; color:#FFFFFF; cursor:default; font-weight:bold;}
+.pager .pager-bar a:hover {background-color:#2E6AB1; color:#FFF;}
+
+.main-right h2 {background: none repeat scroll 0 0 #EFEFEF; height:30px; line-height:30px; margin-bottom:10px; padding-left:10px; width:158px; font-weight:normal; font-size:14px;}
+.main-right .zp-list { margin:10px 0 10px 0px;}
+.main-right .zp-list img { width:168px; height:80px;}
+
+.hot-jobs {background: none repeat scroll 0 0 #F7F7F7; width:940px; padding:0px 20px 10px 20px;}
+.hot-jobs h2 {line-height:35px; font-size:15px; border-bottom:1px solid #999; margin-bottom:8px;}
+.hot-jobs a {line-height:24px; color: #555555;}
+.hot-jobs a:hover { text-decoration:underline;}
+/*------找职位content结束--------*/
